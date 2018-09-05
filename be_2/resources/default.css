@@ -1,0 +1,21 @@
+#element {
+  margin: 0;
+}
+#header, #footer {
+  height: 50px;
+}
+
+a.glyphicon {
+  font-size: 1.5rem;
+}
+
+#section {
+  background-color: #009ee0;
+  color: #fff;
+  padding: 0.7em 1em;
+  font-size: 1.4em;
+}
+
+#padding {
+  padding: 2rem;
+}
