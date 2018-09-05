@@ -5,6 +5,10 @@
   height: 50px;
 }
 
+#sign-on, #sign-out{
+  margin-right: 15px;
+}
+
 a.glyphicon {
   font-size: 1.5rem;
 }

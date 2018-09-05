@@ -45,6 +45,8 @@
         { "context": "head", "url": "https://ccmjs.github.io/tkless-components/libs/bootstrap/css/font-face.css" },
         "resources/default.css"
       ],
+      "js": [ "ccm.load", [ "https://ccmjs.github.io/tkless-components/libs/jquery/jquery.min.js",
+        "https://ccmjs.github.io/tkless-components/libs/bootstrap/js/bootstrap.min.js" ] ],
       "navigation": [ "ccm.load", "resources/navigation.html"],
       "help": [ "ccm.load", "resources/help.html"],
       "menu": {
@@ -135,7 +137,7 @@
 
         renderContent();
 
-        renderFeedback();
+          renderFeedback();
 
         $.setContent( self.element, main );
 
@@ -144,14 +146,19 @@
         function setUpNavigation() {
           main.querySelector( "#header" ).innerHTML = my.navigation;
 
-         [...main.querySelectorAll( '.navbar-nav  > li' )].map( li => {
-           li.addEventListener( 'click', () => {
-             [...main.querySelectorAll( '.navbar-nav  > li' )].map( li => {
-               li.classList.remove( 'active' );
-             } );
-             li.classList.add( 'active' );
-           } );
-         } );
+          [...main.querySelectorAll( '.navbar-nav  > li' )].map( li => {
+            li.addEventListener( 'click', () => {
+              [...main.querySelectorAll( '.navbar-nav  > li' )].map( li => {
+                li.classList.remove( 'active' );
+              } );
+              li.classList.add( 'active' );
+            } );
+          } );
+
+          main.querySelector( ".navbar-toggle").addEventListener( 'click', () => {
+            main.querySelector( ".navbar-toggle" ).classList.toggle( 'collapsed' );
+            main.querySelector( ".navbar-collapse" ).classList.toggle( 'in' );
+          } );
 
           main.querySelector( "#home").addEventListener( 'click', () => {
             renderContent();
