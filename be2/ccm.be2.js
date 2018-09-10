@@ -62,7 +62,8 @@
       },
       "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-7.1.0.js", {
         "key": [ "ccm.get", "https://ccmjs.github.io/akless-components/user/resources/configs.js", "guest" ],
-        "logged_in": true
+        "logged_in": true,
+        "no_password": true
       } ],
       "feedback": [ "ccm.component", "https://ccmjs.github.io/tkless-components/feedback/versions/ccm.feedback-2.0.0.js", {
         "from_above": "20%",
@@ -87,18 +88,9 @@
         "chart": [ "ccm.component", "https://ccmjs.github.io/akless-components/highchart/versions/ccm.highchart-1.0.0.js" ]
         }
       ],
-      /*
       "pdf_viewer": [ "ccm.instance", "https://ccmjs.github.io/tkless-components/pdf_viewer/versions/ccm.pdf_viewer-3.0.0.js",
         [ "ccm.get", { "store": "w2c_pdf_viewer", "url": "https://ccm2.inf.h-brs.de" }, "1536585034382X04756237908295757" ]
       ]
-      */
-      // "voting": [ "ccm.component", "https://ccmjs.github.io/tkless-components/thumb_rating/versions/ccm.thumb_rating-2.0.0.js", {
-      //   "buttons": true,
-      //   "data": { "store": [ "ccm.store", "https://ccmjs.github.io/tkless-components/voting/resources/datastore.js" ] },
-      //   "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-7.0.1.js",
-      //     [ "ccm.get", "https://ccmjs.github.io/akless-components/user/resources/configs.js", "guest" ]
-      //   ]
-      // } ]
     },
 
     Instance: function () {
@@ -170,15 +162,10 @@
 
           main.querySelector( "#script").addEventListener( 'click', () => {
             const div = getDiv();
-            $.setContent( div, '' );
-            $.setContent( main.querySelector( "#article" ), div );
-            /*
             $.setContent( div, self.pdf_viewer.root );
             self.pdf_viewer.start( () => {
               $.setContent( main.querySelector( "#article" ), div );
             } );
-            */
-
           } );
 
           main.querySelector( "#stat" ).addEventListener( 'click', () => {
