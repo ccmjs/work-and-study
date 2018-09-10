@@ -5,6 +5,7 @@
  */
 
 ccm.files[ 'datasets.js' ] = {
+
   "orientation": {
     "key": "orientation",
     "section": "Orientation",
@@ -14,11 +15,29 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1526550731302X4453331659613695" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "key_terminology_of_entrepreneurship"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "key_terminology_of_entrepreneurship",
+              "user": true,
+              "unique": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       },
@@ -27,11 +46,29 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1518690906548X9893455548879022" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "synonyms_for_business"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "synonyms_for_business",
+              "user": true,
+              "unique": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       },
@@ -40,11 +77,29 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1526644134616X8657631128304384" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "personal_characteristics"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "personal_characteristics",
+              "user": true,
+              "unique": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       },
@@ -53,11 +108,29 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1526645829627X16013340042681" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "characteristics_of_entrepreneurs"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "characteristics_of_entrepreneurs",
+              "user": true,
+              "unique": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       },
@@ -66,11 +139,29 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1526653091422X02273709883972974" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "plagiarism_quiz"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "plagiarism_quiz",
+              "user": true,
+              "unique": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       },
@@ -79,11 +170,29 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1518691705125X42220549120432294" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "copyright_quiz"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "copyright_quiz",
+              "user": true,
+              "unique": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       }
@@ -99,11 +208,29 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1518692231862X6906233038090239" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "lca_terminology"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "lca_terminology",
+              "user": true,
+              "unique": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       },
@@ -112,11 +239,29 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1532619098174X18358119379539728" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "prepositions"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "prepositions",
+              "user": true,
+              "unique": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       },
@@ -125,11 +270,29 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1518692429575X48927297674072623" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "environmental_impacts"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "environmental_impacts",
+              "user": true,
+              "unique": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       },
@@ -138,11 +301,29 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1518692517201X6052264284794366" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "sustainable_development_goals"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "sustainable_development_goals",
+              "user": true,
+              "unique": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       }
@@ -158,11 +339,29 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1518692902389X770389262618334" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "defining_departments"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "defining_departments",
+              "user": true,
+              "unique": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       },
@@ -171,11 +370,29 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1532534015993X3303798009929313" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "executives_of_company"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "executives_of_company",
+              "user": true,
+              "unique": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       },
@@ -184,11 +401,29 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1525274879888X20147700616286301" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "corporate_affairs"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "corporate_affairs",
+              "user": true,
+              "unique": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       },
@@ -197,11 +432,29 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1525429066578X09371712618146733" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "incorrect_word_partnerships"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "incorrect_word_partnerships",
+              "user": true,
+              "unique": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       },
@@ -210,11 +463,29 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1532599227124X19808120468112445" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "departments_and_their_functions_1"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "departments_and_their_functions_1",
+              "user": true,
+              "unique": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       },
@@ -223,11 +494,29 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1532610566424X6242103490169981" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "departments_and_their_functions_2"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "departments_and_their_functions_2",
+              "user": true,
+              "unique": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       }
@@ -243,11 +532,28 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1525516094998X1208037518108378" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "learning_chunks_1"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "learning_chunks_1",
+              "user": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       },
@@ -256,11 +562,28 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1527521736795X212993536569414" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "defining_marketing"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "defining_marketing",
+              "user": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       }
@@ -276,11 +599,28 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1530966682311X3288463996724147" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "costs_and_sales"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "costs_and_sales",
+              "user": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       },
@@ -289,11 +629,28 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1530968426612X7535689750005543" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "earnings_and_income"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "earnings_and_income",
+              "user": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       }
@@ -309,11 +666,28 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1530969258661X8952191393680538" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "defining_crowdfunding"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "defining_crowdfunding",
+              "user": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       },
@@ -322,11 +696,28 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1530970776433X549867791496941" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "start_up_funding"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "start_up_funding",
+              "user": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       },
@@ -335,11 +726,28 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1530971554774X21313620784110165" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "start_ups"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "start_ups",
+              "user": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       },
@@ -348,11 +756,28 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1530972383963X023199007860386756" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "learning_chunks_2"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "learning_chunks_2",
+              "user": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       }
@@ -368,11 +793,28 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1531468430914X9382301716358374" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "writing_paper"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "writing_paper",
+              "user": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       },
@@ -381,11 +823,28 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1531469742696X42442522991677545" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "writing_procedure"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "writing_procedure",
+              "user": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       },
@@ -394,11 +853,28 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1531471015039X27400901492652463" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "elements_of_report"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "elements_of_report",
+              "user": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       },
@@ -407,11 +883,28 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1531472277201X06353161050037825" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "keywords_and_phrases"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "keywords_and_phrases",
+              "user": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       },
@@ -420,11 +913,28 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1531473258556X7402482042781462" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "synonyms_1"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "synonyms_1",
+              "user": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       },
@@ -433,11 +943,28 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1531473763591X5399771561478452" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "synonyms_2"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "synonyms_2",
+              "user": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       },
@@ -446,11 +973,28 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1531474250227X9103298982633563" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "word_formations"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "word_formations",
+              "user": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       },
@@ -459,11 +1003,28 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1531993681764X7543255385841261" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "harvard_style_guide"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_resultss"
+              },
+              "key": "harvard_style_guide",
+              "user": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       },
@@ -472,11 +1033,28 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1531994295903X8478028230378629" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "proofreading_and_editing"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "proofreading_and_editing",
+              "user": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       },
@@ -485,11 +1063,28 @@ ccm.files[ 'datasets.js' ] = {
        "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
          "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1531996286677X7734645357100738" ],
          "onfinish": {
-           "alert": "Saved!",
+           "login": true,
            "store": {
-             "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-             "key": "proofreading_1"
-           }
+             "settings": {
+               "url": "https://ccm2.inf.h-brs.de",
+               "method": "POST",
+               "store": "be2_ws18_cloze_results"
+             },
+             "key": "proofreading_1",
+             "user": true,
+             "permissions": {
+               "creator": "teacher",
+               "realm": "guest",
+               "group": [ "%user%" ],
+               "access": {
+                 "get": "group",
+                 "set": "creator",
+                 "del": "creator"
+               }
+             }
+           },
+           "alert": "Saved!",
+           "restart": true
          }
        } ]
       },
@@ -498,11 +1093,28 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1531998101907X3907868591412964" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "proofreading_2"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "proofreading_2",
+              "user": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       }
@@ -518,11 +1130,28 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1531999174809X1458215719642837" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "abbreviated_business_terms"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "abbreviated_business_terms",
+              "user": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       },
@@ -531,11 +1160,28 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1532000417081X3524240194379842" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "review_business_terms"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "review_business_terms",
+              "user": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       },
@@ -544,11 +1190,28 @@ ccm.files[ 'datasets.js' ] = {
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1532002466475X8703464196203523" ],
           "onfinish": {
-            "alert": "Saved!",
+            "login": true,
             "store": {
-              "settings": { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de" },
-              "key": "differentiating_adverbs_and_adjectives"
-            }
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "method": "POST",
+                "store": "be2_ws18_cloze_results"
+              },
+              "key": "differentiating_adverbs_and_adjectives",
+              "user": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved!",
+            "restart": true
           }
         } ]
       }

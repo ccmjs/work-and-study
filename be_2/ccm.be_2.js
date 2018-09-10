@@ -60,9 +60,10 @@
         ],
         "data": [ "ccm.store", "resources/datasets.js" ]
       },
-      "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-7.0.0.js",
-        [ "ccm.get", "https://ccmjs.github.io/akless-components/user/resources/configs.js", "guest" ]
-      ],
+      "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-7.1.0.js", {
+        "key": [ "ccm.get", "https://ccmjs.github.io/akless-components/user/resources/configs.js", "guest" ],
+        "logged_in": true
+      } ],
       "feedback": [ "ccm.component", "https://ccmjs.github.io/tkless-components/feedback/versions/ccm.feedback-2.0.0.js", {
         "from_above": "20%",
         "position": "right",
@@ -86,8 +87,8 @@
         "chart": [ "ccm.component", "https://ccmjs.github.io/akless-components/highchart/versions/ccm.highchart-1.0.0.js" ]
         }
       ],
-      "pdf_viewer": [ "ccm.component", "https://ccmjs.github.io/tkless-components/pdf_viewer/versions/ccm.pdf_viewer-2.1.0.js",
-        [ "ccm.get", { "store": "w2c_pdf_viewer", "url": "https://ccm.inf.h-brs.de" }, "1523213610248X5207819848055685" ]
+      "pdf_viewer": [ "ccm.instance", "https://ccmjs.github.io/tkless-components/pdf_viewer/versions/ccm.pdf_viewer-3.0.0.js",
+        [ "ccm.get", { "store": "w2c_pdf_viewer", "url": "https://ccm2.inf.h-brs.de" }, "1536573402491X9900399299697444" ]
       ]
       // "voting": [ "ccm.component", "https://ccmjs.github.io/tkless-components/thumb_rating/versions/ccm.thumb_rating-2.0.0.js", {
       //   "buttons": true,
@@ -146,6 +147,7 @@
         function setUpNavigation() {
           main.querySelector( "#header" ).innerHTML = my.navigation;
 
+
           [...main.querySelectorAll( '.navbar-nav  > li' )].map( li => {
             li.addEventListener( 'click', () => {
               [...main.querySelectorAll( '.navbar-nav  > li' )].map( li => {
@@ -166,7 +168,9 @@
 
           main.querySelector( "#script").addEventListener( 'click', () => {
             const div = getDiv();
-            my.pdf_viewer.start( { root: div }, () => {
+            debugger;
+            $.setContent( div, self.pdf_viewer.root );
+            self.pdf_viewer.start( () => {
               $.setContent( main.querySelector( "#article" ), div );
             } );
 
@@ -206,6 +210,7 @@
               } );
             } ); }
           } );
+          main.querySelector( "#sign-on" ).click();
         }
 
         function renderContent() {
