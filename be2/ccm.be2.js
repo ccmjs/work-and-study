@@ -152,12 +152,14 @@
           } );
 
           main.querySelector( ".navbar-toggle").addEventListener( 'click', () => {
-            main.querySelector( ".navbar-toggle" ).classList.toggle( 'collapsed' );
+            jQuery( main.querySelector( ".navbar-toggle" ) ).collapse('toggle');
             main.querySelector( ".navbar-collapse" ).classList.toggle( 'in' );
           } );
 
           main.querySelector( "#home").addEventListener( 'click', () => {
             renderContent();
+            //main.querySelector( ".navbar-toggle" ).classList.toggle( 'collapsed' );
+            main.querySelector( ".navbar-collapse" ).classList.toggle( 'in' );
           } );
 
           main.querySelector( "#script").addEventListener( 'click', () => {
