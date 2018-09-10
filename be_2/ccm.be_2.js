@@ -76,19 +76,19 @@
           "results": "Show Results",
           "gaps": "Gap Analysis"
         },
-        "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-7.0.0.js", [ "ccm.get", "https://ccmjs.github.io/akless-components/user/resources/configs.js", "guest" ] ],
+        "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-7.1.0.js", [ "ccm.get", "https://ccmjs.github.io/akless-components/user/resources/configs.js", "guest" ] ],
         "menu": [ "ccm.instance", "https://ccmjs.github.io/akless-components/menu/versions/ccm.menu-1.1.0.js", [ "ccm.get", "https://ccmjs.github.io/akless-components/menu/resources/configs.js", "bootstrap" ] ],
         "cloze": {
           "comp": [ "ccm.component", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js" ],
           "configs": [ "ccm.store", "https://ccmjs.github.io/akless-components/cloze/resources/configs.js" ],
-          "results": [ "ccm.store", { "url": "https://ccm2.inf.h-brs.de", "store": "cloze_results" } ]
+          "results": [ "ccm.store", { "url": "https://ccm2.inf.h-brs.de", "store": "be2_ws18_cloze_results" } ]
         },
         "table": [ "ccm.component", "https://ccmjs.github.io/tkless-components/table/ccm.table.js" ],
         "chart": [ "ccm.component", "https://ccmjs.github.io/akless-components/highchart/versions/ccm.highchart-1.0.0.js" ]
         }
       ],
       "pdf_viewer": [ "ccm.instance", "https://ccmjs.github.io/tkless-components/pdf_viewer/versions/ccm.pdf_viewer-3.0.0.js",
-        [ "ccm.get", { "store": "w2c_pdf_viewer", "url": "https://ccm2.inf.h-brs.de" }, "1536573402491X9900399299697444" ]
+        [ "ccm.get", { "store": "w2c_pdf_viewer", "url": "https://ccm2.inf.h-brs.de" }, "1536585034382X04756237908295757" ]
       ]
       // "voting": [ "ccm.component", "https://ccmjs.github.io/tkless-components/thumb_rating/versions/ccm.thumb_rating-2.0.0.js", {
       //   "buttons": true,
@@ -168,7 +168,6 @@
 
           main.querySelector( "#script").addEventListener( 'click', () => {
             const div = getDiv();
-            debugger;
             $.setContent( div, self.pdf_viewer.root );
             self.pdf_viewer.start( () => {
               $.setContent( main.querySelector( "#article" ), div );
@@ -244,7 +243,7 @@
 
         function getDiv() {
           const div = document.createElement( 'div' );
-          div.setAttribute( 'class', "container" );
+          div.setAttribute( 'id', "padding" );
 
           return div;
         }
