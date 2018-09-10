@@ -14,6 +14,11 @@ ccm.files[ 'datasets.js' ] = {
         "title": '<span class="fa fa-pencil-square-o"></span> Key Terminology of Entrepreneurship',
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1526550731302X4453331659613695" ],
+          "data": {
+            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
+            "key": "key_terminology_of_entrepreneurship",
+            "user": true
+          },
           "onfinish": {
             "login": true,
             "store": {
@@ -45,6 +50,11 @@ ccm.files[ 'datasets.js' ] = {
         "title": '<span class="fa fa-pencil-square-o"></span> Synonyms for “Business”',
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1518690906548X9893455548879022" ],
+          "data": {
+            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
+            "key": "key_terminology_of_entrepreneurship",
+            "user": true
+          },
           "onfinish": {
             "login": true,
             "store": {
@@ -76,6 +86,11 @@ ccm.files[ 'datasets.js' ] = {
         "title": '<span class="fa fa-pencil-square-o"></span> Personal Characteristics',
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1526644134616X8657631128304384" ],
+          "data": {
+            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
+            "key": "key_terminology_of_entrepreneurship",
+            "user": true
+          },
           "onfinish": {
             "login": true,
             "store": {
@@ -107,6 +122,11 @@ ccm.files[ 'datasets.js' ] = {
         "title": '<span class="fa fa-pencil-square-o"></span> Characteristics of Entrepreneurs',
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1526645829627X16013340042681" ],
+          "data": {
+            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
+            "key": "key_terminology_of_entrepreneurship",
+            "user": true
+          },
           "onfinish": {
             "login": true,
             "store": {
@@ -138,6 +158,11 @@ ccm.files[ 'datasets.js' ] = {
         "title": '<span class="fa fa-pencil-square-o"></span> Plagiarism Quiz',
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1526653091422X02273709883972974" ],
+          "data": {
+            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
+            "key": "key_terminology_of_entrepreneurship",
+            "user": true
+          },
           "onfinish": {
             "login": true,
             "store": {
@@ -169,6 +194,11 @@ ccm.files[ 'datasets.js' ] = {
         "title": '<span class="fa fa-pencil-square-o"></span> Copyright Quiz',
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1518691705125X42220549120432294" ],
+          "data": {
+            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
+            "key": "key_terminology_of_entrepreneurship",
+            "user": true
+          },
           "onfinish": {
             "login": true,
             "store": {
@@ -207,6 +237,11 @@ ccm.files[ 'datasets.js' ] = {
         "title": '<span class="fa fa-pencil-square-o"></span> LCA Terminology',
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1518692231862X6906233038090239" ],
+          "data": {
+            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
+            "key": "key_terminology_of_entrepreneurship",
+            "user": true
+          },
           "onfinish": {
             "login": true,
             "store": {
@@ -238,6 +273,11 @@ ccm.files[ 'datasets.js' ] = {
         "title": '<span class="fa fa-pencil-square-o"></span> Prepositions',
         "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
           "key": [ "ccm.get", { "store": "w2c_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1532619098174X18358119379539728" ],
+          "data": {
+            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
+            "key": "key_terminology_of_entrepreneurship",
+            "user": true
+          },
           "onfinish": {
             "login": true,
             "store": {

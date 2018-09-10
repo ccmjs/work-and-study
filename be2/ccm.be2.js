@@ -1,6 +1,6 @@
 /**
  * @overview ccm component for commenting
- * @author Tea Kless <tea.kless@web.de>, 2017
+ * @author Tea Kless <tea.kless@web.de>, 2018
  * @license The MIT License (MIT)
  */
 
@@ -8,7 +8,7 @@
 
   var component = {
 
-    name: 'be_2',
+    name: 'be2',
 
     ccm: 'https://ccmjs.github.io/ccm/versions/ccm-16.7.0.js',
 
