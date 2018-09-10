@@ -77,10 +77,10 @@
           "gaps": "Gap Analysis"
         },
         "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-7.1.0.js", [ "ccm.get", "https://ccmjs.github.io/akless-components/user/resources/configs.js", "guest" ] ],
-        "menu": [ "ccm.instance", "https://ccmjs.github.io/akless-components/menu/versions/ccm.menu-1.1.0.js", [ "ccm.get", "https://ccmjs.github.io/akless-components/menu/resources/configs.js", "bootstrap" ] ],
+        "menu": [ "ccm.instance", "https://ccmjs.github.io/akless-components/menu/versions/ccm.menu-1.2.1.js", [ "ccm.get", "https://ccmjs.github.io/akless-components/menu/resources/configs.js", "bootstrap" ] ],
         "cloze": {
           "comp": [ "ccm.component", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js" ],
-          "configs": [ "ccm.store", "https://ccmjs.github.io/akless-components/cloze/resources/configs.js" ],
+//        "configs": [ "ccm.store", { "url": "https://ccm2.inf.h-brs.de", "store": "w2c_cloze" } ],
           "results": [ "ccm.store", { "url": "https://ccm2.inf.h-brs.de", "store": "be2_ws18_cloze_results" } ]
         },
         "table": [ "ccm.component", "https://ccmjs.github.io/tkless-components/table/ccm.table.js" ],
