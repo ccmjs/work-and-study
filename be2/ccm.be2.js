@@ -152,17 +152,17 @@
           } );
 
           main.querySelector( ".navbar-toggle").addEventListener( 'click', () => {
-            jQuery( main.querySelector( ".navbar-toggle" ) ).collapse('toggle');
+            main.querySelector( ".navbar-toggle" ).classList.toggle( 'collapsed' );
             main.querySelector( ".navbar-collapse" ).classList.toggle( 'in' );
           } );
 
-          main.querySelector( "#home").addEventListener( 'click', () => {
+          main.querySelector( "#home").addEventListener( 'click', ()  => {
+            main.querySelector( ".navbar-toggle").click();
             renderContent();
-            //main.querySelector( ".navbar-toggle" ).classList.toggle( 'collapsed' );
-            main.querySelector( ".navbar-collapse" ).classList.toggle( 'in' );
           } );
 
           main.querySelector( "#script").addEventListener( 'click', () => {
+            main.querySelector( ".navbar-toggle").click();
             const div = getDiv();
             $.setContent( div, self.pdf_viewer.root );
             self.pdf_viewer.start( () => {
@@ -171,6 +171,7 @@
           } );
 
           main.querySelector( "#stat" ).addEventListener( 'click', () => {
+            main.querySelector( ".navbar-toggle").click();
             if ( self.user ) {
               self.user.login( proceed );
             }
@@ -185,6 +186,7 @@
           } );
 
           main.querySelector( "#help" ).addEventListener( 'click', () => {
+            main.querySelector( ".navbar-toggle").click();
             main.querySelector( '#article' ).innerHTML = my.help;
           } );
 
