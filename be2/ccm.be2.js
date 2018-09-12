@@ -84,7 +84,7 @@
 //        "configs": [ "ccm.store", { "url": "https://ccm2.inf.h-brs.de", "store": "w2c_cloze" } ],
           "results": [ "ccm.store", { "url": "https://ccm2.inf.h-brs.de", "store": "be2_ws18_cloze_results" } ]
         },
-        "table": [ "ccm.component", "https://ccmjs.github.io/tkless-components/table/ccm.table.js" ],
+        "table": [ "ccm.component", "https://ccmjs.github.io/tkless-components/table/versions/ccm.table-1.0.0.js" ],
         "chart": [ "ccm.component", "https://ccmjs.github.io/akless-components/highchart/versions/ccm.highchart-1.0.0.js" ]
         }
       ],
