@@ -61,16 +61,11 @@
         "data": [ "ccm.store", "resources/datasets.js" ]
       },
       "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-7.1.0.js", {
-        "key": [ "ccm.get", "https://ccmjs.github.io/akless-components/user/resources/configs.js", "guest" ],
+        "realm": "guest",
+        "title": "Please enter the username you're given in class.",
         "logged_in": true,
         "no_password": true
       } ],
-      "feedback": [ "ccm.component", "https://ccmjs.github.io/tkless-components/feedback/versions/ccm.feedback-2.0.0.js", {
-        "from_above": "20%",
-        "position": "right",
-        "data": { "store": [ "ccm.store", { "store": "feedback", "url": "https://ccm2.inf.h-brs.de" } ], "key": "be2_ws18_feedback" },
-        }
-      ],
       "analytics": [ "ccm.component", "https://ccmjs.github.io/akless-components/cloze_analytics/versions/ccm.cloze_analytics-1.3.0.js",
         {
         "sections": {
@@ -132,7 +127,7 @@
 
         renderContent();
 
-          renderFeedback();
+        renderFeedback();
 
         $.setContent( self.element, main );
 
@@ -235,7 +230,14 @@
         }
 
         function renderFeedback() {
-          my.feedback.start( { root: main.querySelector( '#feedback' ) } );
+          self.ccm.load( "https://ccmjs.github.io/ccm/versions/ccm-18.0.0.js", () => {
+            window.ccm[ '18.0.0' ].start( "https://ccmjs.github.io/tkless-components/feedback/versions/ccm.feedback-3.0.0.js", {
+              "root": main.querySelector( '#feedback' ),
+              "from_above": "20%",
+              "css": [ "ccm.load", "https://ccmjs.github.io/tkless-components/feedback/resources/right.css" ],
+              "data": { "store": [ "ccm.store", { "store": "feedback", "url": "https://ccm2.inf.h-brs.de" } ], "key": "be2_ws18_feedback" },
+            } );
+          } );
         }
 
         function getDiv() {

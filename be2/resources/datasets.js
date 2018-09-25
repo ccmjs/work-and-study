@@ -40,8 +40,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       },
@@ -75,8 +74,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       },
@@ -110,8 +108,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       },
@@ -145,8 +142,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       },
@@ -180,8 +176,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       },
@@ -215,8 +210,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       }
@@ -257,7 +251,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
+            "alert": "Saved for your student analytics!",
             "restart": true
           }
         } ]
@@ -292,8 +286,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       },
@@ -327,8 +320,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       },
@@ -362,8 +354,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       }
@@ -404,8 +395,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       },
@@ -439,8 +429,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       },
@@ -474,8 +463,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       },
@@ -509,8 +497,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       },
@@ -544,8 +531,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       },
@@ -579,8 +565,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       }
@@ -621,8 +606,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       },
@@ -656,8 +640,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       }
@@ -698,8 +681,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       },
@@ -733,8 +715,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       }
@@ -775,8 +756,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       },
@@ -810,8 +790,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       },
@@ -845,8 +824,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       },
@@ -880,8 +858,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       }
@@ -922,8 +899,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       },
@@ -957,8 +933,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       },
@@ -992,8 +967,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       },
@@ -1027,8 +1001,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       },
@@ -1062,8 +1035,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       },
@@ -1097,8 +1069,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       },
@@ -1132,8 +1103,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       },
@@ -1167,8 +1137,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       },
@@ -1202,8 +1171,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       },
@@ -1237,8 +1205,7 @@ ccm.files[ 'datasets.js' ] = {
                }
              }
            },
-           "alert": "Saved!",
-           "restart": true
+           "alert": "Saved for your student analytics!"
          }
        } ]
       },
@@ -1272,8 +1239,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       }
@@ -1314,8 +1280,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       },
@@ -1349,8 +1314,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       },
@@ -1384,8 +1348,7 @@ ccm.files[ 'datasets.js' ] = {
                 }
               }
             },
-            "alert": "Saved!",
-            "restart": true
+            "alert": "Saved for your student analytics!"
           }
         } ]
       }
