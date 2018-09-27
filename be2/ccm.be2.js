@@ -85,7 +85,13 @@
       ],
       "pdf_viewer": [ "ccm.instance", "https://ccmjs.github.io/tkless-components/pdf_viewer/versions/ccm.pdf_viewer-3.0.0.js",
         [ "ccm.get", { "store": "w2c_pdf_viewer", "url": "https://ccm2.inf.h-brs.de" }, "1536585034382X04756237908295757" ]
-      ]
+      ],
+      "accordion": [ "ccm.component", "https://ccmjs.github.io/tkless-components/accordion/versions/ccm.accordion-1.0.0.js", {
+        style: [ "ccm.load","resources/accordion.css" ],
+        size: 'md',
+        color: 'info',
+        entries: [ "ccm.load", "resources/accordion_data.js"]
+      } ],
     },
 
     Instance: function () {
@@ -136,7 +142,6 @@
         function setUpNavigation() {
           main.querySelector( "#header" ).innerHTML = my.navigation;
 
-
           [...main.querySelectorAll( '.navbar-nav  > li' )].map( li => {
             li.addEventListener( 'click', () => {
               [...main.querySelectorAll( '.navbar-nav  > li' )].map( li => {
@@ -182,7 +187,17 @@
 
           main.querySelector( "#help" ).addEventListener( 'click', () => {
             main.querySelector( ".navbar-toggle").click();
-            main.querySelector( '#article' ).innerHTML = my.help;
+
+            $.setContent( main.querySelector( "#article" ), $.html(
+              '<div class="container">' +
+              '  <div class="page-header">' +
+              '    <h3>About this app <small>Infos and how to</small></h3>' +
+              '  </div><br>'+
+              '<div id="accordion"></div>'+
+              '</div>'
+            ) );
+
+            my.accordion.start( { root: main.querySelector( "#accordion" ) } );
           } );
 
           main.querySelector( "#sign-on" ).addEventListener( 'click', () => {
