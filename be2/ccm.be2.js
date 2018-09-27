@@ -48,7 +48,6 @@
       "js": [ "ccm.load", [ "https://ccmjs.github.io/tkless-components/libs/jquery/jquery.min.js",
         "https://ccmjs.github.io/tkless-components/libs/bootstrap/js/bootstrap.min.js" ] ],
       "navigation": [ "ccm.load", "resources/navigation.html"],
-      "help": [ "ccm.load", "resources/help.html"],
       "menu": {
         "comp": [ "ccm.component", "https://ccmjs.github.io/akless-components/menu/versions/ccm.menu-1.2.1.js",
           {
