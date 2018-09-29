@@ -62,7 +62,7 @@
       },
       "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-7.1.0.js", {
         "key": [ "ccm.get", "https://ccmjs.github.io/akless-components/user/resources/configs.js", "guest" ],
-        "logged_in": true,
+        "logged_in": false,
         "no_password": true
       } ],
       "feedback": [ "ccm.component", "https://ccmjs.github.io/tkless-components/feedback/versions/ccm.feedback-2.0.0.js", {
@@ -88,9 +88,13 @@
         "chart": [ "ccm.component", "https://ccmjs.github.io/akless-components/highchart/versions/ccm.highchart-1.0.0.js" ]
         }
       ],
-      "pdf_viewer": [ "ccm.instance", "https://ccmjs.github.io/tkless-components/pdf_viewer/versions/ccm.pdf_viewer-3.0.0.js",
-        [ "ccm.get", { "store": "w2c_pdf_viewer", "url": "https://ccm2.inf.h-brs.de" }, "1536585034382X04756237908295757" ]
-      ]
+      "pdf_viewer": {
+        "comp": [ "ccm.component", "https://ccmjs.github.io/tkless-components/pdf_viewer/versions/ccm.pdf_viewer-3.0.0.js" ],
+        "config": {
+          "store": { "store": "w2c_pdf_viewer", "url": "https://ccm2.inf.h-brs.de" },
+          "key": "1536585034382X04756237908295757"
+        }
+      }
     },
 
     Instance: function () {
@@ -113,6 +117,7 @@
       let $;
 
       this.ready = callback => {
+
         // set shortcut to help functions
         $ = self.ccm.helper;
 
@@ -132,7 +137,7 @@
 
         renderContent();
 
-          renderFeedback();
+        renderFeedback();
 
         $.setContent( self.element, main );
 
@@ -163,10 +168,13 @@
 
           main.querySelector( "#script").addEventListener( 'click', () => {
             main.querySelector( ".navbar-toggle").click();
+            $.setContent( main.querySelector( "#article" ), $.loading( self ) );
             const div = getDiv();
-            $.setContent( div, self.pdf_viewer.root );
-            self.pdf_viewer.start( () => {
-              $.setContent( main.querySelector( "#article" ), div );
+            self.ccm.get( my.pdf_viewer.config.store, my.pdf_viewer.config.key, pdf_viewer_config => {
+              my.pdf_viewer.comp.start( pdf_viewer_config, pdf_viewer_instance => {
+                $.setContent( div, pdf_viewer_instance.root );
+                $.setContent( main.querySelector( "#article" ), div );
+              } );
             } );
           } );
 
