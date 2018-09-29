@@ -48,7 +48,6 @@
       "js": [ "ccm.load", [ "https://ccmjs.github.io/tkless-components/libs/jquery/jquery.min.js",
         "https://ccmjs.github.io/tkless-components/libs/bootstrap/js/bootstrap.min.js" ] ],
       "navigation": [ "ccm.load", "resources/navigation.html"],
-      "help": [ "ccm.load", "resources/help.html"],
       "menu": {
         "comp": [ "ccm.component", "https://ccmjs.github.io/akless-components/menu/versions/ccm.menu-1.2.1.js",
           {
@@ -61,16 +60,11 @@
         "data": [ "ccm.store", "resources/datasets.js" ]
       },
       "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-7.1.0.js", {
-        "key": [ "ccm.get", "https://ccmjs.github.io/akless-components/user/resources/configs.js", "guest" ],
+        "realm": "guest",
+        "title": "Please enter the username you're given in class.",
         "logged_in": false,
         "no_password": true
       } ],
-      "feedback": [ "ccm.component", "https://ccmjs.github.io/tkless-components/feedback/versions/ccm.feedback-2.0.0.js", {
-        "from_above": "20%",
-        "position": "right",
-        "data": { "store": [ "ccm.store", { "store": "feedback", "url": "https://ccm2.inf.h-brs.de" } ], "key": "be2_ws18_feedback" },
-        }
-      ],
       "analytics": [ "ccm.component", "https://ccmjs.github.io/akless-components/cloze_analytics/versions/ccm.cloze_analytics-1.3.0.js",
         {
         "sections": {
@@ -94,7 +88,13 @@
           "store": { "store": "w2c_pdf_viewer", "url": "https://ccm2.inf.h-brs.de" },
           "key": "1536585034382X04756237908295757"
         }
-      }
+      },
+      "accordion": [ "ccm.component", "https://ccmjs.github.io/tkless-components/accordion/versions/ccm.accordion-1.0.0.js", {
+        style: [ "ccm.load","resources/accordion.css" ],
+        size: 'md',
+        color: 'info',
+        entries: [ "ccm.load", "resources/accordion_data.js"]
+      } ]
     },
 
     Instance: function () {
@@ -146,7 +146,6 @@
         function setUpNavigation() {
           main.querySelector( "#header" ).innerHTML = my.navigation;
 
-
           [...main.querySelectorAll( '.navbar-nav  > li' )].map( li => {
             li.addEventListener( 'click', () => {
               [...main.querySelectorAll( '.navbar-nav  > li' )].map( li => {
@@ -195,7 +194,17 @@
 
           main.querySelector( "#help" ).addEventListener( 'click', () => {
             main.querySelector( ".navbar-toggle").click();
-            main.querySelector( '#article' ).innerHTML = my.help;
+
+            $.setContent( main.querySelector( "#article" ), $.html(
+              '<div class="container">' +
+              '  <div class="page-header">' +
+              '    <h3>About this app <small>Infos and how to</small></h3>' +
+              '  </div><br>'+
+              '<div id="accordion"></div>'+
+              '</div>'
+            ) );
+
+            my.accordion.start( { root: main.querySelector( "#accordion" ) } );
           } );
 
           main.querySelector( "#sign-on" ).addEventListener( 'click', () => {
@@ -243,7 +252,14 @@
         }
 
         function renderFeedback() {
-          my.feedback.start( { root: main.querySelector( '#feedback' ) } );
+          self.ccm.load( "https://ccmjs.github.io/ccm/versions/ccm-18.0.0.js", () => {
+            window.ccm[ '18.0.0' ].start( "https://ccmjs.github.io/tkless-components/feedback/versions/ccm.feedback-3.0.0.js", {
+              "root": main.querySelector( '#feedback' ),
+              "from_above": "20%",
+              "css": [ "ccm.load", "https://ccmjs.github.io/tkless-components/feedback/resources/right.css" ],
+              "data": { "store": [ "ccm.store", { "store": "feedback", "url": "https://ccm2.inf.h-brs.de" } ], "key": "be2_ws18_feedback" },
+            } );
+          } );
         }
 
         function getDiv() {
