@@ -1,6 +1,7 @@
 /**
- * @overview ccm component for commenting
- * @author Tea Kless <tea.kless@web.de>, 2018
+ * @overview ccm component for business english app
+ * @author Tea Kless <tea.kless@web.de> 2018
+ * @author André Kless <andre.kless@web.de> 2018
  * @license The MIT License (MIT)
  */
 
@@ -49,24 +50,73 @@
         "https://ccmjs.github.io/tkless-components/libs/bootstrap/js/bootstrap.min.js" ] ],
       "navigation": [ "ccm.load", "resources/navigation.html"],
       "menu": {
-        "comp": [ "ccm.component", "https://ccmjs.github.io/akless-components/menu/versions/ccm.menu-1.2.1.js",
-          {
-            "css": [ "ccm.load",
-              { "context": "head", "url": "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" },
-              "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css",
-              "resources/menu.css" ],
-          }
-        ],
+        "comp": [ "ccm.component", "https://ccmjs.github.io/akless-components/menu/versions/ccm.menu-1.2.1.js", {
+          "css": [ "ccm.load",
+            { "context": "head", "url": "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" },
+            "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css",
+            "resources/menu.css"
+          ],
+          "logger": [ "ccm.instance", "https://ccmjs.github.io/akless-components/log/versions/ccm.log-3.1.0.js", {
+            "events": {
+              "click": {
+                "data": true,
+                "user": true
+              }
+            },
+            "onfinish": {
+              "store": {
+                "settings": { "store": "be2_ws1819_menu_log", "url": "https://ccm2.inf.h-brs.de" },
+                "permissions": {
+                  "creator": "akless2m",
+                  "realm": "hbrsinfkaul",
+                  "access": {
+                    "get": "all",
+                    "set": "creator",
+                    "del": "creator"
+                  }
+                }
+              }
+            }
+          } ]
+        } ],
         "data": [ "ccm.store", "resources/datasets.js" ]
       },
       "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-7.1.0.js", {
         "realm": "guest",
         "title": "Please enter the username you're given in class.",
         "logged_in": false,
-        "no_password": true
+        "no_password": true,
+        "logger": [ "ccm.instance", "https://ccmjs.github.io/akless-components/log/versions/ccm.log-3.1.0.js", {
+          "events": {
+            "ready": {
+              "browser": true,
+              "parent": true,
+              "root": true,
+              "user": true,
+              "website": true
+            },
+            "login": {
+              "user": true
+            },
+            "logout": {}
+          },
+          "onfinish": {
+            "store": {
+              "settings": { "store": "be2_ws1819_user_log", "url": "https://ccm2.inf.h-brs.de" },
+              "permissions": {
+                "creator": "akless2m",
+                "realm": "hbrsinfkaul",
+                "access": {
+                  "get": "all",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            }
+          }
+        } ]
       } ],
-      "analytics": [ "ccm.component", "https://ccmjs.github.io/akless-components/cloze_analytics/versions/ccm.cloze_analytics-1.3.0.js",
-        {
+      "analytics": [ "ccm.component", "https://ccmjs.github.io/akless-components/cloze_analytics/versions/ccm.cloze_analytics-1.3.0.js", {
         "sections": {
           "results": "Show Results",
           "gaps": "Gap Analysis"
@@ -79,25 +129,101 @@
           "results": [ "ccm.store", { "url": "https://ccm2.inf.h-brs.de", "store": "be2_ws18_cloze_results" } ]
         },
         "table": [ "ccm.component", "https://ccmjs.github.io/tkless-components/table/versions/ccm.table-1.0.0.js" ],
-        "chart": [ "ccm.component", "https://ccmjs.github.io/akless-components/highchart/versions/ccm.highchart-1.0.0.js" ]
-        }
-      ],
+        "chart": [ "ccm.component", "https://ccmjs.github.io/akless-components/highchart/versions/ccm.highchart-1.0.0.js" ],
+        "logger": [ "ccm.instance", "https://ccmjs.github.io/akless-components/log/versions/ccm.log-3.1.0.js", {
+          "events": {
+            "start": {
+              "user": true
+            }
+          },
+          "onfinish": {
+            "store": {
+              "settings": { "store": "be2_ws1819_analytics_log", "url": "https://ccm2.inf.h-brs.de" },
+              "permissions": {
+                "creator": "akless2m",
+                "realm": "hbrsinfkaul",
+                "access": {
+                  "get": "all",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            }
+          }
+        } ]
+      } ],
       "pdf_viewer": {
-        "comp": [ "ccm.component", "https://ccmjs.github.io/tkless-components/pdf_viewer/versions/ccm.pdf_viewer-3.0.0.js" ],
+        "comp": [ "ccm.component", "https://ccmjs.github.io/tkless-components/pdf_viewer/versions/ccm.pdf_viewer-3.0.0.js", {
+          "logger": [ "ccm.instance", "https://ccmjs.github.io/akless-components/log/versions/ccm.log-3.1.0.js", {
+            "events": {
+              "start": {
+                "user": true
+              },
+              "prev": {
+                "data": true,
+                "user": true
+              },
+              "next": {
+                "data": true,
+                "user": true
+              },
+              "goto": {
+                "data": true,
+                "user": true
+              }
+            },
+            "onfinish": {
+              "store": {
+                "settings": { "store": "be2_ws1819_pdf_viewer_log", "url": "https://ccm2.inf.h-brs.de" },
+                "permissions": {
+                  "creator": "akless2m",
+                  "realm": "hbrsinfkaul",
+                  "access": {
+                    "get": "all",
+                    "set": "creator",
+                    "del": "creator"
+                  }
+                }
+              }
+            }
+          } ]
+        } ],
         "config": {
           "store": { "store": "w2c_pdf_viewer", "url": "https://ccm2.inf.h-brs.de" },
           "key": "1536585034382X04756237908295757"
         }
       },
       "accordion": [ "ccm.component", "https://ccmjs.github.io/tkless-components/accordion/versions/ccm.accordion-1.0.0.js", {
-        style: [ "ccm.load","resources/accordion.css" ],
-        size: 'md',
-        color: 'info',
-        entries: [ "ccm.load", "resources/accordion_data.js"]
+        "style": [ "ccm.load","resources/accordion.css" ],
+        "size": "md",
+        "color": "info",
+        "entries": [ "ccm.load", "resources/accordion_data.js" ],
+        "logger": [ "ccm.instance", "https://ccmjs.github.io/akless-components/log/versions/ccm.log-3.1.0.js", {
+          "events": {
+            "ready": {
+              "user": true
+            }
+          },
+          "onfinish": {
+            "store": {
+              "settings": { "store": "be2_ws1819_accordion_log", "url": "https://ccm2.inf.h-brs.de" },
+              "permissions": {
+                "creator": "akless2m",
+                "realm": "hbrsinfkaul",
+                "access": {
+                  "get": "all",
+                  "set": "creator",
+                  "del": "creator"
+                }
+              }
+            }
+          }
+        } ]
       } ]
     },
 
     Instance: function () {
+
       /**
        * own reference for inner functions
        * @type {Instance}
@@ -124,12 +250,16 @@
         // privatize all possible instance members
         my = $.privatize( self );
 
-        if ( self.logger ) self.logger.log( 'ready', my );
+        // logging of 'ready' event
+        self.logger && self.logger.log( 'ready', $.clone( my ) );
 
         callback();
       };
 
       this.start = callback => {
+
+        // logging of 'start' event
+        self.logger && self.logger.log( 'start', $.clone( my ) );
 
         let main = $.html( my.html.main );
 
@@ -144,29 +274,30 @@
         callback && callback();
 
         function setUpNavigation() {
+
           main.querySelector( "#header" ).innerHTML = my.navigation;
 
-          [...main.querySelectorAll( '.navbar-nav  > li' )].map( li => {
+          [ ...main.querySelectorAll( '.navbar-nav  > li' ) ].map( li => {
             li.addEventListener( 'click', () => {
-              [...main.querySelectorAll( '.navbar-nav  > li' )].map( li => {
+              [ ...main.querySelectorAll( '.navbar-nav  > li' ) ].map( li => {
                 li.classList.remove( 'active' );
               } );
               li.classList.add( 'active' );
             } );
           } );
 
-          main.querySelector( ".navbar-toggle").addEventListener( 'click', () => {
+          main.querySelector( ".navbar-toggle" ).addEventListener( 'click', () => {
             main.querySelector( ".navbar-toggle" ).classList.toggle( 'collapsed' );
             main.querySelector( ".navbar-collapse" ).classList.toggle( 'in' );
           } );
 
-          main.querySelector( "#home").addEventListener( 'click', ()  => {
+          main.querySelector( "#home" ).addEventListener( 'click', ()  => {
             main.querySelector( ".navbar-toggle").click();
             renderContent();
           } );
 
-          main.querySelector( "#script").addEventListener( 'click', () => {
-            main.querySelector( ".navbar-toggle").click();
+          main.querySelector( "#script" ).addEventListener( 'click', () => {
+            main.querySelector( ".navbar-toggle" ).click();
             $.setContent( main.querySelector( "#article" ), $.loading( self ) );
             const div = getDiv();
             self.ccm.get( my.pdf_viewer.config.store, my.pdf_viewer.config.key, pdf_viewer_config => {
