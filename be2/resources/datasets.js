@@ -1,5 +1,5 @@
 /**
- * @overview datasets of ccm.be_2 app
+ * @overview datasets of ccm component for business english app
  * @author Tea Kless <tea.kless@web.de> 2018
  * @license The MIT License (MIT)
  */
