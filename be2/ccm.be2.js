@@ -384,7 +384,7 @@
 
         function renderFeedback() {
           self.ccm.load( "https://ccmjs.github.io/ccm/versions/ccm-18.0.0.js", () => {
-            window.ccm[ '18.0.0' ].start( "https://ccmjs.github.io/tkless-components/feedback/versions/ccm.feedback-3.0.0.js", {
+            window.ccm[ '18.0.0' ].start( "https://ccmjs.github.io/tkless-components/feedback/versions/ccm.feedback-4.0.0.js", {
               "root": main.querySelector( '#feedback' ),
               "from_above": "20%",
               "css": [ "ccm.load", "https://ccmjs.github.io/tkless-components/feedback/resources/right.css" ],
