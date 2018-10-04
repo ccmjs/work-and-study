@@ -388,7 +388,7 @@
               "root": main.querySelector( '#feedback' ),
               "from_above": "20%",
               "css": [ "ccm.load", "https://ccmjs.github.io/tkless-components/feedback/resources/right.css" ],
-              "data": { "store": [ "ccm.store", { "store": "feedback", "url": "https://ccm2.inf.h-brs.de" } ], "key": "be2_ws18_feedback" },
+              "data": { "store": [ "ccm.store", { "name": "feedback", "url": "https://ccm2.inf.h-brs.de" } ], "key": "be2_ws1819_feedback" }
             } );
           } );
         }
