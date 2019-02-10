@@ -2,7 +2,7 @@
  * @overview ccm component for business english app
  * @author Tea Kless <tea.kless@web.de> 2018
  * @author André Kless <andre.kless@web.de> 2018
- * @license The MIT License (MIT)
+ * @copyright © 2018 work&study - All Rights reserved.
  */
 
 {
