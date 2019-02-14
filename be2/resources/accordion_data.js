@@ -111,7 +111,7 @@ ccm.files[ 'accordion_data.js' ] = [
     },
     {
       "title": "4. Who do I turn to when I experience trouble using the app?",
-      "content": "You can contact our student assistant, <a href='mailto:hannah.petrik.hbrs@gmx.de?subject=BE%20App&bcc=tea.kless@h-brs.de'>Hannah Petrik (hannah.petrik.hbrs@gmx.de)</a> via e-mail if you have " +
+      "content": "You can contact our student assistant, <a href='mailto:debbie.mueller.hbrs@gmx.de?subject=BE%20App&bcc=tea.kless@h-brs.de'>Debbie Müller (debbie.mueller.hbrs@gmx.de)</a> via e-mail if you have " +
       "any problems using the app. We would also appreciate it if you would use the feedback button within the app if you " +
       "notice any inconsistencies."
     },
