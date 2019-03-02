@@ -1,0 +1,41 @@
+#element {
+  margin: 0;
+}
+
+#header, #footer {
+  height: 50px;
+}
+
+#nav {
+  border-bottom: 1px solid #eee;
+}
+
+#sign-on, #sign-out{
+  margin-right: 15px;
+}
+
+#section {
+  background-color: #009ee0;
+  color: #fff;
+  padding: 0.7em 1em;
+  font-size: 1.4em;
+}
+
+#padding {
+  padding: 2rem;
+}
+
+li a {
+  text-decoration: none;
+}
+
+.fas {
+  font-size: 1.5rem;
+  color: #777;
+}
+
+.fas:hover {
+  color: #333;
+  text-decoration: none;
+}
+
