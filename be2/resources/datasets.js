@@ -19,44 +19,6 @@ ccm.files[ 'datasets.js' ] = {
             "key": "key_terminology_of_entrepreneurship",
             "user": true
           },
-          "logger": [ "ccm.instance", "https://ccmjs.github.io/akless-components/log/versions/ccm.log-3.1.0.js", {
-            "events": {
-              "start": {
-                "data": true,
-                "user": true
-              },
-              "change": {
-                "data": true,
-                "user": true
-              },
-              "feedback": {
-                "data": true,
-                "user": true
-              },
-              "retry": {
-                "data": true,
-                "user": true
-              },
-              "finish": {
-                "data": true,
-                "user": true
-              }
-            },
-            "onfinish": {
-              "store": {
-                "settings": { "store": "be2_ws1819_pdf_viewer_log", "url": "https://ccm2.inf.h-brs.de" },
-                "permissions": {
-                  "creator": "akless2m",
-                  "realm": "hbrsinfkaul",
-                  "access": {
-                    "get": "all",
-                    "set": "creator",
-                    "del": "creator"
-                  }
-                }
-              }
-            }
-          } ],
           "onfinish": {
             "login": true,
             "store": {
