@@ -172,7 +172,7 @@
             },
             "onfinish": {
               "store": {
-                "settings": { "store": "be2_ws1819_pdf_viewer_log", "url": "https://ccm2.inf.h-brs.de" },
+                "settings": { "store": "be2_SoSe19_pdf_viewer_log", "url": "https://ccm2.inf.h-brs.de" },
                 "permissions": {
                   "creator": "akless2m",
                   "realm": "hbrsinfkaul",
@@ -186,10 +186,7 @@
             }
           } ]
         } ],
-        "config": {
-          "store": { "store": "w2c_pdf_viewer", "url": "https://ccm2.inf.h-brs.de" },
-          "key": "1536585034382X04756237908295757"
-        }
+        "ignore": [ "ccm.get", { "name": "w&s_pdf_viewer", url: "https://ccm2.inf.h-brs.de" }, "1536585034382X04756237908295757" ]
       },
       "accordion": [ "ccm.component", "https://ccmjs.github.io/tkless-components/accordion/versions/ccm.accordion-2.1.0.js", {
         "style": [ "ccm.load","resources/accordion.css" ],
@@ -221,7 +218,7 @@
       "feedback": [ "ccm.component", "https://ccmjs.github.io/tkless-components/feedback/versions/ccm.feedback-4.0.0.js", {
         "from_above": 20,
         "css": [ "ccm.load", "https://ccmjs.github.io/tkless-components/feedback/resources/right.css" ],
-        "data": { "store": [ "ccm.store", { "name": "feedback", "url": "https://ccm2.inf.h-brs.de" } ], "key": "be2_ws1819_feedback" }
+        "data": { "store": [ "ccm.store", { "name": "feedback", "url": "https://ccm2.inf.h-brs.de" } ], "key": "be2_SoSe19_feedback" }
       } ]
     },
 
@@ -276,71 +273,40 @@
         function setUpNavigation() {
 
           $.setContent( main.querySelector( "#header" ), my.navigation );
-
-          [ ...main.querySelectorAll( '.navbar-nav  > li' ) ].map( li => {
-            li.addEventListener( 'click', () => {
-              [ ...main.querySelectorAll( '.navbar-nav  > li' ) ].map( li => {
-                li.classList.remove( 'active' );
-              } );
-              li.classList.add( 'active' );
-            } );
-          } );
-
           main.querySelector( ".navbar-toggler" ).addEventListener( 'click', () => {
             main.querySelector( "nav button").toggleAttribute("aria-expanded");
             main.querySelector( ".navbar-toggler" ).classList.toggle( 'collapsed' );
             main.querySelector( ".navbar-collapse" ).classList.toggle( 'show' );
           } );
 
-          main.querySelector( "#home" ).addEventListener( 'click', ()  => {
-            main.querySelector( ".navbar-toggler").click();
-            renderContent();
-          } );
-
-          main.querySelector( "#script" ).addEventListener( 'click', () => {
-            main.querySelector( ".navbar-toggler" ).click();
-            $.setContent( main.querySelector( "#article" ), $.loading( self ) );
-            const div = getDiv();
-            self.ccm.get( my.pdf_viewer.config.store, my.pdf_viewer.config.key, pdf_viewer_config => {
-              my.pdf_viewer.comp.start( pdf_viewer_config, pdf_viewer_instance => {
-                $.setContent( div, pdf_viewer_instance.root );
-                $.setContent( main.querySelector( "#article" ), div );
+          main.querySelectorAll( '.navbar-nav  > .nav-item' ).forEach( li => {
+            li.addEventListener( 'click', async () => {
+              main.querySelectorAll( '.nav-item' ).forEach( li => {
+                li.classList.remove( 'active' );
               } );
+
+              switch (li.id) {
+                case 'home':
+                  await renderContent();
+                  break;
+                case 'script':
+                  await renderScript();
+                  break;
+                case 'stat':
+                  await renderAnalytics();
+                  break;
+                case 'info':
+                  await renderInfo();
+                  break;
+              }
+
+
             } );
           } );
 
-          main.querySelector( "#stat" ).addEventListener( 'click', () => {
-            main.querySelector( ".navbar-toggler").click();
+          main.querySelector( "#sign-on" ).addEventListener( 'click', async () => {
             if ( self.user ) {
-              self.user.login( proceed );
-            }
-            else proceed();
-
-            function proceed() {
-              const div = getDiv();
-              my.analytics.start( { root: div }, () => {
-                $.setContent( main.querySelector( "#article" ), div );
-              } );
-            }
-          } );
-
-          main.querySelector( "#help" ).addEventListener( 'click', () => {
-            main.querySelector( ".navbar-toggler").click();
-
-            $.setContent( main.querySelector( "#article" ), $.html(
-              '<div class="container">' +
-              '  <div class="page-header">' +
-              '    <h3>About this app <small>Infos and how to</small></h3>' +
-              '  </div><br>'+
-              '<div id="accordion"></div>'+
-              '</div>'
-            ) );
-
-            my.accordion.start( { root: main.querySelector( "#accordion" ) } );
-          } );
-
-          main.querySelector( "#sign-on" ).addEventListener( 'click', () => {
-            if ( self.user ) { self.user.login( () => {
+              await self.user.login();
               main.querySelector( '#username' ).innerHTML = "<span class='glyphicon glyphicon-user'></span> "+ self.user.data().user;
               main.querySelector( '#sign-on' ).style.display = "none";
               const sign_out = main.querySelector( '#sign-out' );
@@ -353,7 +319,7 @@
                   main.querySelector( '#sign-out' ).style.display = "none";
                 });
               } );
-            } ); }
+            }
           } );
           main.querySelector( "#sign-on" ).click();
         }
@@ -396,6 +362,39 @@
 
         async function renderFeedback() {
           await my.feedback.start({ root: main.querySelector( '#feedback' ) });
+        }
+
+        async function renderScript() {
+          const div = getDiv();
+          div.innerHTML = "This menu item is not available.";
+          $.setContent( main.querySelector( "#article" ), div );
+
+          //$.setContent( main.querySelector( "#article" ), $.loading( self ) );
+          //const div = getDiv();
+          //await my.pdf_viewer.comp.start( { root: div, pdf: my.pdf_viewer.ignore } );
+          //$.setContent( main.querySelector( "#article" ), div );
+        }
+
+        async function renderAnalytics() {
+          const div = getDiv();
+          div.innerHTML = "This menu item is not available.";
+          //await my.analytics.start( { root: div } );
+          $.setContent( main.querySelector( "#article" ), div );
+        }
+
+        async function renderInfo() {
+          const div = getDiv();
+          $.setContent( div,  $.html(
+            '<div class="container">' +
+            ' <div class="mb-2 border-bottom">' +
+            '    <h3 class="text-muted">About this app <small>Infos and how to</small></h3>' +
+            '  </div><br>'+
+            ' <div id="accordion"></div>'+
+            '</div>'
+          ) );
+          $.setContent( main.querySelector( "#article" ), div );
+
+          await my.accordion.start( { root: main.querySelector( "#accordion" ) } );
         }
 
         function getDiv() {
