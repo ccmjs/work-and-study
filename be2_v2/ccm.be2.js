@@ -51,11 +51,7 @@
       "navigation": [ "ccm.load", { "url": "resources/navigation.html", "type": "data" } ],
       "menu": {
         "comp": [ "ccm.component", "https://ccmjs.github.io/akless-components/menu/versions/ccm.menu-2.4.4.js", {
-          "css": [ "ccm.load",
-            { "context": "head", "url": "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" },
-            "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css",
-            "resources/menu.css"
-          ],
+          "css": [ "ccm.load", "resources/menu.css" ],
           "logger": [ "ccm.instance", "https://ccmjs.github.io/akless-components/log/versions/ccm.log-4.0.2.js", {
             "events": {
               "click": {
@@ -79,9 +75,7 @@
             }
           } ]
         } ],
-        "data": [ "ccm.store", "resources/datasets.js" ],
-        "css": [ "ccm.load", "https://use.fontawesome.com/releases/v5.6.3/css/all.css",
-          { "context": "head", "url": "https://use.fontawesome.com/releases/v5.6.3/css/all.css" },]
+        "data": [ "ccm.store", "resources/datasets.js" ]
       },
       "cloze": {
         "comp": [ "ccm.component", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-5.0.3.js"],
@@ -115,11 +109,12 @@
           }
         },
       },
-      /*"user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-9.0.0.js", {
+      "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-9.0.0.js", {
         "realm": "guest",
         "title": "Please enter the username you're given in class.",
         "logged_in": false,
         "no_password": true,
+        "lib": [ "ccm.load", "https://use.fontawesome.com/releases/v5.6.3/css/all.css" ],
         "logger": [ "ccm.instance", "https://ccmjs.github.io/akless-components/log/versions/ccm.log-3.1.0.js", {
           "events": {
             "ready": {
@@ -136,7 +131,7 @@
           },
           "onfinish": {
             "store": {
-              "settings": { "store": "be2_ws1819_user_log", "url": "https://ccm2.inf.h-brs.de" },
+              "settings": { "store": "be2_SoSe19_user_log", "url": "https://ccm2.inf.h-brs.de" },
               "permissions": {
                 "creator": "akless2m",
                 "realm": "hbrsinfkaul",
@@ -149,7 +144,7 @@
             }
           }
         } ]
-      } ],*/
+      } ],
       "pdf_viewer": {
         "comp": [ "ccm.component", "https://ccmjs.github.io/tkless-components/pdf_viewer/versions/ccm.pdf_viewer-4.0.0.js", {
           "logger": [ "ccm.instance", "https://ccmjs.github.io/akless-components/log/versions/ccm.log-4.0.2.js", {
@@ -307,17 +302,16 @@
           main.querySelector( "#sign-on" ).addEventListener( 'click', async () => {
             if ( self.user ) {
               await self.user.login();
-              main.querySelector( '#username' ).innerHTML = "<span class='glyphicon glyphicon-user'></span> "+ self.user.data().user;
+              main.querySelector( '#username' ).innerHTML = "<span class='fas fa-user pr-1'></span>"+ self.user.data().user;
               main.querySelector( '#sign-on' ).style.display = "none";
               const sign_out = main.querySelector( '#sign-out' );
               sign_out.style.display = "block";
 
-              sign_out.addEventListener( 'click', () => {
-                self.user.logout( () => {
-                  main.querySelector( '#username' ).innerHTML = "";
-                  main.querySelector( '#sign-on' ).style.display = "block";
-                  main.querySelector( '#sign-out' ).style.display = "none";
-                });
+              sign_out.addEventListener( 'click', async () => {
+                await self.user.logout();
+                main.querySelector( '#username' ).innerHTML = "";
+                main.querySelector( '#sign-on' ).style.display = "block";
+                main.querySelector( '#sign-out' ).style.display = "none";
               } );
             }
           } );

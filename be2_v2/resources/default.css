@@ -39,3 +39,7 @@ li a {
   text-decoration: none;
 }
 
+#sign-out {
+  display: none;
+}
+

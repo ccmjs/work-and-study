@@ -11,7 +11,7 @@ ccm.files[ 'datasets.js' ] = {
     "section": "Orientation",
     "entries": [
       {
-        "title": '<span class="fas fa-pencil-alt"></span> Key Terminology of Entrepreneurship',
+        "title": 'Key Terminology of Entrepreneurship',
         "data": {
           "component": "cloze",
           "id": "1526550731302X4453331659613695",
@@ -19,7 +19,7 @@ ccm.files[ 'datasets.js' ] = {
         }
       },
       {
-        "title": '<span class="fas fa-pencil-alt"></span> Synonyms for “Business”',
+        "title": 'Synonyms for “Business”',
         "data": {
           "component": "cloze",
           "id": "1518690906548X9893455548879022",
@@ -27,7 +27,7 @@ ccm.files[ 'datasets.js' ] = {
         }
       },
       {
-        "title": '<span class="fas fa-pencil-alt"></span> Personal Characteristics',
+        "title": 'Personal Characteristics',
         "data": {
           "component": "cloze",
           "id": "1526644134616X8657631128304384",
@@ -35,7 +35,7 @@ ccm.files[ 'datasets.js' ] = {
         }
       },
       {
-        "title": '<span class="fas fa-pencil-alt"></span> Characteristics of Entrepreneurs',
+        "title": 'Characteristics of Entrepreneurs',
         "data": {
           "component": "cloze",
           "id": "1526645829627X16013340042681",
@@ -43,7 +43,7 @@ ccm.files[ 'datasets.js' ] = {
         }
       },
       {
-        "title": '<span class="fas fa-pencil-alt"></span> Plagiarism Quiz',
+        "title": 'Plagiarism Quiz',
         "data": {
           "component": "cloze",
           "id": "1526653091422X02273709883972974",
@@ -51,7 +51,7 @@ ccm.files[ 'datasets.js' ] = {
         }
       },
       {
-        "title": '<span class="fas fa-pencil-alt"></span> Copyright Quiz',
+        "title": 'Copyright Quiz',
         "data": {
           "component": "cloze",
           "id": "1518691705125X42220549120432294",
@@ -66,7 +66,7 @@ ccm.files[ 'datasets.js' ] = {
     "section": "Sustainable Business Practices",
     "entries": [
       {
-        "title": '<span class="fa fa-pencil-square-o"></span> LCA Terminology',
+        "title": 'LCA Terminology',
         "data": {
           "component": "cloze",
           "id": "1518692231862X6906233038090239",
@@ -74,7 +74,7 @@ ccm.files[ 'datasets.js' ] = {
         }
       },
       {
-        "title": '<span class="fa fa-pencil-square-o"></span> Prepositions',
+        "title": 'Prepositions',
         "data": {
           "component": "cloze",
           "id": "1532619098174X18358119379539728",
@@ -82,7 +82,7 @@ ccm.files[ 'datasets.js' ] = {
         }
       },
       {
-        "title": '<span class="fa fa-pencil-square-o"></span> Environmental Impacts',
+        "title": 'Environmental Impacts',
         "data": {
           "component": "cloze",
           "id": "1518692429575X48927297674072623",
@@ -90,7 +90,7 @@ ccm.files[ 'datasets.js' ] = {
         }
       },
       {
-        "title": '<span class="fa fa-pencil-square-o"></span> Sustainable Development Goals',
+        "title": 'Sustainable Development Goals',
         "data": {
           "component": "cloze",
           "id": "1518692517201X6052264284794366",
@@ -100,219 +100,57 @@ ccm.files[ 'datasets.js' ] = {
     ]
   },
 
-  /*"company_structure": {
+  "company_structure": {
     "key": "company_structure",
     "section": "Company Structure",
     "entries": [
       {
-        "title": '<span class="fa fa-pencil-square-o"></span> Defining Departments',
-        "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
-          "key": [ "ccm.get", { "store": "w&s_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1518692902389X770389262618334" ],
-          "data": {
-            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
-            "key": "defining_departments",
-            "user": true
-          },
-          "onfinish": {
-            "login": true,
-            "store": {
-              "settings": {
-                "url": "https://ccm2.inf.h-brs.de",
-                "method": "POST",
-                "store": "be2_ws18_cloze_results"
-              },
-              "key": "defining_departments",
-              "user": true,
-              "permissions": {
-                "creator": "teacher",
-                "realm": "guest",
-                "group": [ "%user%" ],
-                "access": {
-                  "get": "group",
-                  "set": "creator",
-                  "del": "creator"
-                }
-              }
-            },
-            "alert": "Saved for your student analytics!",
-            "restart": true
-          }
-        } ]
+        "title": 'Defining Departments',
+        "data": {
+          "component": "cloze",
+          "id": "1518692902389X770389262618334",
+          "key": "defining_departments"
+        }
       },
       {
-        "title": '<span class="fa fa-pencil-square-o"></span> Executives of a Company',
-        "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
-          "key": [ "ccm.get", { "store": "w&s_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1532534015993X3303798009929313" ],
-          "data": {
-            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
-            "key": "executives_of_company",
-            "user": true
-          },
-          "onfinish": {
-            "login": true,
-            "store": {
-              "settings": {
-                "url": "https://ccm2.inf.h-brs.de",
-                "method": "POST",
-                "store": "be2_ws18_cloze_results"
-              },
-              "key": "executives_of_company",
-              "user": true,
-              "permissions": {
-                "creator": "teacher",
-                "realm": "guest",
-                "group": [ "%user%" ],
-                "access": {
-                  "get": "group",
-                  "set": "creator",
-                  "del": "creator"
-                }
-              }
-            },
-            "alert": "Saved for your student analytics!",
-            "restart": true
-          }
-        } ]
+        "title": 'Executives of a Company',
+        "data": {
+          "component": "cloze",
+          "id": "1532534015993X3303798009929313",
+          "key": "executives_of_company"
+        }
       },
       {
-        "title": '<span class="fa fa-pencil-square-o"></span> Corporate Affairs',
-        "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
-          "key": [ "ccm.get", { "store": "w&s_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1525274879888X20147700616286301" ],
-          "data": {
-            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
-            "key": "corporate_affairs",
-            "user": true
-          },
-          "onfinish": {
-            "login": true,
-            "store": {
-              "settings": {
-                "url": "https://ccm2.inf.h-brs.de",
-                "method": "POST",
-                "store": "be2_ws18_cloze_results"
-              },
-              "key": "corporate_affairs",
-              "user": true,
-              "permissions": {
-                "creator": "teacher",
-                "realm": "guest",
-                "group": [ "%user%" ],
-                "access": {
-                  "get": "group",
-                  "set": "creator",
-                  "del": "creator"
-                }
-              }
-            },
-            "alert": "Saved for your student analytics!",
-            "restart": true
-          }
-        } ]
+        "title": 'Corporate Affairs',
+        "data": {
+          "component": "cloze",
+          "id": "1525274879888X20147700616286301",
+          "key": "corporate_affairs"
+        }
       },
       {
-        "title": '<span class="fa fa-pencil-square-o"></span> Incorrect Word Partnerships',
-        "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
-          "key": [ "ccm.get", { "store": "w&s_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1525429066578X09371712618146733" ],
-          "data": {
-            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
-            "key": "incorrect_word_partnerships",
-            "user": true
-          },
-          "onfinish": {
-            "login": true,
-            "store": {
-              "settings": {
-                "url": "https://ccm2.inf.h-brs.de",
-                "method": "POST",
-                "store": "be2_ws18_cloze_results"
-              },
-              "key": "incorrect_word_partnerships",
-              "user": true,
-              "permissions": {
-                "creator": "teacher",
-                "realm": "guest",
-                "group": [ "%user%" ],
-                "access": {
-                  "get": "group",
-                  "set": "creator",
-                  "del": "creator"
-                }
-              }
-            },
-            "alert": "Saved for your student analytics!",
-            "restart": true
-          }
-        } ]
+        "title": 'Incorrect Word Partnerships',
+        "data": {
+          "component": "cloze",
+          "id": "1525429066578X09371712618146733",
+          "key": "incorrect_word_partnerships"
+        }
       },
       {
-        "title": '<span class="fa fa-pencil-square-o"></span> Departments and Their Functions (Part I)',
-        "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
-          "key": [ "ccm.get", { "store": "w&s_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1532599227124X19808120468112445" ],
-          "data": {
-            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
-            "key": "departments_and_their_functions_1",
-            "user": true
-          },
-          "onfinish": {
-            "login": true,
-            "store": {
-              "settings": {
-                "url": "https://ccm2.inf.h-brs.de",
-                "method": "POST",
-                "store": "be2_ws18_cloze_results"
-              },
-              "key": "departments_and_their_functions_1",
-              "user": true,
-              "permissions": {
-                "creator": "teacher",
-                "realm": "guest",
-                "group": [ "%user%" ],
-                "access": {
-                  "get": "group",
-                  "set": "creator",
-                  "del": "creator"
-                }
-              }
-            },
-            "alert": "Saved for your student analytics!",
-            "restart": true
-          }
-        } ]
+        "title": 'Departments and Their Functions (Part I)',
+        "data": {
+          "component": "cloze",
+          "id": "1532599227124X19808120468112445",
+          "key": "departments_and_their_functions_1"
+        }
       },
       {
-        "title": '<span class="fa fa-pencil-square-o"></span> Departments and Their Functions (Part II)',
-        "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
-          "key": [ "ccm.get", { "store": "w&s_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1532610566424X6242103490169981" ],
-          "data": {
-            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
-            "key": "departments_and_their_functions_2",
-            "user": true
-          },
-          "onfinish": {
-            "login": true,
-            "store": {
-              "settings": {
-                "url": "https://ccm2.inf.h-brs.de",
-                "method": "POST",
-                "store": "be2_ws18_cloze_results"
-              },
-              "key": "departments_and_their_functions_2",
-              "user": true,
-              "permissions": {
-                "creator": "teacher",
-                "realm": "guest",
-                "group": [ "%user%" ],
-                "access": {
-                  "get": "group",
-                  "set": "creator",
-                  "del": "creator"
-                }
-              }
-            },
-            "alert": "Saved for your student analytics!",
-            "restart": true
-          }
-        } ]
+        "title": 'Departments and Their Functions (Part II)',
+        "data": {
+          "component": "cloze",
+          "id": "1532610566424X6242103490169981",
+          "key": "departments_and_their_functions_2"
+        }
       }
     ]
   },
@@ -322,74 +160,20 @@ ccm.files[ 'datasets.js' ] = {
     "section":  "Products, Innovation and Marketing",
     "entries": [
       {
-        "title": "<span class=\"fa fa-pencil-square-o\"></span> Language Learning Clues - Learning in Chunks 1",
-        "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
-          "key": [ "ccm.get", { "store": "w&s_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1525516094998X1208037518108378" ],
-          "data": {
-            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
-            "key": "learning_chunks_1",
-            "user": true
-          },
-          "onfinish": {
-            "login": true,
-            "store": {
-              "settings": {
-                "url": "https://ccm2.inf.h-brs.de",
-                "method": "POST",
-                "store": "be2_ws18_cloze_results"
-              },
-              "key": "learning_chunks_1",
-              "user": true,
-              "permissions": {
-                "creator": "teacher",
-                "realm": "guest",
-                "group": [ "%user%" ],
-                "access": {
-                  "get": "group",
-                  "set": "creator",
-                  "del": "creator"
-                }
-              }
-            },
-            "alert": "Saved for your student analytics!",
-            "restart": true
-          }
-        } ]
+        "title": "Language Learning Clues - Learning in Chunks 1",
+        "data": {
+          "component": "cloze",
+          "id": "1525516094998X1208037518108378",
+          "key": "learning_chunks_1"
+        }
       },
       {
-        "title": "<span class=\"fa fa-pencil-square-o\"></span> Defining Marketing",
-        "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
-          "key": [ "ccm.get", { "store": "w&s_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1527521736795X212993536569414" ],
-          "data": {
-            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
-            "key": "defining_marketing",
-            "user": true
-          },
-          "onfinish": {
-            "login": true,
-            "store": {
-              "settings": {
-                "url": "https://ccm2.inf.h-brs.de",
-                "method": "POST",
-                "store": "be2_ws18_cloze_results"
-              },
-              "key": "defining_marketing",
-              "user": true,
-              "permissions": {
-                "creator": "teacher",
-                "realm": "guest",
-                "group": [ "%user%" ],
-                "access": {
-                  "get": "group",
-                  "set": "creator",
-                  "del": "creator"
-                }
-              }
-            },
-            "alert": "Saved for your student analytics!",
-            "restart": true
-          }
-        } ]
+        "title": "Defining Marketing",
+        "data": {
+          "component": "cloze",
+          "id": "1527521736795X212993536569414",
+          "key": "defining_marketing"
+        }
       }
     ]
   },
@@ -399,74 +183,20 @@ ccm.files[ 'datasets.js' ] = {
     "section":  "Accounting",
     "entries": [
       {
-        "title": "<span class=\"fa fa-pencil-square-o\"></span> Costs and Sales",
-        "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
-          "key": [ "ccm.get", { "store": "w&s_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1530966682311X3288463996724147" ],
-          "data": {
-            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
-            "key": "costs_and_sales",
-            "user": true
-          },
-          "onfinish": {
-            "login": true,
-            "store": {
-              "settings": {
-                "url": "https://ccm2.inf.h-brs.de",
-                "method": "POST",
-                "store": "be2_ws18_cloze_results"
-              },
-              "key": "costs_and_sales",
-              "user": true,
-              "permissions": {
-                "creator": "teacher",
-                "realm": "guest",
-                "group": [ "%user%" ],
-                "access": {
-                  "get": "group",
-                  "set": "creator",
-                  "del": "creator"
-                }
-              }
-            },
-            "alert": "Saved for your student analytics!",
-            "restart": true
-          }
-        } ]
+        "title": "Costs and Sales",
+        "data": {
+          "component": "cloze",
+          "id": "1530966682311X3288463996724147",
+          "key": "costs_and_sales"
+        }
       },
       {
-        "title": "<span class=\"fa fa-pencil-square-o\"></span> Earnings and Income",
-        "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
-          "key": [ "ccm.get", { "store": "w&s_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1530968426612X7535689750005543" ],
-          "data": {
-            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
-            "key": "earnings_and_income",
-            "user": true
-          },
-          "onfinish": {
-            "login": true,
-            "store": {
-              "settings": {
-                "url": "https://ccm2.inf.h-brs.de",
-                "method": "POST",
-                "store": "be2_ws18_cloze_results"
-              },
-              "key": "earnings_and_income",
-              "user": true,
-              "permissions": {
-                "creator": "teacher",
-                "realm": "guest",
-                "group": [ "%user%" ],
-                "access": {
-                  "get": "group",
-                  "set": "creator",
-                  "del": "creator"
-                }
-              }
-            },
-            "alert": "Saved for your student analytics!",
-            "restart": true
-          }
-        } ]
+        "title": "Earnings and Income",
+        "data": {
+          "component": "cloze",
+          "id": "1530968426612X7535689750005543",
+          "key": "earnings_and_income"
+        }
       }
     ]
   },
@@ -476,144 +206,36 @@ ccm.files[ 'datasets.js' ] = {
     "section":  "Finance Start-ups",
     "entries": [
       {
-        "title": "<span class=\"fa fa-pencil-square-o\"></span> Defining Crowdfunding",
-        "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
-          "key": [ "ccm.get", { "store": "w&s_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1530969258661X8952191393680538" ],
-          "data": {
-            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
-            "key": "defining_crowdfunding",
-            "user": true
-          },
-          "onfinish": {
-            "login": true,
-            "store": {
-              "settings": {
-                "url": "https://ccm2.inf.h-brs.de",
-                "method": "POST",
-                "store": "be2_ws18_cloze_results"
-              },
-              "key": "defining_crowdfunding",
-              "user": true,
-              "permissions": {
-                "creator": "teacher",
-                "realm": "guest",
-                "group": [ "%user%" ],
-                "access": {
-                  "get": "group",
-                  "set": "creator",
-                  "del": "creator"
-                }
-              }
-            },
-            "alert": "Saved for your student analytics!",
-            "restart": true
-          }
-        } ]
+        "title": "Defining Crowdfunding",
+        "data": {
+          "component": "cloze",
+          "id": "1530969258661X8952191393680538",
+          "key": "defining_crowdfunding"
+        }
       },
       {
-        "title": "<span class=\"fa fa-pencil-square-o\"></span> Start-up Funding",
-        "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
-          "key": [ "ccm.get", { "store": "w&s_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1530970776433X549867791496941" ],
-          "data": {
-            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
-            "key": "start_up_funding",
-            "user": true
-          },
-          "onfinish": {
-            "login": true,
-            "store": {
-              "settings": {
-                "url": "https://ccm2.inf.h-brs.de",
-                "method": "POST",
-                "store": "be2_ws18_cloze_results"
-              },
-              "key": "start_up_funding",
-              "user": true,
-              "permissions": {
-                "creator": "teacher",
-                "realm": "guest",
-                "group": [ "%user%" ],
-                "access": {
-                  "get": "group",
-                  "set": "creator",
-                  "del": "creator"
-                }
-              }
-            },
-            "alert": "Saved for your student analytics!",
-            "restart": true
-          }
-        } ]
+        "title": "Start-up Funding",
+        "data": {
+          "component": "cloze",
+          "id": "1530970776433X549867791496941",
+          "key": "start_up_funding"
+        }
       },
       {
-        "title": "<span class=\"fa fa-pencil-square-o\"></span> Start Ups",
-        "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
-          "key": [ "ccm.get", { "store": "w&s_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1530971554774X21313620784110165" ],
-          "data": {
-            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
-            "key": "start_ups",
-            "user": true
-          },
-          "onfinish": {
-            "login": true,
-            "store": {
-              "settings": {
-                "url": "https://ccm2.inf.h-brs.de",
-                "method": "POST",
-                "store": "be2_ws18_cloze_results"
-              },
-              "key": "start_ups",
-              "user": true,
-              "permissions": {
-                "creator": "teacher",
-                "realm": "guest",
-                "group": [ "%user%" ],
-                "access": {
-                  "get": "group",
-                  "set": "creator",
-                  "del": "creator"
-                }
-              }
-            },
-            "alert": "Saved for your student analytics!",
-            "restart": true
-          }
-        } ]
+        "title": "Start Ups",
+        "data": {
+          "component": "cloze",
+          "id": "1530971554774X21313620784110165",
+          "key": "start_ups"
+        }
       },
       {
-        "title": "<span class=\"fa fa-pencil-square-o\"></span> Language Learning Clues - Learning in Chunks 2",
-        "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
-          "key": [ "ccm.get", { "store": "w&s_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1530972383963X023199007860386756" ],
-          "data": {
-            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
-            "key": "learning_chunks_2",
-            "user": true
-          },
-          "onfinish": {
-            "login": true,
-            "store": {
-              "settings": {
-                "url": "https://ccm2.inf.h-brs.de",
-                "method": "POST",
-                "store": "be2_ws18_cloze_results"
-              },
-              "key": "learning_chunks_2",
-              "user": true,
-              "permissions": {
-                "creator": "teacher",
-                "realm": "guest",
-                "group": [ "%user%" ],
-                "access": {
-                  "get": "group",
-                  "set": "creator",
-                  "del": "creator"
-                }
-              }
-            },
-            "alert": "Saved for your student analytics!",
-            "restart": true
-          }
-        } ]
+        "title": "Language Learning Clues - Learning in Chunks 2",
+        "data": {
+          "component": "cloze",
+          "id": "1530972383963X023199007860386756",
+          "key": "learning_chunks_2"
+        }
       }
     ]
   },
@@ -623,389 +245,92 @@ ccm.files[ 'datasets.js' ] = {
     "section": "Academic Writing",
     "entries": [
       {
-        "title": "<span class=\"fa fa-pencil-square-o\"></span> Writing a Paper",
-        "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
-          "key": [ "ccm.get", { "store": "w&s_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1531468430914X9382301716358374" ],
-          "data": {
-            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
-            "key": "writing_paper",
-            "user": true
-          },
-          "onfinish": {
-            "login": true,
-            "store": {
-              "settings": {
-                "url": "https://ccm2.inf.h-brs.de",
-                "method": "POST",
-                "store": "be2_ws18_cloze_results"
-              },
-              "key": "writing_paper",
-              "user": true,
-              "permissions": {
-                "creator": "teacher",
-                "realm": "guest",
-                "group": [ "%user%" ],
-                "access": {
-                  "get": "group",
-                  "set": "creator",
-                  "del": "creator"
-                }
-              }
-            },
-            "alert": "Saved for your student analytics!",
-            "restart": true
-          }
-        } ]
+        "title": "Writing a Paper",
+        "data": {
+          "component": "cloze",
+          "id": "1531468430914X9382301716358374",
+          "key": "writing_paper"
+        }
       },
       {
-        "title": "<span class=\"fa fa-pencil-square-o\"></span> Writing a Paper: Procedure",
-        "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
-          "key": [ "ccm.get", { "store": "w&s_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1531469742696X42442522991677545" ],
-          "data": {
-            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
-            "key": "writing_procedure",
-            "user": true
-          },
-          "onfinish": {
-            "login": true,
-            "store": {
-              "settings": {
-                "url": "https://ccm2.inf.h-brs.de",
-                "method": "POST",
-                "store": "be2_ws18_cloze_results"
-              },
-              "key": "writing_procedure",
-              "user": true,
-              "permissions": {
-                "creator": "teacher",
-                "realm": "guest",
-                "group": [ "%user%" ],
-                "access": {
-                  "get": "group",
-                  "set": "creator",
-                  "del": "creator"
-                }
-              }
-            },
-            "alert": "Saved for your student analytics!",
-            "restart": true
-          }
-        } ]
+        "title": "Writing a Paper: Procedure",
+        "data": {
+          "component": "cloze",
+          "id": "1531469742696X42442522991677545",
+          "key": "writing_procedure"
+        }
       },
       {
-        "title": "<span class=\"fa fa-pencil-square-o\"></span> Elements of a Report",
-        "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
-          "key": [ "ccm.get", { "store": "w&s_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1531471015039X27400901492652463" ],
-          "data": {
-            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
-            "key": "elements_of_report",
-            "user": true
-          },
-          "onfinish": {
-            "login": true,
-            "store": {
-              "settings": {
-                "url": "https://ccm2.inf.h-brs.de",
-                "method": "POST",
-                "store": "be2_ws18_cloze_results"
-              },
-              "key": "elements_of_report",
-              "user": true,
-              "permissions": {
-                "creator": "teacher",
-                "realm": "guest",
-                "group": [ "%user%" ],
-                "access": {
-                  "get": "group",
-                  "set": "creator",
-                  "del": "creator"
-                }
-              }
-            },
-            "alert": "Saved for your student analytics!",
-            "restart": true
-          }
-        } ]
+        "title": "Elements of a Report",
+        "data": {
+          "component": "cloze",
+          "id": "1531471015039X27400901492652463",
+          "key": "elements_of_report"
+        }
       },
       {
-        "title": "<span class=\"fa fa-pencil-square-o\"></span> Key Words and Phrases",
-        "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
-          "key": [ "ccm.get", { "store": "w&s_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1531472277201X06353161050037825" ],
-          "data": {
-            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
-            "key": "keywords_and_phrases",
-            "user": true
-          },
-          "onfinish": {
-            "login": true,
-            "store": {
-              "settings": {
-                "url": "https://ccm2.inf.h-brs.de",
-                "method": "POST",
-                "store": "be2_ws18_cloze_results"
-              },
-              "key": "keywords_and_phrases",
-              "user": true,
-              "permissions": {
-                "creator": "teacher",
-                "realm": "guest",
-                "group": [ "%user%" ],
-                "access": {
-                  "get": "group",
-                  "set": "creator",
-                  "del": "creator"
-                }
-              }
-            },
-            "alert": "Saved for your student analytics!",
-            "restart": true
-          }
-        } ]
+        "title": "Key Words and Phrases",
+        "data": {
+          "component": "cloze",
+          "id": "1531472277201X06353161050037825",
+          "key": "keywords_and_phrases"
+        }
       },
       {
-        "title": "<span class=\"fa fa-pencil-square-o\"></span> Synonyms 1",
-        "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
-          "key": [ "ccm.get", { "store": "w&s_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1531473258556X7402482042781462" ],
-          "data": {
-            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
-            "key": "synonyms_1",
-            "user": true
-          },
-          "onfinish": {
-            "login": true,
-            "store": {
-              "settings": {
-                "url": "https://ccm2.inf.h-brs.de",
-                "method": "POST",
-                "store": "be2_ws18_cloze_results"
-              },
-              "key": "synonyms_1",
-              "user": true,
-              "permissions": {
-                "creator": "teacher",
-                "realm": "guest",
-                "group": [ "%user%" ],
-                "access": {
-                  "get": "group",
-                  "set": "creator",
-                  "del": "creator"
-                }
-              }
-            },
-            "alert": "Saved for your student analytics!",
-            "restart": true
-          }
-        } ]
+        "title": "Synonyms 1",
+        "data": {
+          "component": "cloze",
+          "id": "1531473258556X7402482042781462",
+          "key": "synonyms_1"
+        }
       },
       {
-        "title": "<span class=\"fa fa-pencil-square-o\"></span> Synonyms 2",
-        "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
-          "key": [ "ccm.get", { "store": "w&s_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1531473763591X5399771561478452" ],
-          "data": {
-            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
-            "key": "synonyms_2",
-            "user": true
-          },
-          "onfinish": {
-            "login": true,
-            "store": {
-              "settings": {
-                "url": "https://ccm2.inf.h-brs.de",
-                "method": "POST",
-                "store": "be2_ws18_cloze_results"
-              },
-              "key": "synonyms_2",
-              "user": true,
-              "permissions": {
-                "creator": "teacher",
-                "realm": "guest",
-                "group": [ "%user%" ],
-                "access": {
-                  "get": "group",
-                  "set": "creator",
-                  "del": "creator"
-                }
-              }
-            },
-            "alert": "Saved for your student analytics!",
-            "restart": true
-          }
-        } ]
+        "title": "Synonyms 2",
+        "data": {
+          "component": "cloze",
+          "id": "1531473763591X5399771561478452",
+          "key": "synonyms_2"
+        }
       },
       {
-        "title": "<span class=\"fa fa-pencil-square-o\"></span> Word Formations",
-        "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
-          "key": [ "ccm.get", { "store": "w&s_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1531474250227X9103298982633563" ],
-          "data": {
-            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
-            "key": "word_formations",
-            "user": true
-          },
-          "onfinish": {
-            "login": true,
-            "store": {
-              "settings": {
-                "url": "https://ccm2.inf.h-brs.de",
-                "method": "POST",
-                "store": "be2_ws18_cloze_results"
-              },
-              "key": "word_formations",
-              "user": true,
-              "permissions": {
-                "creator": "teacher",
-                "realm": "guest",
-                "group": [ "%user%" ],
-                "access": {
-                  "get": "group",
-                  "set": "creator",
-                  "del": "creator"
-                }
-              }
-            },
-            "alert": "Saved for your student analytics!",
-            "restart": true
-          }
-        } ]
+        "title": "Word Formations",
+        "data": {
+          "component": "cloze",
+          "id": "1531474250227X9103298982633563",
+          "key": "word_formations"
+        }
       },
       {
-        "title": "<span class=\"fa fa-pencil-square-o\"></span> Harvard Style Guide",
-        "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
-          "key": [ "ccm.get", { "store": "w&s_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1531993681764X7543255385841261" ],
-          "data": {
-            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
-            "key": "harvard_style_guide",
-            "user": true
-          },
-          "onfinish": {
-            "login": true,
-            "store": {
-              "settings": {
-                "url": "https://ccm2.inf.h-brs.de",
-                "method": "POST",
-                "store": "be2_ws18_cloze_results"
-              },
-              "key": "harvard_style_guide",
-              "user": true,
-              "permissions": {
-                "creator": "teacher",
-                "realm": "guest",
-                "group": [ "%user%" ],
-                "access": {
-                  "get": "group",
-                  "set": "creator",
-                  "del": "creator"
-                }
-              }
-            },
-            "alert": "Saved for your student analytics!",
-            "restart": true
-          }
-        } ]
+        "title": "Harvard Style Guide",
+        "data": {
+          "component": "cloze",
+          "id": "1531993681764X7543255385841261",
+          "key": "harvard_style_guide"
+        }
       },
       {
-        "title": "<span class=\"fa fa-pencil-square-o\"></span> Proofreading and Editing",
-        "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
-          "key": [ "ccm.get", { "store": "w&s_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1531994295903X8478028230378629" ],
-          "data": {
-            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
-            "key": "proofreading_and_editing",
-            "user": true
-          },
-          "onfinish": {
-            "login": true,
-            "store": {
-              "settings": {
-                "url": "https://ccm2.inf.h-brs.de",
-                "method": "POST",
-                "store": "be2_ws18_cloze_results"
-              },
-              "key": "proofreading_and_editing",
-              "user": true,
-              "permissions": {
-                "creator": "teacher",
-                "realm": "guest",
-                "group": [ "%user%" ],
-                "access": {
-                  "get": "group",
-                  "set": "creator",
-                  "del": "creator"
-                }
-              }
-            },
-            "alert": "Saved for your student analytics!",
-            "restart": true
-          }
-        } ]
+        "title": "Proofreading and Editing",
+        "data": {
+          "component": "cloze",
+          "id": "1531994295903X8478028230378629",
+          "key": "proofreading_and_editing"
+        }
       },
      {
-       "title": "<span class=\"fa fa-pencil-square-o\"></span> Proofreading (Teil 1)",
-       "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
-         "key": [ "ccm.get", { "store": "w&s_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1531996286677X7734645357100738" ],
-         "data": {
-           "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
-           "key": "proofreading_1",
-           "user": true
-         },
-         "onfinish": {
-           "login": true,
-           "store": {
-             "settings": {
-               "url": "https://ccm2.inf.h-brs.de",
-               "method": "POST",
-               "store": "be2_ws18_cloze_results"
-             },
-             "key": "proofreading_1",
-             "user": true,
-             "permissions": {
-               "creator": "teacher",
-               "realm": "guest",
-               "group": [ "%user%" ],
-               "access": {
-                 "get": "group",
-                 "set": "creator",
-                 "del": "creator"
-               }
-             }
-           },
-           "alert": "Saved for your student analytics!",
-           "restart": true
-         }
-       } ]
+       "title": "Proofreading (Teil 1)",
+       "data": {
+         "component": "cloze",
+         "id": "1531996286677X7734645357100738",
+         "key": "proofreading_1"
+       }
       },
       {
-        "title": "<span class=\"fa fa-pencil-square-o\"></span> Proofreading (Teil 2)",
-        "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
-          "key": [ "ccm.get", { "store": "w&s_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1531998101907X3907868591412964" ],
-          "data": {
-            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
-            "key": "proofreading_2",
-            "user": true
-          },
-          "onfinish": {
-            "login": true,
-            "store": {
-              "settings": {
-                "url": "https://ccm2.inf.h-brs.de",
-                "method": "POST",
-                "store": "be2_ws18_cloze_results"
-              },
-              "key": "proofreading_2",
-              "user": true,
-              "permissions": {
-                "creator": "teacher",
-                "realm": "guest",
-                "group": [ "%user%" ],
-                "access": {
-                  "get": "group",
-                  "set": "creator",
-                  "del": "creator"
-                }
-              }
-            },
-            "alert": "Saved for your student analytics!",
-            "restart": true
-          }
-        } ]
+        "title": "Proofreading (Teil 2)",
+        "data": {
+          "component": "cloze",
+          "id": "1531998101907X3907868591412964",
+          "key": "proofreading_2"
+        }
       }
     ]
   },
@@ -1015,111 +340,30 @@ ccm.files[ 'datasets.js' ] = {
     "section": "Exam Preparation",
     "entries": [
       {
-        "title": "<span class=\"fa fa-pencil-square-o\"></span> Abbreviated Business Terms",
-        "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
-          "key": [ "ccm.get", { "store": "w&s_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1531999174809X1458215719642837" ],
-          "data": {
-            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
-            "key": "abbreviated_business_terms",
-            "user": true
-          },
-          "onfinish": {
-            "login": true,
-            "store": {
-              "settings": {
-                "url": "https://ccm2.inf.h-brs.de",
-                "method": "POST",
-                "store": "be2_ws18_cloze_results"
-              },
-              "key": "abbreviated_business_terms",
-              "user": true,
-              "permissions": {
-                "creator": "teacher",
-                "realm": "guest",
-                "group": [ "%user%" ],
-                "access": {
-                  "get": "group",
-                  "set": "creator",
-                  "del": "creator"
-                }
-              }
-            },
-            "alert": "Saved for your student analytics!",
-            "restart": true
-          }
-        } ]
+        "title": "Abbreviated Business Terms",
+        "data": {
+          "component": "cloze",
+          "id": "1531999174809X1458215719642837",
+          "key": "abbreviated_business_terms"
+        }
       },
       {
-        "title": "<span class=\"fa fa-pencil-square-o\"></span> Review Business Terms",
-        "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
-          "key": [ "ccm.get", { "store": "w&s_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1532000417081X3524240194379842" ],
-          "data": {
-            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
-            "key": "review_business_terms",
-            "user": true
-          },
-          "onfinish": {
-            "login": true,
-            "store": {
-              "settings": {
-                "url": "https://ccm2.inf.h-brs.de",
-                "method": "POST",
-                "store": "be2_ws18_cloze_results"
-              },
-              "key": "review_business_terms",
-              "user": true,
-              "permissions": {
-                "creator": "teacher",
-                "realm": "guest",
-                "group": [ "%user%" ],
-                "access": {
-                  "get": "group",
-                  "set": "creator",
-                  "del": "creator"
-                }
-              }
-            },
-            "alert": "Saved for your student analytics!",
-            "restart": true
-          }
-        } ]
+        "title": "Review Business Terms",
+        "data": {
+          "component": "cloze",
+          "id": "1532000417081X3524240194379842",
+          "key": "review_business_terms"
+        }
       },
       {
-        "title": "<span class=\"fa fa-pencil-square-o\"></span> Differentiating Adverbs and Adjectives",
-        "content": [ "ccm.instance", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-4.1.0.js", {
-          "key": [ "ccm.get", { "store": "w&s_cloze", "url": "https://ccm2.inf.h-brs.de" }, "1532002466475X8703464196203523" ],
-          "data": {
-            "store": [ "ccm.store", { "store": "be2_ws18_cloze_results", "url": "https://ccm2.inf.h-brs.de", "method": "POST" } ],
-            "key": "differentiating_adverbs_and_adjectives",
-            "user": true
-          },
-          "onfinish": {
-            "login": true,
-            "store": {
-              "settings": {
-                "url": "https://ccm2.inf.h-brs.de",
-                "method": "POST",
-                "store": "be2_ws18_cloze_results"
-              },
-              "key": "differentiating_adverbs_and_adjectives",
-              "user": true,
-              "permissions": {
-                "creator": "teacher",
-                "realm": "guest",
-                "group": [ "%user%" ],
-                "access": {
-                  "get": "group",
-                  "set": "creator",
-                  "del": "creator"
-                }
-              }
-            },
-            "alert": "Saved for your student analytics!",
-            "restart": true
-          }
-        } ]
+        "title": "Differentiating Adverbs and Adjectives",
+        "data": {
+          "component": "cloze",
+          "id": "1532002466475X8703464196203523",
+          "key": "differentiating_adverbs_and_adjectives"
+        }
       }
     ]
-  }*/
+  }
 
 };
