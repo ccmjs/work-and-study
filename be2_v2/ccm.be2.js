@@ -48,7 +48,7 @@
       ],
       "js": [ "ccm.load", [ "https://code.jquery.com/jquery-3.2.1.slim.min.js",
         "https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" ] ],
-      "navigation": [ "ccm.load", { "url": "https://ccmjs.github.io/work-and-study/be2_v2/resources/navigation.html", "type": "data" } ],
+      "navigation": [ "ccm.load", { "url": "https://ccmjs.github.io/work-and-study/be2_v2/resources/navigation.html", "type": "data", "method": "get" } ],
       "menu": {
         "comp": [ "ccm.component", "https://ccmjs.github.io/akless-components/menu/versions/ccm.menu-2.4.4.js", {
           "css": [ "ccm.load", "resources/menu.css" ],
