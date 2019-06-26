@@ -80,7 +80,7 @@
       "cloze": {
         "comp": [ "ccm.component", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-5.0.3.js"],
         "ignore": {
-          "key": [ "ccm.get", { "name": "w&s_cloze", "url": "https://ccm2.inf.h-brs.de" } ],
+          "key": [ "ccm.get", { "name": "ws_cloze", "url": "https://ccm2.inf.h-brs.de" } ],
           "data": {
             "store": [ "ccm.store", { "name": "be2_SoSe19_cloze_results", "url": "https://ccm2.inf.h-brs.de" } ],
             "user": true
@@ -91,6 +91,70 @@
               "settings": {
                 "url": "https://ccm2.inf.h-brs.de",
                 "name": "be2_SoSe19_cloze_results"
+              },
+              "user": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "group",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved for your student analytics!",
+            "restart": true
+          }
+        },
+      },
+      "quiz": {
+        "comp": [ "ccm.component", "https://ccmjs.github.io/akless-components/quiz/versions/ccm.quiz-4.0.0.js"],
+        "ignore": {
+          "key": [ "ccm.get", { "name": "ws_quiz", "url": "https://ccm2.inf.h-brs.de" } ],
+          "data": {
+            "store": [ "ccm.store", { "name": "be2_SoSe19_quiz_results", "url": "https://ccm2.inf.h-brs.de" } ],
+            "user": true
+          },
+          "onfinish": {
+            "login": true,
+            "store": {
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "name": "be2_SoSe19_quiz_results"
+              },
+              "user": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "group",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved for your student analytics!",
+            "restart": true
+          }
+        },
+      },
+      "quick_decide": {
+        "comp": [ "ccm.component", "https://ccmjs.github.io/akless-components/quick_decide/versions/ccm.quick_decide-2.0.0.js"],
+        "ignore": {
+          "key": [ "ccm.get", { "name": "ws_quick_decide", "url": "https://ccm2.inf.h-brs.de" } ],
+          "data": {
+            "store": [ "ccm.store", { "name": "be2_SoSe19_quick_decide_results", "url": "https://ccm2.inf.h-brs.de" } ],
+            "user": true
+          },
+          "onfinish": {
+            "login": true,
+            "store": {
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "name": "be2_SoSe19_quick_decide_results"
               },
               "user": true,
               "permissions": {
@@ -181,7 +245,7 @@
             }
           } ]
         } ],
-        "ignore": [ "ccm.get", { "name": "w&s_pdf_viewer", url: "https://ccm2.inf.h-brs.de" }, "1536585034382X04756237908295757" ]
+        "ignore": [ "ccm.get", { "name": "ws_pdf_viewer", url: "https://ccm2.inf.h-brs.de" }, "1536585034382X04756237908295757" ]
       },
       "accordion": [ "ccm.component", "https://ccmjs.github.io/tkless-components/accordion/versions/ccm.accordion-2.1.0.js", {
         "style": [ "ccm.load","resources/accordion.css" ],
@@ -338,13 +402,31 @@
 
                 switch ( event.data.component ) {
                   case 'cloze':
-                    const config = $.clone( my.cloze.ignore );
-                    config.root = div;
-                    config.key[2] = event.data.id;
-                    config.data.key = event.data.key;
-                    config.onfinish.store.key = event.data.key;
+                    const config_cloze = $.clone( my.cloze.ignore );
+                    config_cloze.root = div;
+                    config_cloze.key[2] = event.data.id;
+                    config_cloze.data.key = event.data.key;
+                    config_cloze.onfinish.store.key = event.data.key;
 
-                    await my.cloze.comp.start( config );
+                    await my.cloze.comp.start( config_cloze );
+                    break;
+                  case 'quiz':
+                    const config_quiz = $.clone( my.quiz.ignore );
+                    config_quiz.root = div;
+                    config_quiz.key[2] = event.data.id;
+                    config_quiz.data.key = event.data.key;
+                    config_quiz.onfinish.store.key = event.data.key;
+
+                    await my.quiz.comp.start( config_quiz );
+                    break;
+                  case 'quick_decide':
+                    const quick_decide = $.clone( my.quick_decide.ignore );
+                    quick_decide.root = div;
+                    quick_decide.key[2] = event.data.id;
+                    quick_decide.data.key = event.data.key;
+                    quick_decide.onfinish.store.key = event.data.key;
+
+                    await my.quick_decide.comp.start( quick_decide );
                     break;
                 }
 
