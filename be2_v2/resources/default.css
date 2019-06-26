@@ -10,6 +10,10 @@
   border-bottom: 1px solid #eee;
 }
 
+.navbar {
+  box-shadow: 0px 1px 1px grey;
+}
+
 #sign-on, #sign-out{
   margin-right: 15px;
 }
