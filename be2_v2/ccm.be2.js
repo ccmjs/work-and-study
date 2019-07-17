@@ -175,6 +175,7 @@
       },
       "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-9.0.0.js", {
         "realm": "guest",
+        "guest": "guest",
         "title": "Please enter the username you're given in class.",
         "logged_in": false,
         "no_password": true,
