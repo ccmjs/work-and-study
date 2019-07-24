@@ -7,7 +7,7 @@
 
   const component = {
 
-    name: 'be2',
+    name: 'be1',
 
     ccm: 'https://ccmjs.github.io/ccm/ccm.js',
 
@@ -48,10 +48,11 @@
       ],
       "js": [ "ccm.load", [ "https://code.jquery.com/jquery-3.2.1.slim.min.js",
         "https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" ] ],
-      "navigation": [ "ccm.load", { "url": "https://ccmjs.github.io/work-and-study/be2_v2/resources/navigation.html", "type": "data", "method": "get" } ],
+      "navigation": [ "ccm.load", { "url": "resources/navigation.html", "type": "data", "method": "get" } ],
       "menu": {
         "comp": [ "ccm.component", "https://ccmjs.github.io/akless-components/menu/versions/ccm.menu-2.4.4.js", {
-          "css": [ "ccm.load", "resources/menu.css" ],
+          "css": [ "ccm.load", "https://use.fontawesome.com/releases/v5.6.3/css/all.css",
+            { "context": "head", "url": "https://use.fontawesome.com/releases/v5.6.3/css/all.css" }, "resources/menu.css" ],
           "logger": [ "ccm.instance", "https://ccmjs.github.io/akless-components/log/versions/ccm.log-4.0.2.js", {
             "events": {
               "click": {
@@ -76,6 +77,7 @@
           } ]
         } ],
         "data": [ "ccm.store", "resources/datasets.js" ]
+
       },
       "cloze": {
         "comp": [ "ccm.component", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-5.0.3.js"],
@@ -173,9 +175,40 @@
           }
         },
       },
+      "exercise": {
+        "comp": [ "ccm.component", "https://ccmjs.github.io/tkless-components/exercise/versions/ccm.exercise-5.0.0.js"],
+        "ignore": {
+          "key": [ "ccm.get", { "name": "ws_exercise", "url": "https://ccm2.inf.h-brs.de" } ],
+          "data": {
+            "store": [ "ccm.store", { "name": "be2_SoSe19_exercise_results", "url": "https://ccm2.inf.h-brs.de" } ],
+            "user": true
+          },
+          "onfinish": {
+            "login": true,
+            "store": {
+              "settings": {
+                "url": "https://ccm2.inf.h-brs.de",
+                "name": "be2_SoSe19_exercise_results"
+              },
+              "user": true,
+              "permissions": {
+                "creator": "teacher",
+                "realm": "guest",
+                "group": [ "%user%" ],
+                "access": {
+                  "get": "group",
+                  "set": "group",
+                  "del": "creator"
+                }
+              }
+            },
+            "alert": "Saved for your student analytics!",
+            "restart": true
+          }
+        },
+      },
       "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-9.0.0.js", {
         "realm": "guest",
-        "guest": "guest",
         "title": "Please enter the username you're given in class.",
         "logged_in": false,
         "no_password": true,
@@ -246,7 +279,7 @@
             }
           } ]
         } ],
-        "ignore": [ "ccm.get", { "name": "ws_pdf_viewer", url: "https://ccm2.inf.h-brs.de" }, "1536585034382X04756237908295757" ]
+        "ignore": [ "ccm.get", { "name": "ws_pdf_viewer", "url": "https://ccm2.inf.h-brs.de" }, "1536585034382X04756237908295757" ]
       },
       "accordion": [ "ccm.component", "https://ccmjs.github.io/tkless-components/accordion/versions/ccm.accordion-2.1.0.js", {
         "style": [ "ccm.load","resources/accordion.css" ],
@@ -274,6 +307,16 @@
             }
           }
         } ]
+      } ],
+      "chat": [ "ccm.component", "https://ccmjs.github.io/tkless-components/comment/versions/ccm.comment-4.1.0.js", {
+        "editable": true,
+        "chat": true,
+        "data": {
+          "store": [ "ccm.store", { "name": "ws_chat_result", "url": "https://ccm2.inf.h-brs.de" } ],
+          "key": "be2_SoSe19_chat"
+        },
+        "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-8.3.1.js",
+          [ "ccm.get", "https://ccmjs.github.io/akless-components/user/resources/configs.js", "compact" ]  ]
       } ],
       "feedback": [ "ccm.component", "https://ccmjs.github.io/tkless-components/feedback/versions/ccm.feedback-4.0.0.js", {
         "from_above": 20,
@@ -349,8 +392,8 @@
                 case 'home':
                   await renderContent();
                   break;
-                case 'script':
-                  await renderScript();
+                case 'chat':
+                  await renderChat();
                   break;
                 case 'stat':
                   await renderAnalytics();
@@ -424,10 +467,27 @@
                     const quick_decide = $.clone( my.quick_decide.ignore );
                     quick_decide.root = div;
                     quick_decide.key[2] = event.data.id;
-                    quick_decide.data.key = event.data.key;
                     quick_decide.onfinish.store.key = event.data.key;
 
                     await my.quick_decide.comp.start( quick_decide );
+                    break;
+                  case 'pdf':
+                    const pdf = $.clone( my.pdf_viewer.ignore );
+                    pdf[2] = event.data.id;
+                    const config = {
+                      key: pdf,
+                      root: div
+                    };
+                    pdf.root = div;
+                    await my.pdf_viewer.comp.start( config );
+                    break;
+                  case 'exercise':
+                    const exercise = $.clone( my.exercise.ignore );
+                    exercise.root = div;
+                    exercise.key[2] = event.data.id;
+                    exercise.onfinish.store.key = event.data.key;
+
+                    await my.exercise.comp.start( exercise );
                     break;
                 }
 
@@ -442,9 +502,9 @@
         }
 
         async function renderScript() {
-          const div = getDiv();
-          div.innerHTML = "This menu item is not available.";
-          $.setContent( main.querySelector( "#article" ), div );
+          //const div = getDiv();
+          //div.innerHTML = "This menu item is not available.";
+          //$.setContent( main.querySelector( "#article" ), div );
 
           //$.setContent( main.querySelector( "#article" ), $.loading( self ) );
           //const div = getDiv();
@@ -472,6 +532,13 @@
           $.setContent( main.querySelector( "#article" ), div );
 
           await my.accordion.start( { root: main.querySelector( "#accordion" ) } );
+        }
+        
+        async function renderChat() {
+          const div = getDiv();
+          div.innerHTML = "This menu item is not available.";
+          await my.chat.start( { root: div } );
+          $.setContent( main.querySelector( "#article" ), div );
         }
 
         function getDiv() {
