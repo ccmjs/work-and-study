@@ -5,3 +5,8 @@
   line-height: 1.5rem;
   color: #009ee0;
 }
+
+.entry:hover {
+  background-color: rgba(0, 158, 224, .9);
+  color: #ffffff;
+}
