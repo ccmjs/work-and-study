@@ -80,7 +80,7 @@ ccm.files[ 'datasets.js' ] = {
     "section": "Describing What you Do",
     "entries": [
       {
-        "title": "<i class='far fa-edit'></i> What do you do? Part 1",
+        "title": "<i class='far fa-file-alt'></i> What do you do? Part 1",
         "data": {
           "component": "exercise",
           "id": "1562227411089X5472852610388494",
@@ -88,7 +88,7 @@ ccm.files[ 'datasets.js' ] = {
         }
       },
       {
-        "title": "<i class='far fa-edit'></i> What do you do? Part 2",
+        "title": "<i class='far fa-file-alt'></i> What do you do? Part 2",
         "data": {
           "component": "exercise",
           "id": "1562232973257X9217429286908654",
