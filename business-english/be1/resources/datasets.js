@@ -1,6 +1,6 @@
 /**
  * @overview datasets of ccm component for business english app
- * @author Tea Kless <tea.kless@web.de> 2018
+ * @author Tea Kless <tea.kless@web.de> 2019
  * @license The MIT License (MIT)
  */
 
@@ -11,7 +11,7 @@ ccm.files[ 'datasets.js' ] = {
     "section": "Introductions",
     "entries": [
       {
-        "title": "<i class='far fa-file-pdf'></i> Introduction To the BE I",
+        "title": "<i class='far fa-file-pdf'></i> Introduction to the BE I",
         "data": {
           "component": "pdf",
           "id": "1562225288012X09632465412797098"
@@ -194,6 +194,69 @@ ccm.files[ 'datasets.js' ] = {
           "id": "1563904151963X10774620307657412",
           "key": "sections_of_report"
         }
+      },
+      {
+        "title": "<i class='far fa-edit'></i> Formal vs informal english",
+        "data": {
+          "component": "cloze",
+          "id": "1563967167377X8268598181816884",
+          "key": "formal_vs_informal_english"
+        }
+      },
+      {
+        "title": "<i class='fas fa-tasks'></i> Active vs passive voice",
+        "data": {
+          "component": "quiz",
+          "id": "1563992576782X09737584304001179",
+          "key": "active_vs_passive_voice"
+        }
+      },
+      {
+        "title": "<i class='fas fa-hourglass-end'></i> Linking Words",
+        "data": {
+          "component": "cloze",
+          "id": "1563995267580X2778862069136889",
+          "key": "linking_words"
+        }
+      }
+    ]
+  },
+
+  "emailing": {
+    "key": "emailing",
+    "section": "Emailing",
+    "entries": [
+      {
+        "title": "<i class='fas fa-hourglass-end'></i> Opening and closing Quick decision",
+        "data": {
+          "component": "quick_decide",
+          "id": "1564149432900X9724164192022882",
+          "key": "opening_and_closing_quick_decision"
+        }
+      },
+      {
+        "title": "<i class='far fa-edit'></i> Punctuation",
+        "data": {
+          "component": "cloze",
+          "id": "1564151794950X9158442551158472",
+          "key": "punctation"
+        }
+      },
+      {
+        "title": "<i class='fas fa-tasks'></i> Modals",
+        "data": {
+          "component": "quiz",
+          "id": "1564154174016X6656412010096768",
+          "key": "modals"
+        }
+      },
+      {
+        "title": "<i class='far fa-edit'></i> Softening phrases",
+        "data": {
+          "component": "cloze",
+          "id": "1564662719889X07015470943832125",
+          "key": "softening_phrases"
+        }
       }
     ]
   },
@@ -239,6 +302,106 @@ ccm.files[ 'datasets.js' ] = {
           "component": "cloze",
           "id": "1563899112247X1668410346827771",
           "key": "closing"
+        }
+      }
+    ]
+  },
+
+  "Meetings": {
+    "key": "meetings",
+    "section": "Meetings",
+    "entries": [
+      {
+        "title": "<i class='far fa-edit'></i> Small talk questions",
+        "data": {
+          "component": "cloze",
+          "id": "1564664618694X5830521792493726",
+          "key": "small_talk_questions"
+        }
+      },
+      {
+        "title": "<i class='fas fa-tasks'></i> Agreeing and Disagreeing",
+        "data": {
+          "component": "quiz",
+          "id": "1564667320468X19311765196389397",
+          "key": "agreeing_and_disagreeing"
+        }
+      },
+      {
+        "title": "<i class='far fa-edit'></i> Conditionals",
+        "data": {
+          "component": "cloze",
+          "id": "1564669551535X20507129104702848",
+          "key": "conditionals"
+        }
+      }
+    ]
+  },
+
+  "CV/Resume": {
+    "key": "cv",
+    "section": "CV/Resume",
+    "entries": [
+      {
+        "title": "<i class='far fa-file-pdf'></i> Writing Dates",
+        "data": {
+          "component": "pdf",
+          "id": "1564743116232X08894741810557916"
+        }
+      },
+      {
+        "title": "<i class='fas fa-hourglass-end'></i> No title",
+        "data": {
+          "component": "quick_decide",
+          "id": "1564742539865X9463475967765169",
+          "key": "no_title"
+        }
+      },
+      {
+        "title": "<i class='fas fa-tasks'></i> Personal Details",
+        "data": {
+          "component": "quiz",
+          "id": "1564670885987X6937766015437055",
+          "key": "Personal Details"
+        }
+      },
+      {
+        "title": "<i class='far fa-edit'></i> Education Section",
+        "data": {
+          "component": "cloze",
+          "id": "1564748571248X8928749805911735",
+          "key": "education_section"
+        }
+      }
+    ]
+  },
+
+  "Interviewing": {
+    "key": "interviewing",
+    "section": "Interviewing",
+    "entries": [
+      {
+        "title": "<i class='far fa-edit'></i> Questions in interviews",
+        "data": {
+          "component": "cloze",
+          "id": "1565263189511X808885936105739",
+          "key": "questions_in_interviews"
+        }
+      },
+      {
+        "title": "<i class='far fa-edit'></i> Present tenses in interviews",
+        "data": {
+          "component": "cloze",
+          "id": "1565266441226X0005288184983411881",
+          "key": "present_tenses_in_interviews"
+        }
+      },
+      {
+        "title": "<i class='fas fa-hourglass-end'></i> Mixed tenses in interviews",
+        "data": {
+          "component": "quick_decide",
+          "id": "1565266441226X0005288184983411881",
+          "key": "mixed_tenses_in_interviews"
         }
       }
     ]

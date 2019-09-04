@@ -9,7 +9,7 @@
 
     name: 'be1',
 
-    ccm: 'https://ccmjs.github.io/ccm/ccm.js',
+    ccm: 'https://ccmjs.github.io/ccm/versions/ccm-22.4.0.js',
 
     config: {
       "html": {
@@ -308,7 +308,7 @@
           }
         } ]
       } ],
-      "chat": [ "ccm.component", "https://ccmjs.github.io/tkless-components/comment/versions/ccm.comment-4.1.0.js", {
+      "chat": [ "ccm.component", "https://ccmjs.github.io/tkless-components/comment/versions/ccm.comment-5.0.0.js", {
         "editable": true,
         "chat": true,
         "data": {
