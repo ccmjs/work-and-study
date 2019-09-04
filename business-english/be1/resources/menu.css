@@ -3,10 +3,10 @@
   padding: 0.6rem 2.3rem;
   cursor: pointer;
   line-height: 1.5rem;
-  color: #009ee0;
+  color: rgb(35, 155, 209);
 }
 
 .entry:hover {
-  background-color: rgba(0, 158, 224, .9);
+  background-color: rgba(132, 162, 102, .9);
   color: #ffffff;
 }
