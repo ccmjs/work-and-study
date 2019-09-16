@@ -62,7 +62,7 @@
             },
             "onfinish": {
               "store": {
-                "settings": { "store": "be2_ws1819_menu_log", "url": "https://ccm2.inf.h-brs.de" },
+                "settings": { "store": "be1_WiSe19_menu_log", "url": "https://ccm2.inf.h-brs.de" },
                 "permissions": {
                   "creator": "akless2m",
                   "realm": "hbrsinfkaul",
@@ -92,7 +92,7 @@
             "store": {
               "settings": {
                 "url": "https://ccm2.inf.h-brs.de",
-                "name": "be2_SoSe19_cloze_results"
+                "name": "be1_WiSe19_cloze_results"
               },
               "user": true,
               "permissions": {
@@ -116,7 +116,7 @@
         "ignore": {
           "key": [ "ccm.get", { "name": "ws_quiz", "url": "https://ccm2.inf.h-brs.de" } ],
           "data": {
-            "store": [ "ccm.store", { "name": "be2_SoSe19_quiz_results", "url": "https://ccm2.inf.h-brs.de" } ],
+            "store": [ "ccm.store", { "name": "be1_WiSe19_quiz_results", "url": "https://ccm2.inf.h-brs.de" } ],
             "user": true
           },
           "onfinish": {
@@ -148,7 +148,7 @@
         "ignore": {
           "key": [ "ccm.get", { "name": "ws_quick_decide", "url": "https://ccm2.inf.h-brs.de" } ],
           "data": {
-            "store": [ "ccm.store", { "name": "be2_SoSe19_quick_decide_results", "url": "https://ccm2.inf.h-brs.de" } ],
+            "store": [ "ccm.store", { "name": "be1_WiSe19_quick_decide_results", "url": "https://ccm2.inf.h-brs.de" } ],
             "user": true
           },
           "onfinish": {
@@ -188,7 +188,7 @@
             "store": {
               "settings": {
                 "url": "https://ccm2.inf.h-brs.de",
-                "name": "be2_SoSe19_exercise_results"
+                "name": "be1_WiSe19_exercise_results"
               },
               "user": true,
               "permissions": {
@@ -229,7 +229,7 @@
           },
           "onfinish": {
             "store": {
-              "settings": { "store": "be2_SoSe19_user_log", "url": "https://ccm2.inf.h-brs.de" },
+              "settings": { "store": "be1_WiSe19_user_log", "url": "https://ccm2.inf.h-brs.de" },
               "permissions": {
                 "creator": "akless2m",
                 "realm": "hbrsinfkaul",
@@ -294,7 +294,7 @@
           },
           "onfinish": {
             "store": {
-              "settings": { "store": "be2_ws1819_accordion_log", "url": "https://ccm2.inf.h-brs.de" },
+              "settings": { "store": "be1_wise1920_accordion_log", "url": "https://ccm2.inf.h-brs.de" },
               "permissions": {
                 "creator": "akless2m",
                 "realm": "hbrsinfkaul",
@@ -313,15 +313,15 @@
         "chat": true,
         "data": {
           "store": [ "ccm.store", { "name": "ws_chat_result", "url": "https://ccm2.inf.h-brs.de" } ],
-          "key": "be2_SoSe19_chat"
+          "key": "be1_WiSe19_chat"
         },
-        "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-8.3.1.js",
+        "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-9.0.0.js",
           [ "ccm.get", "https://ccmjs.github.io/akless-components/user/resources/configs.js", "compact" ]  ]
       } ],
       "feedback": [ "ccm.component", "https://ccmjs.github.io/tkless-components/feedback/versions/ccm.feedback-4.0.0.js", {
         "from_above": 20,
         "css": [ "ccm.load", "https://ccmjs.github.io/tkless-components/feedback/resources/right.css" ],
-        "data": { "store": [ "ccm.store", { "name": "feedback", "url": "https://ccm2.inf.h-brs.de" } ], "key": "be2_SoSe19_feedback" }
+        "data": { "store": [ "ccm.store", { "name": "feedback", "url": "https://ccm2.inf.h-brs.de" } ], "key": "be1_WiSe19_feedback" }
       } ]
     },
 
