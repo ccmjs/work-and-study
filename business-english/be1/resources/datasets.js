@@ -484,7 +484,7 @@ ccm.files[ 'datasets.js' ] = {
 
   "Job  Fair": {
     "key": "job_fair",
-    "section": "job_fair",
+    "section": "Job Fair",
     "entries": [
       {
         "title": "<i class='far fa-file-pdf'></i> Overview",
@@ -505,7 +505,7 @@ ccm.files[ 'datasets.js' ] = {
         "title": "<i class='fas fa-external-link-alt'></i> Elevator Pitch",
         "data": {
           "component": "content",
-          "inner": "<a href='#' target='_blank'> https://www.youtube.com/watch?v=bZTWx2bftaw&feature=youtu.be </a>",
+          "inner": "<a href='https://youtu.be/bZTWx2bftaw' target='_blank'> </a>",
         }
       },
       {
