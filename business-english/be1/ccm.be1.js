@@ -9,7 +9,7 @@
 
     name: 'be1',
 
-    ccm: 'https://ccmjs.github.io/ccm/versions/ccm-22.4.0.js',
+    ccm: 'https://ccmjs.github.io/ccm/versions/ccm-22.6.1.js',
 
     config: {
       "html": {
@@ -51,7 +51,8 @@
       "navigation": [ "ccm.load", { "url": "resources/navigation.html", "type": "data", "method": "get" } ],
       "menu": {
         "comp": [ "ccm.component", "https://ccmjs.github.io/akless-components/menu/versions/ccm.menu-2.4.4.js", {
-          "css": [ "ccm.load", "https://use.fontawesome.com/releases/v5.6.3/css/all.css",
+          "css": [ "ccm.load", "https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css",
+            "https://use.fontawesome.com/releases/v5.6.3/css/all.css",
             { "context": "head", "url": "https://use.fontawesome.com/releases/v5.6.3/css/all.css" }, "resources/menu.css" ],
           "logger": [ "ccm.instance", "https://ccmjs.github.io/akless-components/log/versions/ccm.log-4.0.2.js", {
             "events": {
@@ -80,11 +81,11 @@
 
       },
       "cloze": {
-        "comp": [ "ccm.component", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-5.0.3.js"],
-        "ignore": {
+        "comp": [ "ccm.component", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-6.0.0.js"],
+        "ignore":{
           "key": [ "ccm.get", { "name": "ws_cloze", "url": "https://ccm2.inf.h-brs.de" } ],
           "data": {
-            "store": [ "ccm.store", { "name": "be2_SoSe19_cloze_results", "url": "https://ccm2.inf.h-brs.de" } ],
+            "store": [ "ccm.store", { "name": "be1_WiSe19_results", "url": "https://ccm2.inf.h-brs.de" } ],
             "user": true
           },
           "onfinish": {
@@ -92,12 +93,12 @@
             "store": {
               "settings": {
                 "url": "https://ccm2.inf.h-brs.de",
-                "name": "be1_WiSe19_cloze_results"
+                "name": "be1_WiSe19_results"
               },
               "user": true,
               "permissions": {
-                "creator": "teacher",
-                "realm": "guest",
+                "creator": "be_team",
+                "realm": "cloud",
                 "group": [ "%user%" ],
                 "access": {
                   "get": "group",
@@ -108,15 +109,23 @@
             },
             "alert": "Saved for your student analytics!",
             "restart": true
-          }
-        },
+          },
+          "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-9.2.0.js", {
+            "key": [ "ccm.get", "https://ccmjs.github.io/akless-components/user/resources/configs.js", "compact" ],
+            "logged_in": true,
+            "realm": "cloud",
+            "store": "be1_WiSe19_user",
+            "url": "https://ccm2.inf.h-brs.de",
+            "title": "Please enter your Username and Password"
+          } ]
+        }
       },
       "quiz": {
         "comp": [ "ccm.component", "https://ccmjs.github.io/akless-components/quiz/versions/ccm.quiz-4.0.0.js"],
         "ignore": {
           "key": [ "ccm.get", { "name": "ws_quiz", "url": "https://ccm2.inf.h-brs.de" } ],
           "data": {
-            "store": [ "ccm.store", { "name": "be1_WiSe19_quiz_results", "url": "https://ccm2.inf.h-brs.de" } ],
+            "store": [ "ccm.store", { "name": "be1_WiSe19_results", "url": "https://ccm2.inf.h-brs.de" } ],
             "user": true
           },
           "onfinish": {
@@ -124,12 +133,12 @@
             "store": {
               "settings": {
                 "url": "https://ccm2.inf.h-brs.de",
-                "name": "be2_SoSe19_quiz_results"
+                "name": "be1_WiSe19_results"
               },
               "user": true,
               "permissions": {
-                "creator": "teacher",
-                "realm": "guest",
+                "creator": "be_team",
+                "realm": "cloud",
                 "group": [ "%user%" ],
                 "access": {
                   "get": "group",
@@ -140,7 +149,15 @@
             },
             "alert": "Saved for your student analytics!",
             "restart": true
-          }
+          },
+          "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-9.2.0.js", {
+            "key": [ "ccm.get", "https://ccmjs.github.io/akless-components/user/resources/configs.js", "compact" ],
+            "logged_in": true,
+            "realm": "cloud",
+            "store": "be1_WiSe19_user",
+            "url": "https://ccm2.inf.h-brs.de",
+            "title": "Please enter your Username and Password"
+          } ]
         },
       },
       "quick_decide": {
@@ -148,7 +165,7 @@
         "ignore": {
           "key": [ "ccm.get", { "name": "ws_quick_decide", "url": "https://ccm2.inf.h-brs.de" } ],
           "data": {
-            "store": [ "ccm.store", { "name": "be1_WiSe19_quick_decide_results", "url": "https://ccm2.inf.h-brs.de" } ],
+            "store": [ "ccm.store", { "name": "be1_WiSe19_results", "url": "https://ccm2.inf.h-brs.de" } ],
             "user": true
           },
           "onfinish": {
@@ -156,12 +173,12 @@
             "store": {
               "settings": {
                 "url": "https://ccm2.inf.h-brs.de",
-                "name": "be2_SoSe19_quick_decide_results"
+                "name": "be1_WiSe19_results"
               },
               "user": true,
               "permissions": {
-                "creator": "teacher",
-                "realm": "guest",
+                "creator": "be_team",
+                "realm": "cloud",
                 "group": [ "%user%" ],
                 "access": {
                   "get": "group",
@@ -172,7 +189,15 @@
             },
             "alert": "Saved for your student analytics!",
             "restart": true
-          }
+          },
+          "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-9.2.0.js", {
+            "key": [ "ccm.get", "https://ccmjs.github.io/akless-components/user/resources/configs.js", "compact" ],
+            "logged_in": true,
+            "realm": "cloud",
+            "store": "be1_WiSe19_user",
+            "url": "https://ccm2.inf.h-brs.de",
+            "title": "Please enter your Username and Password"
+          } ]
         },
       },
       "exercise": {
@@ -180,7 +205,7 @@
         "ignore": {
           "key": [ "ccm.get", { "name": "ws_exercise", "url": "https://ccm2.inf.h-brs.de" } ],
           "data": {
-            "store": [ "ccm.store", { "name": "be2_SoSe19_exercise_results", "url": "https://ccm2.inf.h-brs.de" } ],
+            "store": [ "ccm.store", { "name": "be1_WiSe19_results", "url": "https://ccm2.inf.h-brs.de" } ],
             "user": true
           },
           "onfinish": {
@@ -188,12 +213,12 @@
             "store": {
               "settings": {
                 "url": "https://ccm2.inf.h-brs.de",
-                "name": "be1_WiSe19_exercise_results"
+                "name": "be1_WiSe19_results"
               },
               "user": true,
               "permissions": {
-                "creator": "teacher",
-                "realm": "guest",
+                "creator": "be_team",
+                "realm": "cloud",
                 "group": [ "%user%" ],
                 "access": {
                   "get": "group",
@@ -204,16 +229,25 @@
             },
             "alert": "Saved for your student analytics!",
             "restart": true
-          }
+          },
+          "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-9.2.0.js", {
+            "key": [ "ccm.get", "https://ccmjs.github.io/akless-components/user/resources/configs.js", "compact" ],
+            "logged_in": true,
+            "realm": "cloud",
+            "store": "be1_WiSe19_user",
+            "url": "https://ccm2.inf.h-brs.de",
+            "title": "Please enter your Username and Password"
+          } ]
         },
       },
-      "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-9.0.0.js", {
-        "realm": "guest",
-        "title": "Please enter the username you're given in class.",
-        "logged_in": false,
-        "no_password": true,
-        "lib": [ "ccm.load", "https://use.fontawesome.com/releases/v5.6.3/css/all.css" ],
-        "logger": [ "ccm.instance", "https://ccmjs.github.io/akless-components/log/versions/ccm.log-3.1.0.js", {
+      "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-9.2.0.js", {
+        "key": [ "ccm.get", "https://ccmjs.github.io/akless-components/user/resources/configs.js", "compact" ],
+        "logged_in": true,
+        "realm": "cloud",
+        "store": "be1_WiSe19_user",
+        "url": "https://ccm2.inf.h-brs.de",
+        "title": "Please enter your Username and Password",
+        "logger": [ "ccm.instance", "https://ccmjs.github.io/akless-components/log/versions/ccm.log-4.0.2.js", {
           "events": {
             "ready": {
               "browser": true,
@@ -286,7 +320,7 @@
         "size": "md",
         "color": "info",
         "entries": [ "ccm.load", "resources/accordion_data.js" ],
-        "logger": [ "ccm.instance", "https://ccmjs.github.io/akless-components/log/versions/ccm.log-3.1.0.js", {
+        "logger": [ "ccm.instance", "https://ccmjs.github.io/akless-components/log/versions/ccm.log-4.0.2.js", {
           "events": {
             "ready": {
               "user": true
@@ -309,19 +343,99 @@
         } ]
       } ],
       "chat": [ "ccm.component", "https://ccmjs.github.io/tkless-components/comment/versions/ccm.comment-5.0.0.js", {
+        "submit_button_label": "SENT",
         "editable": true,
         "chat": true,
         "data": {
           "store": [ "ccm.store", { "name": "ws_chat_result", "url": "https://ccm2.inf.h-brs.de" } ],
           "key": "be1_WiSe19_chat"
         },
-        "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-9.0.0.js",
-          [ "ccm.get", "https://ccmjs.github.io/akless-components/user/resources/configs.js", "compact" ]  ]
+        "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-9.2.0.js", {
+          "key": [ "ccm.get", "https://ccmjs.github.io/akless-components/user/resources/configs.js", "compact" ],
+          "hash": [ "ccm.load", { "url": "https://ccmjs.github.io/akless-components/modules/md5.mjs", "type": "module" } ],
+          "logged_in": true,
+          "realm": "cloud",
+          "store": "be1_WiSe19_user",
+          "url": "https://ccm2.inf.h-brs.de",
+          "title": "Please enter your Username and Password"
+        } ],
       } ],
       "feedback": [ "ccm.component", "https://ccmjs.github.io/tkless-components/feedback/versions/ccm.feedback-4.0.0.js", {
         "from_above": 20,
         "css": [ "ccm.load", "https://ccmjs.github.io/tkless-components/feedback/resources/right.css" ],
         "data": { "store": [ "ccm.store", { "name": "feedback", "url": "https://ccm2.inf.h-brs.de" } ], "key": "be1_WiSe19_feedback" }
+      } ],
+      "analytic": [ "ccm.component", "https://ccmjs.github.io/akless-components/result/versions/ccm.result-2.0.0.js", {
+        "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-9.2.0.js", {
+          "key": [ "ccm.get", "https://ccmjs.github.io/akless-components/user/resources/configs.js", "compact" ],
+          "hash": [ "ccm.load", { "url": "https://ccmjs.github.io/akless-components/modules/md5.mjs", "type": "module" } ],
+          "logged_in": true,
+          "realm": "cloud",
+          "store": "be1_WiSe19_user",
+          "url": "https://ccm2.inf.h-brs.de",
+          "title": "Please enter your Username and Password",
+          "logger": [ "ccm.instance", "https://ccmjs.github.io/akless-components/log/versions/ccm.log-4.0.2.js", {
+            "events": {
+              "ready": {
+                "browser": true,
+                "parent": true,
+                "root": true,
+                "user": true,
+                "website": true
+              },
+              "login": {
+                "user": true
+              },
+              "logout": {}
+            },
+            "onfinish": {
+              "store": {
+                "settings": { "store": "be1_WiSe19_analytic_log", "url": "https://ccm2.inf.h-brs.de" },
+                "permissions": {
+                  "creator": "akless2m",
+                  "realm": "hbrsinfkaul",
+                  "access": {
+                    "get": "all",
+                    "set": "creator",
+                    "del": "creator"
+                  }
+                }
+              }
+            }
+          } ]
+        } ],
+        "store": [ "ccm.store", { "name": "be1_WiSe19_results", "url": "wss://ccm2.inf.h-brs.de" } ]
+      } ],
+      "json_builder": [ "ccm.component", "https://ccmjs.github.io/akless-components/json_builder/versions/ccm.json_builder-1.3.0.js", {
+        "html": {
+          "tag": "form",
+          "onsubmit": "%onclick%",
+          "inner": [
+            {
+              "tag": "textarea",
+              "id": "input",
+              "class": "form-control",
+              "oninput": "%oninput%",
+              "onchange": "%onchange%"
+            },
+            {
+              "tag": "input",
+              "id": "button",
+              "class": "btn btn-primary pull-right",
+              "value": "Save",
+              "type": "submit",
+              "onclick": "%onclick%"
+            }
+          ]
+        },
+        "bootstrap": [ "ccm.load", "https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        ],
+        "data": {
+          "store": [ "ccm.store", { "name": "be1_WiSe19_user", "url": "https://ccm2.inf.h-brs.de" } ],
+          "key": {}
+        },
+        "directly": true,
+        "onfinish": { log: true, alert: "Saved!", store: true }
       } ]
     },
 
@@ -345,6 +459,19 @@
        */
       let $;
 
+      this.init = async () => {
+
+        if ( self.user ) self.user.onchange = login => {
+          if ( login ) return;
+
+          // clear content
+          $.setContent( self.element, '' );
+
+          // restart app
+          self.start();
+        }
+      };
+
       this.ready = async () => {
 
         // set shortcut to help functions
@@ -359,6 +486,9 @@
       };
 
       this.start = async () => {
+
+        // login user, if not logged in
+        this.user && await this.user.login();
 
         // logging of 'start' event
         self.logger && self.logger.log( 'start', $.clone( my ) );
@@ -376,6 +506,10 @@
         function setUpNavigation() {
 
           $.setContent( main.querySelector( "#header" ), my.navigation );
+
+          if ( self.user.data().user !== 'be_team' )
+            main.querySelector('#users').remove();
+
           main.querySelector( ".navbar-toggler" ).addEventListener( 'click', () => {
             main.querySelector( "nav button").toggleAttribute("aria-expanded");
             main.querySelector( ".navbar-toggler" ).classList.toggle( 'collapsed' );
@@ -400,6 +534,9 @@
                   break;
                 case 'info':
                   await renderInfo();
+                  break;
+                case 'users':
+                  await renderMembership();
                   break;
               }
 
@@ -514,8 +651,7 @@
 
         async function renderAnalytics() {
           const div = getDiv();
-          div.innerHTML = "This menu item is not available.";
-          //await my.analytics.start( { root: div } );
+          await my.analytic.start( { root: div } );
           $.setContent( main.querySelector( "#article" ), div );
         }
 
@@ -538,6 +674,30 @@
           const div = getDiv();
           div.innerHTML = "This menu item is not available.";
           await my.chat.start( { root: div } );
+          $.setContent( main.querySelector( "#article" ), div );
+        }
+        
+        async function renderMembership() {
+          const div = getDiv();
+          await my.json_builder.start( {
+            root: div,
+            onfinish: async function (instance, results) {
+              const users = await instance.data.store.get( {} );
+              await $.asyncForEach( users.filter( user => user.user !== 'be_team' ), async user => await instance.data.store.del( user.key ) );
+              for( const user in results ){
+                await instance.data.store.set( { key: user, token: results[ user ], user: user, realm: 'cloud' } );
+              }
+              alert('Saved');
+            },
+            'data.convert': dataset => {
+              const users = {} ;
+              dataset.forEach( user => {
+                if ( user.key !== 'be_team' )
+                  users[ user.key ] = user.token;
+              } );
+              return users;
+            }
+          } );
           $.setContent( main.querySelector( "#article" ), div );
         }
 
