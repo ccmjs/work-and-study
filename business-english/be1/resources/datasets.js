@@ -64,13 +64,6 @@ ccm.files[ 'datasets.js' ] = {
           "id": "1562244182368X9586298527761004",
           "key": "pronounciation_in_introductions"
         }
-      },
-      {
-        "title": "<i class='fas fa-external-link-alt'></i> Link to Additional Materials",
-        "data": {
-          "component": "content",
-          "inner": "<a href='#'> Link </a>",
-        }
       }
     ]
   },
@@ -117,6 +110,13 @@ ccm.files[ 'datasets.js' ] = {
           "component": "cloze",
           "id": "1558988788863X5301679270557094",
           "key": "simple_vs_progressive_02"
+        }
+      },
+      {
+        "title": "<i class='fas fa-book'></i> Additional materials",
+        "data": {
+          "component": "content",
+          "id": "1569259217382X6808336729357558"
         }
       }
     ]
@@ -502,11 +502,7 @@ ccm.files[ 'datasets.js' ] = {
         }
       },
       {
-        "title": "<i class='fas fa-external-link-alt'></i> Elevator Pitch",
-        "data": {
-          "component": "content",
-          "inner": "<a href='https://youtu.be/bZTWx2bftaw' target='_blank'> </a>",
-        }
+        "title": "<i class='fas fa-external-link-alt'></i> <a href='https://youtu.be/bZTWx2bftaw' target='_blank'>Elevator Pitch</a>"
       },
       {
         "title": "<i class='fas fa-tasks'></i> Elevator Pitch &nbsp;<span class='badge badge-warning'>Middle</span>",

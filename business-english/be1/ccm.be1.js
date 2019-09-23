@@ -436,7 +436,13 @@
         },
         "directly": true,
         "onfinish": { log: true, alert: "Saved!", store: true }
-      } ]
+      } ],
+      "content": {
+        "comp": [ "ccm.component", "https://ccmjs.github.io/akless-components/content/versions/ccm.content-5.2.0.js", {
+          "css": [ "ccm.load", "https://tkless.github.io/ccm-components/libs/bootstrap/css/bootstrap.css" ]
+        } ],
+        "ignore": [ "ccm.get", { "name": "ws_content", "url": "https://ccm2.inf.h-brs.de" }, "1536585034382X04756237908295757" ]
+      },
     },
 
     Instance: function () {
@@ -625,6 +631,18 @@
                     exercise.onfinish.store.key = event.data.key;
 
                     await my.exercise.comp.start( exercise );
+                    break;
+
+                  case 'content':
+
+                    const content = $.clone( my.content.ignore );
+                    content[2] = event.data.id;
+                    const content_config = {
+                      key: content,
+                      root: div
+                    };
+                    content.root = div;
+                    await my.content.comp.start( content_config );
                     break;
                 }
 
