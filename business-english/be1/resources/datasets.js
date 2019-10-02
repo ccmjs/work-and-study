@@ -14,7 +14,8 @@ ccm.files[ 'datasets.js' ] = {
         "title": "<i class='far fa-file-pdf'></i> Introduction to the BE I",
         "data": {
           "component": "pdf",
-          "id": "1562225288012X09632465412797098"
+          "id": "1562225288012X09632465412797098",
+          "key": "introduction_to_the_be_1"
         }
       },
       {
@@ -116,7 +117,8 @@ ccm.files[ 'datasets.js' ] = {
         "title": "<i class='fas fa-book'></i> Additional materials",
         "data": {
           "component": "content",
-          "id": "1569259217382X6808336729357558"
+          "id": "1569259217382X6808336729357558",
+          "key": "additional_materials"
         }
       }
     ]
@@ -130,7 +132,8 @@ ccm.files[ 'datasets.js' ] = {
         "title": "<i class='far fa-file-pdf'></i> Overview",
         "data": {
           "component": "pdf",
-          "id": "1562239001751X7977398251478303"
+          "id": "1562239001751X7977398251478303",
+          "key": "overview_telephoning"
         }
       },
       {
@@ -178,7 +181,7 @@ ccm.files[ 'datasets.js' ] = {
         "data": {
           "component": "pdf",
           "id": "1568410301205X9866174731369755",
-          "key": "conversation"
+          "key": "external_exercise"
         }
       }
     ]
@@ -192,14 +195,16 @@ ccm.files[ 'datasets.js' ] = {
         "title": "<i class='far fa-file-pdf'></i> Overview",
         "data": {
           "component": "pdf",
-          "id": "1568402398257X7358278557630911"
+          "id": "1568402398257X7358278557630911",
+          "key": "overview_emailing"
         }
       },
       {
         "title": "<i class='far fa-file-pdf'></i> Overview of Salutations and Closings",
         "data": {
           "component": "pdf",
-          "id": "1568406394499X9797122643478704"
+          "id": "1568406394499X9797122643478704",
+          "key": "overview_of_salutations_and_closings"
         }
       },
       {
@@ -253,7 +258,8 @@ ccm.files[ 'datasets.js' ] = {
         "title": "<i class='far fa-file-pdf'></i> Overview",
         "data": {
           "component": "pdf",
-          "id": "1563902843771X5709638800011494"
+          "id": "1563902843771X5709638800011494",
+          "key": "overview_report_writing"
         }
       },
       {
@@ -299,7 +305,8 @@ ccm.files[ 'datasets.js' ] = {
         "title": "<i class='far fa-file-pdf'></i> Overview",
         "data": {
           "component": "pdf",
-          "id": "1562239540063X6516480465176744"
+          "id": "1562239540063X6516480465176744",
+          "key": "overview_presentation"
         }
       },
       {
@@ -345,7 +352,8 @@ ccm.files[ 'datasets.js' ] = {
         "title": "<i class='far fa-file-pdf'></i> Overview",
         "data": {
           "component": "pdf",
-          "id": "1568822278004X450268637469589"
+          "id": "1568822278004X450268637469589",
+          "key": "overview_meetings"
         }
       },
       {
@@ -383,14 +391,16 @@ ccm.files[ 'datasets.js' ] = {
         "title": "<i class='far fa-file-pdf'></i> Overview",
         "data": {
           "component": "pdf",
-          "id": "1568408382172X45480965526820416"
+          "id": "1568408382172X45480965526820416",
+          "pdf": "overview_cv_resume"
         }
       },
       {
         "title": "<i class='far fa-file-pdf'></i> Writing Dates Text Assignment &nbsp;<span class='badge badge-success'>Easy</span>",
         "data": {
           "component": "pdf",
-          "id": "1564743116232X08894741810557916"
+          "id": "1564743116232X08894741810557916",
+          "key": "writing_dates_text_assignment"
         }
       },
       {
@@ -436,7 +446,8 @@ ccm.files[ 'datasets.js' ] = {
         "title": "<i class='far fa-file-pdf'></i> Overview",
         "data": {
           "component": "pdf",
-          "id": "1568407878928X31143770449800745"
+          "id": "1568407878928X31143770449800745",
+          "key": "overview_interviewing"
         }
       },
       {
@@ -490,7 +501,8 @@ ccm.files[ 'datasets.js' ] = {
         "title": "<i class='far fa-file-pdf'></i> Overview",
         "data": {
           "component": "pdf",
-          "id": "1568028414702X6121728047938968"
+          "id": "1568028414702X6121728047938968",
+          "key": "overview_job_fair"
         }
       },
       {
@@ -531,7 +543,8 @@ ccm.files[ 'datasets.js' ] = {
         "title": "<i class='far fa-file-pdf'></i> Overview",
         "data": {
           "component": "pdf",
-          "id": "1568038078625X06158595759574981"
+          "id": "1568038078625X06158595759574981",
+          "key": "overview_final_exam"
         }
       },
       {

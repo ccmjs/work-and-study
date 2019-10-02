@@ -53,7 +53,7 @@
         "comp": [ "ccm.component", "https://ccmjs.github.io/akless-components/menu/versions/ccm.menu-2.4.4.js", {
           "css": [ "ccm.load", "https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css",
             "https://use.fontawesome.com/releases/v5.6.3/css/all.css",
-            { "context": "head", "url": "https://use.fontawesome.com/releases/v5.6.3/css/all.css" }, "resources/menu.css" ],
+            "resources/menu.css" ],
           "logger": [ "ccm.instance", "https://ccmjs.github.io/akless-components/log/versions/ccm.log-4.0.2.js", {
             "events": {
               "click": {
@@ -406,6 +406,24 @@
         } ],
         "store": [ "ccm.store", { "name": "be1_WiSe19_results", "url": "wss://ccm2.inf.h-brs.de" } ]
       } ],
+      "star_rating": {
+        "comp": [ "ccm.component", "https://ccmjs.github.io/tkless-components/star_rating/versions/ccm.star_rating-5.0.0.js" ],
+        "ignore": {
+          "show_results": true,
+          "star_title": ["I do not Like It at All", "I do not Like It", "It Is OK", "I Like It", "Like It a Lot"],
+          "data": {
+            "store": [ "ccm.store", { "name": "be1_WiSe19_star_rating_results", "url": "https://ccm2.inf.h-brs.de" } ]
+          },
+          "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-9.2.0.js", {
+            "key": [ "ccm.get", "https://ccmjs.github.io/akless-components/user/resources/configs.js", "compact" ],
+            "logged_in": true,
+            "realm": "cloud",
+            "store": "be1_WiSe19_user",
+            "url": "https://ccm2.inf.h-brs.de",
+            "title": "Please enter your Username and Password"
+          } ]
+        }
+      },
       "json_builder": [ "ccm.component", "https://ccmjs.github.io/akless-components/json_builder/versions/ccm.json_builder-1.3.0.js", {
         "html": {
           "tag": "form",
@@ -572,9 +590,10 @@
         async function renderContent() {
           const article = main.querySelector( '#article' );
           $.setContent( article, '' );
+          let star_rating_key;
 
           const result = await my.menu.data.get();
-          result.forEach(  async entry => {
+          for ( const entry of result ) {
 
             let content = $.html( my.html.content );
             $.append( article, content );
@@ -593,6 +612,7 @@
                     config_cloze.root = div;
                     config_cloze.key[2] = event.data.id;
                     config_cloze.data.key = event.data.key;
+                    star_rating_key = event.data.key;
                     config_cloze.onfinish.store.key = event.data.key;
 
                     await my.cloze.comp.start( config_cloze );
@@ -602,6 +622,7 @@
                     config_quiz.root = div;
                     config_quiz.key[2] = event.data.id;
                     config_quiz.data.key = event.data.key;
+                    star_rating_key = event.data.key;
                     config_quiz.onfinish.store.key = event.data.key;
 
                     await my.quiz.comp.start( config_quiz );
@@ -610,6 +631,7 @@
                     const quick_decide = $.clone( my.quick_decide.ignore );
                     quick_decide.root = div;
                     quick_decide.key[2] = event.data.id;
+                    star_rating_key = event.data.key;
                     quick_decide.onfinish.store.key = event.data.key;
 
                     await my.quick_decide.comp.start( quick_decide );
@@ -621,35 +643,50 @@
                       key: pdf,
                       root: div
                     };
-                    pdf.root = div;
+                    star_rating_key = event.data.key;
                     await my.pdf_viewer.comp.start( config );
                     break;
                   case 'exercise':
                     const exercise = $.clone( my.exercise.ignore );
                     exercise.root = div;
                     exercise.key[2] = event.data.id;
+                    star_rating_key = event.data.key;
                     exercise.onfinish.store.key = event.data.key;
 
                     await my.exercise.comp.start( exercise );
                     break;
 
-                  case 'content':
-
+                 case 'content':
                     const content = $.clone( my.content.ignore );
                     content[2] = event.data.id;
+                    star_rating_key = event.data.key;
                     const content_config = {
                       key: content,
                       root: div
                     };
+                    star_rating_key = event.data.key;
                     content.root = div;
                     await my.content.comp.start( content_config );
                     break;
                 }
 
+                let heading = getDiv();
+                heading.classList.add( 'heading' );
+                heading.innerHTML = '<div class="mb-2 border-bottom"><h4>Do you like it? <span class="badge badge-info"> Please let us know.</span></h4></div>';
+
+                const rating_div = document.createElement( 'div' );
                 $.setContent( main.querySelector( "#article" ), div );
+                main.querySelector( "#padding" ).appendChild( heading );
+                main.querySelector( "#padding" ).appendChild( rating_div );
+
+                const star_rating = $.clone( my.star_rating.ignore );
+                star_rating.data.key = event.data.key;
+                star_rating.root = rating_div;
+                await my.star_rating.comp.start( star_rating );
+
               }
             } );
-          } );
+          }
         }
 
         async function renderFeedback() {

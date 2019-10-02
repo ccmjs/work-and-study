@@ -47,3 +47,8 @@ li a {
   display: none;
 }
 
+
+.heading {
+  padding: 4rem 0 0 0 !important;
+}
+
