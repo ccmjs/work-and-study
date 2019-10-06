@@ -117,6 +117,37 @@
             "store": "be1_WiSe19_user",
             "url": "https://ccm2.inf.h-brs.de",
             "title": "Please enter your Username and Password"
+          } ],
+          "logger": [ "ccm.instance", "https://ccmjs.github.io/akless-components/log/versions/ccm.log-4.0.2.js", {
+            "events": {
+              "start": {
+                "data": true,
+                "user": true
+              },
+              "retry": {
+                "user": true
+              },
+              "finish": {
+                "user": true
+              }
+            },
+            "only": {
+              "data": [ "key" ]
+            },
+            "onfinish": {
+              "store": {
+                "settings": { "name": "be1_WiSe19_cloze_log", "url": "https://ccm2.inf.h-brs.de" },
+                "permissions": {
+                  "creator": "akless2m",
+                  "realm": "hbrsinfkaul",
+                  "access": {
+                    "get": "all",
+                    "set": "creator",
+                    "del": "creator"
+                  }
+                }
+              }
+            }
           } ]
         }
       },
@@ -157,8 +188,36 @@
             "store": "be1_WiSe19_user",
             "url": "https://ccm2.inf.h-brs.de",
             "title": "Please enter your Username and Password"
+          } ],
+          "logger": [ "ccm.instance", "https://ccmjs.github.io/akless-components/log/versions/ccm.log-4.0.2.js", {
+            "events": {
+              "start": {
+                "data": true,
+                "user": true
+              },
+              "finish": {
+                "user": true
+              }
+            },
+            "only": {
+              "data": [ "key" ]
+            },
+            "onfinish": {
+              "store": {
+                "settings": { "name": "be1_WiSe19_quiz_log", "url": "https://ccm2.inf.h-brs.de" },
+                "permissions": {
+                  "creator": "akless2m",
+                  "realm": "hbrsinfkaul",
+                  "access": {
+                    "get": "all",
+                    "set": "creator",
+                    "del": "creator"
+                  }
+                }
+              }
+            }
           } ]
-        },
+        }
       },
       "quick_decide": {
         "comp": [ "ccm.component", "https://ccmjs.github.io/akless-components/quick_decide/versions/ccm.quick_decide-2.0.2.js"],
@@ -197,8 +256,32 @@
             "store": "be1_WiSe19_user",
             "url": "https://ccm2.inf.h-brs.de",
             "title": "Please enter your Username and Password"
+          } ],
+          "logger": [ "ccm.instance", "https://ccmjs.github.io/akless-components/log/versions/ccm.log-4.0.2.js", {
+            "events": {
+              "start": {
+                "user": true
+              },
+              "finish": {
+                "user": true
+              }
+            },
+            "onfinish": {
+              "store": {
+                "settings": { "name": "be1_WiSe19_quick_decide_log", "url": "https://ccm2.inf.h-brs.de" },
+                "permissions": {
+                  "creator": "akless2m",
+                  "realm": "hbrsinfkaul",
+                  "access": {
+                    "get": "all",
+                    "set": "creator",
+                    "del": "creator"
+                  }
+                }
+              }
+            }
           } ]
-        },
+        }
       },
       "exercise": {
         "comp": [ "ccm.component", "https://ccmjs.github.io/tkless-components/exercise/versions/ccm.exercise-5.0.0.js"],
@@ -246,94 +329,17 @@
         "realm": "cloud",
         "store": "be1_WiSe19_user",
         "url": "https://ccm2.inf.h-brs.de",
-        "title": "Please enter your Username and Password",
-        "logger": [ "ccm.instance", "https://ccmjs.github.io/akless-components/log/versions/ccm.log-4.0.2.js", {
-          "events": {
-            "login": {
-              "user": true
-            },
-            "logout": {}
-          },
-          "onfinish": {
-            "store": {
-              "settings": { "name": "be1_WiSe19_user_log", "url": "https://ccm2.inf.h-brs.de" },
-              "permissions": {
-                "creator": "akless2m",
-                "realm": "hbrsinfkaul",
-                "access": {
-                  "get": "all",
-                  "set": "creator",
-                  "del": "creator"
-                }
-              }
-            }
-          }
-        } ]
+        "title": "Please enter your Username and Password"
       } ],
       "pdf_viewer": {
-        "comp": [ "ccm.component", "https://ccmjs.github.io/tkless-components/pdf_viewer/versions/ccm.pdf_viewer-4.0.0.js", {
-          "logger": [ "ccm.instance", "https://ccmjs.github.io/akless-components/log/versions/ccm.log-4.0.2.js", {
-            "events": {
-              "start": {
-                "user": true
-              },
-              "prev": {
-                "data": true,
-                "user": true
-              },
-              "next": {
-                "data": true,
-                "user": true
-              },
-              "goto": {
-                "data": true,
-                "user": true
-              }
-            },
-            "onfinish": {
-              "store": {
-                "settings": { "name": "be2_SoSe19_pdf_viewer_log", "url": "https://ccm2.inf.h-brs.de" },
-                "permissions": {
-                  "creator": "akless2m",
-                  "realm": "hbrsinfkaul",
-                  "access": {
-                    "get": "all",
-                    "set": "creator",
-                    "del": "creator"
-                  }
-                }
-              }
-            }
-          } ]
-        } ],
+        "comp": [ "ccm.component", "https://ccmjs.github.io/tkless-components/pdf_viewer/versions/ccm.pdf_viewer-4.0.0.js" ],
         "ignore": [ "ccm.get", { "name": "ws_pdf_viewer", "url": "https://ccm2.inf.h-brs.de" }, "1536585034382X04756237908295757" ]
       },
       "accordion": [ "ccm.component", "https://ccmjs.github.io/tkless-components/accordion/versions/ccm.accordion-2.1.0.js", {
         "style": [ "ccm.load","resources/accordion.css" ],
         "size": "md",
         "color": "info",
-        "entries": [ "ccm.load", "resources/accordion_data.js" ],
-        "logger": [ "ccm.instance", "https://ccmjs.github.io/akless-components/log/versions/ccm.log-4.0.2.js", {
-          "events": {
-            "ready": {
-              "user": true
-            }
-          },
-          "onfinish": {
-            "store": {
-              "settings": { "name": "be1_WiSe19_accordion_log", "url": "https://ccm2.inf.h-brs.de" },
-              "permissions": {
-                "creator": "akless2m",
-                "realm": "hbrsinfkaul",
-                "access": {
-                  "get": "all",
-                  "set": "creator",
-                  "del": "creator"
-                }
-              }
-            }
-          }
-        } ]
+        "entries": [ "ccm.load", "resources/accordion_data.js" ]
       } ],
       "chat": [ "ccm.component", "https://ccmjs.github.io/tkless-components/comment/versions/ccm.comment-5.0.0.js", {
         "submit_button_label": "SENT",
@@ -366,36 +372,7 @@
           "realm": "cloud",
           "store": "be1_WiSe19_user",
           "url": "https://ccm2.inf.h-brs.de",
-          "title": "Please enter your Username and Password",
-          "logger": [ "ccm.instance", "https://ccmjs.github.io/akless-components/log/versions/ccm.log-4.0.2.js", {
-            "events": {
-              "ready": {
-                "browser": true,
-                "parent": true,
-                "root": true,
-                "user": true,
-                "website": true
-              },
-              "login": {
-                "user": true
-              },
-              "logout": {}
-            },
-            "onfinish": {
-              "store": {
-                "settings": { "name": "be1_WiSe19_analytic_log", "url": "https://ccm2.inf.h-brs.de" },
-                "permissions": {
-                  "creator": "akless2m",
-                  "realm": "hbrsinfkaul",
-                  "access": {
-                    "get": "all",
-                    "set": "creator",
-                    "del": "creator"
-                  }
-                }
-              }
-            }
-          } ]
+          "title": "Please enter your Username and Password"
         } ],
         "store": [ "ccm.store", { "name": "be1_WiSe19_results", "url": "wss://ccm2.inf.h-brs.de" } ]
       } ],
@@ -454,6 +431,43 @@
         } ],
         "ignore": [ "ccm.get", { "name": "ws_content", "url": "https://ccm2.inf.h-brs.de" }, "1536585034382X04756237908295757" ]
       },
+      "logger": [ "ccm.instance", "https://ccmjs.github.io/akless-components/log/versions/ccm.log-4.0.2.js", {
+        "events": {
+          "ready": {
+            "browser": true,
+            "user": true,
+            "website": true
+          },
+          "toggle": {
+            "data": true,
+            "user": true
+          },
+          "nav": {
+            "data": true,
+            "user": true
+          },
+          "login": {
+            "user": true
+          },
+          "logout": {
+            "user": true
+          }
+        },
+        "onfinish": {
+          "store": {
+            "settings": { "name": "be1_WiSe19_app_log", "url": "https://ccm2.inf.h-brs.de" },
+            "permissions": {
+              "creator": "akless2m",
+              "realm": "hbrsinfkaul",
+              "access": {
+                "get": "all",
+                "set": "creator",
+                "del": "creator"
+              }
+            }
+          }
+        }
+      } ]
     },
 
     Instance: function () {
@@ -508,7 +522,7 @@
         this.user && await this.user.login();
 
         // logging of 'start' event
-        self.logger && self.logger.log( 'start', $.clone( my ) );
+        self.logger && self.logger.log( 'start' );
 
         let main = $.html( my.html.main );
 
@@ -531,6 +545,10 @@
             main.querySelector( "nav button").toggleAttribute("aria-expanded");
             main.querySelector( ".navbar-toggler" ).classList.toggle( 'collapsed' );
             main.querySelector( ".navbar-collapse" ).classList.toggle( 'show' );
+
+            // logging of 'toggle' event
+            self.logger && self.logger.log( 'toggle', main.querySelector( ".navbar-toggler" ).classList.contains( 'collapsed' ) );
+
           } );
 
           main.querySelectorAll( '.navbar-nav  > .nav-item' ).forEach( li => {
@@ -557,19 +575,29 @@
                   break;
               }
 
+              // logging of 'nav' event
+              self.logger && self.logger.log( 'nav', li.id );
 
             } );
           } );
 
           main.querySelector( "#sign-on" ).addEventListener( 'click', async () => {
             if ( self.user ) {
+
               await self.user.login();
               main.querySelector( '#username' ).innerHTML = "<span class='fas fa-user pr-1'></span>"+ self.user.data().user;
               main.querySelector( '#sign-on' ).style.display = "none";
               const sign_out = main.querySelector( '#sign-out' );
               sign_out.style.display = "block";
 
+              // logging of 'login' event
+              self.logger && self.logger.log( 'login' );
+
               sign_out.addEventListener( 'click', async () => {
+
+                // logging of 'logout' event
+                self.logger && self.logger.log( 'logout' );
+
                 await self.user.logout();
                 main.querySelector( '#username' ).innerHTML = "";
                 main.querySelector( '#sign-on' ).style.display = "block";
