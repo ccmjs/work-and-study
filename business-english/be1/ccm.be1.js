@@ -63,7 +63,7 @@
             },
             "onfinish": {
               "store": {
-                "settings": { "store": "be1_WiSe19_menu_log", "url": "https://ccm2.inf.h-brs.de" },
+                "settings": { "name": "be1_WiSe19_menu_log", "url": "https://ccm2.inf.h-brs.de" },
                 "permissions": {
                   "creator": "akless2m",
                   "realm": "hbrsinfkaul",
@@ -238,7 +238,7 @@
             "url": "https://ccm2.inf.h-brs.de",
             "title": "Please enter your Username and Password"
           } ]
-        },
+        }
       },
       "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-9.2.0.js", {
         "key": [ "ccm.get", "https://ccmjs.github.io/akless-components/user/resources/configs.js", "compact" ],
@@ -249,13 +249,6 @@
         "title": "Please enter your Username and Password",
         "logger": [ "ccm.instance", "https://ccmjs.github.io/akless-components/log/versions/ccm.log-4.0.2.js", {
           "events": {
-            "ready": {
-              "browser": true,
-              "parent": true,
-              "root": true,
-              "user": true,
-              "website": true
-            },
             "login": {
               "user": true
             },
@@ -263,7 +256,7 @@
           },
           "onfinish": {
             "store": {
-              "settings": { "store": "be1_WiSe19_user_log", "url": "https://ccm2.inf.h-brs.de" },
+              "settings": { "name": "be1_WiSe19_user_log", "url": "https://ccm2.inf.h-brs.de" },
               "permissions": {
                 "creator": "akless2m",
                 "realm": "hbrsinfkaul",
@@ -299,7 +292,7 @@
             },
             "onfinish": {
               "store": {
-                "settings": { "store": "be2_SoSe19_pdf_viewer_log", "url": "https://ccm2.inf.h-brs.de" },
+                "settings": { "name": "be2_SoSe19_pdf_viewer_log", "url": "https://ccm2.inf.h-brs.de" },
                 "permissions": {
                   "creator": "akless2m",
                   "realm": "hbrsinfkaul",
@@ -328,7 +321,7 @@
           },
           "onfinish": {
             "store": {
-              "settings": { "store": "be1_wise1920_accordion_log", "url": "https://ccm2.inf.h-brs.de" },
+              "settings": { "name": "be1_WiSe19_accordion_log", "url": "https://ccm2.inf.h-brs.de" },
               "permissions": {
                 "creator": "akless2m",
                 "realm": "hbrsinfkaul",
@@ -390,7 +383,7 @@
             },
             "onfinish": {
               "store": {
-                "settings": { "store": "be1_WiSe19_analytic_log", "url": "https://ccm2.inf.h-brs.de" },
+                "settings": { "name": "be1_WiSe19_analytic_log", "url": "https://ccm2.inf.h-brs.de" },
                 "permissions": {
                   "creator": "akless2m",
                   "realm": "hbrsinfkaul",

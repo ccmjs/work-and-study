@@ -11,10 +11,10 @@ ccm.files[ 'datasets.js' ] = {
     "section": "Introductions",
     "entries": [
       {
-        "title": "<i class='far fa-file-pdf'></i> Introduction to the BE I",
+        "title": "<i class='far fa-eye'></i> Introduction to the BE I",
         "data": {
-          "component": "pdf",
-          "id": "1562225288012X09632465412797098",
+          "component": "content",
+          "id": "1570196887291X6761196888957408",
           "key": "introduction_to_the_be_1"
         }
       },
@@ -51,7 +51,7 @@ ccm.files[ 'datasets.js' ] = {
         }
       },
       {
-        "title": "<i class='far fa-edit'></i> Listening and Writing &nbsp;<span class='badge badge-success'>Easy</span>",
+        "title": "<i class='far fa-edit'></i> Listening and Writing &nbsp;<span class='badge badge-danger'>Difficult</span>",
         "data": {
           "component": "cloze",
           "id": "1562240631170X4275033702361819",
@@ -59,11 +59,19 @@ ccm.files[ 'datasets.js' ] = {
         }
       },
       {
-        "title": "<i class='far fa-edit'></i> Pronounciation in Introductions &nbsp;<span class='badge badge-danger'>Difficult</span>",
+        "title": "<i class='far fa-edit'></i> Pronounciation in Introductions &nbsp;<span class='badge badge-success'>Easy</span>",
         "data": {
           "component": "cloze",
           "id": "1562244182368X9586298527761004",
           "key": "pronounciation_in_introductions"
+        }
+      },
+      {
+        "title": "<i class='fas fa-book'></i> Additional Materials",
+        "data": {
+          "component": "content",
+          "id": "1569511208322X6664375858380482",
+          "key": "additional_materials_introductions"
         }
       }
     ]
@@ -114,11 +122,19 @@ ccm.files[ 'datasets.js' ] = {
         }
       },
       {
-        "title": "<i class='fas fa-book'></i> Additional materials",
+        "title": "<i class='fas fa-book'></i> Link to additional materials",
         "data": {
           "component": "content",
           "id": "1569259217382X6808336729357558",
-          "key": "additional_materials"
+          "key": "link_additional_materials_describing"
+        }
+      },
+      {
+        "title": "<i class='far fa-file'></i> Exercise with additional materials",
+        "data": {
+          "component": "content",
+          "id": "1569519332295X7831291926035022",
+          "key": "exercise_with_additional_materials_describing"
         }
       }
     ]
@@ -129,10 +145,10 @@ ccm.files[ 'datasets.js' ] = {
     "section": "Telephoning",
     "entries": [
       {
-        "title": "<i class='far fa-file-pdf'></i> Overview",
+        "title": "<i class='far fa-eye'></i> Overview",
         "data": {
-          "component": "pdf",
-          "id": "1562239001751X7977398251478303",
+          "component": "content",
+          "id": "1570197881311X7634313359616682",
           "key": "overview_telephoning"
         }
       },
@@ -177,11 +193,11 @@ ccm.files[ 'datasets.js' ] = {
         }
       },
       {
-        "title": " <i class='far fa-file-pdf'></i> External Exercise &nbsp;<span class='badge badge-danger'>Difficult</span>",
+        "title": "<i class='fas fa-book'></i> Link to additional materials",
         "data": {
-          "component": "pdf",
-          "id": "1568410301205X9866174731369755",
-          "key": "external_exercise"
+          "component": "content",
+          "id": "1569575380195X2074788350696457",
+          "key": "link_additional_materials_telephoning"
         }
       }
     ]
@@ -192,18 +208,18 @@ ccm.files[ 'datasets.js' ] = {
     "section": "Emailing",
     "entries": [
       {
-        "title": "<i class='far fa-file-pdf'></i> Overview",
+        "title": "<i class='far fa-eye'></i> Overview",
         "data": {
-          "component": "pdf",
-          "id": "1568402398257X7358278557630911",
+          "component": "content",
+          "id": "1570198551406X08241896037380769",
           "key": "overview_emailing"
         }
       },
       {
-        "title": "<i class='far fa-file-pdf'></i> Overview of Salutations and Closings",
+        "title": "<i class='far fa-file'></i> Overview of Salutations and Closings",
         "data": {
-          "component": "pdf",
-          "id": "1568406394499X9797122643478704",
+          "component": "content",
+          "id": "1570198887288X22639156771818558",
           "key": "overview_of_salutations_and_closings"
         }
       },
@@ -224,6 +240,14 @@ ccm.files[ 'datasets.js' ] = {
         }
       },
       {
+        "title": "<i class='far fa-edit'></i> Capitalization &nbsp;<span class='badge badge-warning'>Middle</span>",
+        "data": {
+          "component": "cloze",
+          "id": "1569577122135X6009018594406703",
+          "key": "capitalization"
+        }
+      },
+      {
         "title": "<i class='fas fa-tasks'></i> Modals &nbsp;<span class='badge badge-danger'>Difficult</span>",
         "data": {
           "component": "quiz",
@@ -240,13 +264,13 @@ ccm.files[ 'datasets.js' ] = {
         }
       },
       {
-        "title": "<i class='far fa-file-alt'></i> Further reading and exercise",
+        "title": "<i class='fas fa-book'></i> Link to additional materials",
         "data": {
           "component": "exercise",
-          "id": "1562232973257X9217429286908654",
-          "key": "further_reading_and_exercise"
+          "id": "1568411482158X6549716391567724",
+          "key": "link_to_additional_materials_emailing"
         }
-      },
+      }
     ]
   },
 
@@ -255,10 +279,10 @@ ccm.files[ 'datasets.js' ] = {
     "section": "Report Writing",
     "entries": [
       {
-        "title": "<i class='far fa-file-pdf'></i> Overview",
+        "title": "<i class='far fa-eye'></i> Overview",
         "data": {
-          "component": "pdf",
-          "id": "1563902843771X5709638800011494",
+          "component": "content",
+          "id": "1570200365035X26822387693466054",
           "key": "overview_report_writing"
         }
       },
@@ -287,11 +311,35 @@ ccm.files[ 'datasets.js' ] = {
         }
       },
       {
-        "title": "<i class='fas fa-hourglass-end'></i> Linking Words &nbsp;<span class='badge badge-warning'>Middle</span>",
+        "title": "<i class='far fa-edit'></i> Linking Words &nbsp;<span class='badge badge-warning'>Middle</span>",
         "data": {
           "component": "cloze",
           "id": "1563995267580X2778862069136889",
           "key": "linking_words"
+        }
+      },
+      {
+        "title": "<i class='far fa-file'></i> Fronting and Inversion &nbsp;<span class='badge badge-danger'>Difficult</span>",
+        "data": {
+          "component": "content",
+          "id": "1569663793785X9302397055609901",
+          "key": "fronting_and_inversion"
+        }
+      },
+      {
+        "title": "<i class='far fa-edit'></i> Word Order &nbsp;<span class='badge badge-danger'>Difficult</span>",
+        "data": {
+          "component": "cloze",
+          "id": "1569674340444X08575465237197566",
+          "key": "word_order"
+        }
+      },
+      {
+        "title": "<i class='far fa-file'></i> Writing a report",
+        "data": {
+          "component": "content",
+          "id": "1569675239210X7579612274319472",
+          "key": "writing_a_report"
         }
       }
     ]
@@ -302,10 +350,10 @@ ccm.files[ 'datasets.js' ] = {
     "section": "Presentations",
     "entries": [
       {
-        "title": "<i class='far fa-file-pdf'></i> Overview",
+        "title": "<i class='far fa-eye'></i> Overview",
         "data": {
-          "component": "pdf",
-          "id": "1562239540063X6516480465176744",
+          "component": "content",
+          "id": "1570200581827X41224371507497826",
           "key": "overview_presentation"
         }
       },
@@ -326,6 +374,14 @@ ccm.files[ 'datasets.js' ] = {
         }
       },
       {
+        "title": "<i class='far fa-edit'></i> Adjectives and Adverbs &nbsp;<span class='badge badge-danger'>Difficult</span>",
+        "data": {
+          "component": "cloze",
+          "id": "1569679902856X6489855218171441",
+          "key": "adjectives_and_adverbs"
+        }
+      },
+      {
         "title": "<i class='far fa-edit'></i> Review &nbsp;<span class='badge badge-danger'>Difficult</span>",
         "data": {
           "component": "cloze",
@@ -340,6 +396,14 @@ ccm.files[ 'datasets.js' ] = {
           "id": "1563899112247X1668410346827771",
           "key": "closing"
         }
+      },
+      {
+        "title": "<i class='far fa-file'></i> TED Talks Exercise Link",
+        "data": {
+          "component": "content",
+          "id": "1569681548832X2518220236626909",
+          "key": "ted_talks_exercise_link"
+        }
       }
     ]
   },
@@ -349,10 +413,10 @@ ccm.files[ 'datasets.js' ] = {
     "section": "Meetings",
     "entries": [
       {
-        "title": "<i class='far fa-file-pdf'></i> Overview",
+        "title": "<i class='far fa-eye'></i> Overview",
         "data": {
-          "component": "pdf",
-          "id": "1568822278004X450268637469589",
+          "component": "content",
+          "id": "1570201026972X9643418094732268",
           "key": "overview_meetings"
         }
       },
@@ -379,6 +443,22 @@ ccm.files[ 'datasets.js' ] = {
           "id": "1564669551535X20507129104702848",
           "key": "conditionals"
         }
+      },
+      {
+        "title": "<i class='far fa-file'></i> Reading Link and Exercise &nbsp;<span class='badge badge-warning'>Middle</span>",
+        "data": {
+          "component": "content",
+          "id": "1569868630008X4862256030348051",
+          "key": "reading_link_and_exercise"
+        }
+      },
+      {
+        "title": "<i class='far fa-file'></i> Videos and Exercise",
+        "data": {
+          "component": "content",
+          "id": "1569868081746X2171531968735747",
+          "key": "videos_and_exercise"
+        }
       }
     ]
   },
@@ -388,18 +468,26 @@ ccm.files[ 'datasets.js' ] = {
     "section": "CV/Resume",
     "entries": [
       {
-        "title": "<i class='far fa-file-pdf'></i> Overview",
+        "title": "<i class='far fa-eye'></i> Overview",
         "data": {
-          "component": "pdf",
-          "id": "1568408382172X45480965526820416",
+          "component": "content",
+          "id": "1570201158760X1131344625008337",
           "pdf": "overview_cv_resume"
         }
       },
       {
-        "title": "<i class='far fa-file-pdf'></i> Writing Dates Text Assignment &nbsp;<span class='badge badge-success'>Easy</span>",
+        "title": "<i class='far fa-edit'></i> Countable and uncountable nouns &nbsp;<span class='badge badge-warning'>Middle</span>",
         "data": {
-          "component": "pdf",
-          "id": "1564743116232X08894741810557916",
+          "component": "cloze",
+          "id": "1570113272200X05424661152401078",
+          "key": "countable_and_uncountable_nouns"
+        }
+      },
+      {
+        "title": "<i class='far fa-file'></i> Writing Dates Text Assignment &nbsp;<span class='badge badge-success'>Easy</span>",
+        "data": {
+          "component": "content",
+          "id": "1569869207418X8918125725923849",
           "key": "writing_dates_text_assignment"
         }
       },
@@ -428,6 +516,14 @@ ccm.files[ 'datasets.js' ] = {
         }
       },
       {
+        "title": "<i class='fas fa-tasks'></i> Verbs and Prepositions &nbsp;<span class='badge badge-danger'>Difficult</span>",
+        "data": {
+          "component": "quiz",
+          "id": "1570117008354X2948417549124136",
+          "key": "verbs_and_prepositions"
+        }
+      },
+      {
         "title": "<i class='fas fa-tasks'></i> Experience and Skills Section &nbsp;<span class='badge badge-danger'>Difficult</span>",
         "data": {
           "component": "quiz",
@@ -435,6 +531,22 @@ ccm.files[ 'datasets.js' ] = {
           "key": "experience_and_skills_section"
         }
       },
+      {
+        "title": "<i class='far fa-edit'></i> Adjectives and Prepositions &nbsp;<span class='badge badge-danger'>Difficult</span>",
+        "data": {
+          "component": "cloze",
+          "id": "1570118510014X5912421090155713",
+          "key": "adjectives_and_prepositions"
+        }
+      },
+      {
+        "title": "<i class='fas fa-book'></i> Link to additional materials",
+        "data": {
+          "component": "content",
+          "id": "1570119225268X08247398061990441",
+          "key": "link_additional_materials_cv_resume"
+        }
+      }
     ]
   },
 
@@ -443,10 +555,10 @@ ccm.files[ 'datasets.js' ] = {
     "section": "Interviewing",
     "entries": [
       {
-        "title": "<i class='far fa-file-pdf'></i> Overview",
+        "title": "<i class='far fa-eye'></i> Overview",
         "data": {
-          "component": "pdf",
-          "id": "1568407878928X31143770449800745",
+          "component": "content",
+          "id": "1570201353061X5944110058918384",
           "key": "overview_interviewing"
         }
       },
@@ -489,6 +601,14 @@ ccm.files[ 'datasets.js' ] = {
           "id": "1565266441226X0005288184983411881",
           "key": "mixed_tenses_in_interviews"
         }
+      },
+      {
+        "title": "<i class='fas fa-file'></i> Harvard Business Review &nbsp;<span class='badge badge-warning'>Middle</span>",
+        "data": {
+          "component": "content",
+          "id": "1570122146105X9819591592606964",
+          "key": "harvard_business_review"
+        }
       }
     ]
   },
@@ -498,15 +618,15 @@ ccm.files[ 'datasets.js' ] = {
     "section": "Job Fair",
     "entries": [
       {
-        "title": "<i class='far fa-file-pdf'></i> Overview",
+        "title": "<i class='far fa-eye'></i> Overview",
         "data": {
-          "component": "pdf",
-          "id": "1568028414702X6121728047938968",
+          "component": "content",
+          "id": "1570201714564X9216144076004757",
           "key": "overview_job_fair"
         }
       },
       {
-        "title": "<i class='far fa-edit'></i> Personal Profile &nbsp;<span class='badge badge-danger'>????</span>",
+        "title": "<i class='far fa-edit'></i> Personal Profile &nbsp;<span class='badge badge-success'>Easy</span>",
         "data": {
           "component": "cloze",
           "id": "1568024620824X32930343379113425",
@@ -514,22 +634,67 @@ ccm.files[ 'datasets.js' ] = {
         }
       },
       {
-        "title": "<i class='fas fa-external-link-alt'></i> <a href='https://youtu.be/bZTWx2bftaw' target='_blank'>Elevator Pitch</a>"
-      },
-      {
-        "title": "<i class='fas fa-tasks'></i> Elevator Pitch &nbsp;<span class='badge badge-warning'>Middle</span>",
+        "title": "<i class='far fa-edit'></i> Relative Clauses &nbsp;<span class='badge badge-warning'>Middle</span>",
         "data": {
-          "component": "quiz",
-          "id": "1568026611617X07431246812440206",
-          "key": "elevator_pitch"
+          "component": "cloze",
+          "id": "1570187637530X019369381765576676",
+          "key": "relative_clauses"
         }
       },
       {
-        "title": "<i class='far fa-edit'></i> Following up &nbsp;<span class='badge badge-warning'>????</span>",
+        "title": "<i class='fas fa-video'></i> Elevator Pitch",
+        "data": {
+          "component": "content",
+          "id": "1570392208487X22482814288695208",
+          "key": "elevator_pitch_video"
+        }
+      },
+      {
+        "title": "<i class='fas fa-tasks'></i> Elevator pitch quiz &nbsp;<span class='badge badge-warning'>Middle</span>",
+        "data": {
+          "component": "quiz",
+          "id": "1568026611617X07431246812440206",
+          "key": "elevator_pitch_quiz"
+        }
+      },
+      {
+        "title": "<i class='fas fa-file'></i> Reported Speech Overview",
+        "data": {
+          "component": "content",
+          "id": "1570189204754X7115311091843695",
+          "key": "reported_speech_overview"
+        }
+      },
+      {
+        "title": "<i class='far fa-edit'></i> Reported Speech Exercise &nbsp;<span class='badge badge-danger'>Difficult</span>",
+        "data": {
+          "component": "cloze",
+          "id": "1570189983280X44990505074507703",
+          "key": "reported_speech_exercise"
+        }
+      },
+      {
+        "title": "<i class='far fa-edit'></i> Following up &nbsp;<span class='badge badge-warning'>Middle</span>",
         "data": {
           "component": "cloze",
           "id": "1568027516094X6437456355719473",
           "key": "following_up"
+        }
+      },
+      {
+        "title": "<i class='fas fa-book'></i> Video and Reading Link",
+        "data": {
+          "component": "content",
+          "id": "1570190692194X48504164720248744",
+          "key": "video_and_reading_link"
+        }
+      },
+      {
+        "title": "<i class='fas fa-book'></i> Research and Writing Assignment",
+        "data": {
+          "component": "content",
+          "id": "1570191281505X2746236145212628",
+          "key": "research_and_writing_assignment"
         }
       }
     ]
@@ -625,6 +790,21 @@ ccm.files[ 'datasets.js' ] = {
           "component": "quiz",
           "id": "1568399620515X6435584263333018",
           "key": "final_exam_job_fair"
+        }
+      }
+    ]
+  },
+
+  "Final Project": {
+    "key": "final_project",
+    "section": "Final Project",
+    "entries": [
+      {
+        "title": "<i class='fas fa-book'></i> Final Assignment",
+        "data": {
+          "component": "content",
+          "id": "1570195822083X4609489764211827",
+          "key": "final_assignment"
         }
       }
     ]
