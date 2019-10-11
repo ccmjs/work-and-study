@@ -264,7 +264,7 @@ ccm.files[ 'datasets.js' ] = {
         }
       },
       {
-        "title": "<i class='fas fa-book'></i> Link to additional materials",
+        "title": "<i class='fas fa-book'></i> Reading assignment",
         "data": {
           "component": "exercise",
           "id": "1568411482158X6549716391567724",
@@ -540,7 +540,7 @@ ccm.files[ 'datasets.js' ] = {
         }
       },
       {
-        "title": "<i class='fas fa-book'></i> Link to additional materials",
+        "title": "<i class='fas fa-book'></i> Link to additional exercises",
         "data": {
           "component": "content",
           "id": "1570119225268X08247398061990441",
