@@ -1,0 +1,49 @@
+<ccm-template key="main">
+  <div>
+    <div id="header"></div>
+    <div id="article"></div>
+    <div id="feedback"></div>
+    <div id="footer"></div>
+  </div>
+</ccm-template>
+
+<ccm-template key="content">
+  <div>
+    <div id="section"></div>
+    <div id="menu-list"></div>
+  </div>
+</ccm-template>
+
+<ccm-template key="navigation">
+  <nav class="navbar navbar-expand-sm  navbar-light bg-light fixed-top">
+    <a class="navbar-brand mr-5" style="color: #777">
+      <img src="../be1/img/w&s.svg" width="30px;"> Business English
+    </a>
+    <button onclick="%show_hide_nav%" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse mr-auto" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li id="home" class="nav-item active p-2" onclick="%nav_item_click%"><a href="#" class="nav-link fas fa-home pr-2" title="home"></a></li>
+        <li id="chat" class="nav-item p-2" onclick="%nav_item_click%"><a href="#" class="nav-link fas fa-comments pr-2" title="chat"></a></li>
+        <li id="stat" class="nav-item p-2" onclick="%nav_item_click%"><a href="#" class="nav-link fas fa-chart-bar pr-2" title="statistics"></a></li>
+        <li id="info" class="nav-item p-2" onclick="%nav_item_click%"><a href="#" class="nav-link fas fa-info pr-2" title="help"></a></li>
+        <li id="users" class="nav-item p-2" onclick="%nav_item_click%"><a href="#" class="nav-link fas fa-user-plus" title="membership"></a></li>
+        <li id="user-feedback" class="nav-item p-2" onclick="%nav_item_click%"><a href="#" class="nav-link disabled fas fa-bullhorn" title="feedback"></a></li>
+      </ul>
+      <form class="form-inline" style="font-size: .9rem">
+        <label class="pr-2 navbar-text" id="username"></label>
+        <button type="button" class="btn btn-outline-success my-2 my-sm-0" id="sign-on">Sign on</button>
+        <button type="button" class="btn btn-outline-primary my-2 my-sm-0" id="sign-out">Sign out</button>
+      </form>
+    </div>
+  </nav>
+</ccm-template>
+
+<ccm-template key="feedback_view">
+  <div class="alert alert-info">
+    <div class="title"><strong>Title: </strong>%feedback_title%</div>
+    <div class="content"><strong>Content: </strong><br> %feedback_content%</div>
+  </div>
+</ccm-template>

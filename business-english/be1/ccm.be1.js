@@ -12,34 +12,7 @@
     ccm: 'https://ccmjs.github.io/ccm/versions/ccm-22.6.1.js',
 
     config: {
-      "html": {
-        "main": {
-          "inner": [
-            {
-              "id": "header"
-            },
-            {
-              "id": "article"
-            },
-            {
-              "id": "feedback"
-            },
-            {
-              "id": "footer"
-            }
-          ]
-        },
-        "content": {
-          "inner": [
-            {
-              "id": "section"
-            },
-            {
-              "id": "menu-list"
-            }
-          ]
-        }
-      },
+      "html": [ "ccm.load", "resources/templates.html" ],
       "css": [ "ccm.load", "https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css",
         { "context": "head", "url": "https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" },
         "https://use.fontawesome.com/releases/v5.6.3/css/all.css",
@@ -48,7 +21,7 @@
       ],
       "js": [ "ccm.load", [ "https://code.jquery.com/jquery-3.2.1.slim.min.js",
         "https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" ] ],
-      "navigation": [ "ccm.load", { "url": "resources/navigation.html", "type": "data", "method": "get" } ],
+
       "menu": {
         "comp": [ "ccm.component", "https://ccmjs.github.io/akless-components/menu/versions/ccm.menu-2.4.4.js", {
           "css": [ "ccm.load", "https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css",
@@ -467,7 +440,9 @@
             }
           }
         }
-      } ]
+      } ],
+      "user_feedback": [ "ccm.store", { "name": "be1_WiSe19_feedback", "url": "https://ccm2.inf.h-brs.de" } ],
+      "admin": "be_team"
     },
 
     Instance: function () {
@@ -526,6 +501,8 @@
 
         let main = $.html( my.html.main );
 
+        const feedbacks = await my.user_feedback.get( {} );
+
         setUpNavigation();
 
         renderContent();
@@ -535,29 +512,22 @@
         $.setContent( self.element, main );
 
         function setUpNavigation() {
+          const nav = $.html( my.html.navigation,  {
+            show_hide_nav: () => {
+              main.querySelector( "nav button").toggleAttribute("aria-expanded");
+              main.querySelector( ".navbar-toggler" ).classList.toggle( 'collapsed' );
+              main.querySelector( ".navbar-collapse" ).classList.toggle( 'show' );
 
-          $.setContent( main.querySelector( "#header" ), my.navigation );
+              // logging of 'toggle' event
+              self.logger && self.logger.log( 'toggle', main.querySelector( ".navbar-toggler" ).classList.contains( 'collapsed' ) );
 
-          if ( self.user.data().user !== 'be_team' )
-            main.querySelector('#users').remove();
-
-          main.querySelector( ".navbar-toggler" ).addEventListener( 'click', () => {
-            main.querySelector( "nav button").toggleAttribute("aria-expanded");
-            main.querySelector( ".navbar-toggler" ).classList.toggle( 'collapsed' );
-            main.querySelector( ".navbar-collapse" ).classList.toggle( 'show' );
-
-            // logging of 'toggle' event
-            self.logger && self.logger.log( 'toggle', main.querySelector( ".navbar-toggler" ).classList.contains( 'collapsed' ) );
-
-          } );
-
-          main.querySelectorAll( '.navbar-nav  > .nav-item' ).forEach( li => {
-            li.addEventListener( 'click', async () => {
+            },
+            nav_item_click: async function () {
+              const elem = this;
               main.querySelectorAll( '.nav-item' ).forEach( li => {
                 li.classList.remove( 'active' );
               } );
-
-              switch (li.id) {
+              switch ( elem.id ) {
                 case 'home':
                   await renderContent();
                   break;
@@ -573,13 +543,27 @@
                 case 'users':
                   await renderMembership();
                   break;
+                case 'user-feedback':
+                  if ( feedbacks.length !== 0 ) {
+                    await renderUserFeedback();
+                  }
+                  break;
               }
 
               // logging of 'nav' event
-              self.logger && self.logger.log( 'nav', li.id );
+              self.logger && self.logger.log( 'nav', elem.id );
 
-            } );
-          } );
+            }
+          }  );
+
+          $.setContent( main.querySelector( "#header" ), nav );
+
+          ( feedbacks.length !== 0 ) && main.querySelector( '[title=feedback]' ).classList.remove( 'disabled' );
+
+          if ( my.admin && ( self.user.data().user !== my.admin ) ) {
+            main.querySelector('#users').remove();
+            main.querySelector('#user-feedback').remove();
+          }
 
           main.querySelector( "#sign-on" ).addEventListener( 'click', async () => {
             if ( self.user ) {
@@ -775,6 +759,21 @@
             }
           } );
           $.setContent( main.querySelector( "#article" ), div );
+        }
+
+        async function renderUserFeedback() {
+          const div = getDiv();
+
+          for( const fdbk of feedbacks ) {
+            const feedback_elem = $.html( my.html.feedback_view, {
+              feedback_title: fdbk.title,
+              feedback_content: fdbk.content
+            } );
+
+            div.appendChild( feedback_elem );
+          }
+          $.setContent( main.querySelector( "#article" ), div );
+
         }
 
         function getDiv() {
