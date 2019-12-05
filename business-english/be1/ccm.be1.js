@@ -560,7 +560,7 @@
 
           ( feedbacks.length !== 0 ) && main.querySelector( '[title=feedback]' ).classList.remove( 'disabled' );
 
-          if ( my.admin && ( self.user.data().user !== my.admin ) ) {
+          if (( my.admin && ( self.user.data().user !== my.admin ) ) || my.mode === 'guest' ) {
             main.querySelector('#users').remove();
             main.querySelector('#user-feedback').remove();
           }

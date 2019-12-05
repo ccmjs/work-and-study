@@ -1,6 +1,28 @@
 ccm.files[ "configs.js" ] = {
 
   "be1_guest": {
+    "html": [ "ccm.load", "https://ccmjs.github.io/work-and-study/business-english/be1/resources/templates.html" ],
+    "accordion": [ "ccm.component", "https://ccmjs.github.io/tkless-components/accordion/versions/ccm.accordion-2.1.0.js", {
+      "style": [ "ccm.load","https://ccmjs.github.io/work-and-study/business-english/be1/resources/accordion.css" ],
+      "size": "md",
+      "color": "info",
+      "entries": [ "ccm.load", "https://ccmjs.github.io/work-and-study/business-english/be1/resources/accordion_data.js" ]
+    } ],
+    "css": [ "ccm.load", "https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css",
+      { "context": "head", "url": "https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" },
+      "https://use.fontawesome.com/releases/v5.6.3/css/all.css",
+      { "context": "head", "url": "https://use.fontawesome.com/releases/v5.6.3/css/all.css" },
+      "https://ccmjs.github.io/work-and-study/business-english/be1/resources/default.css"
+    ],
+    "menu": {
+      "comp": [ "ccm.component", "https://ccmjs.github.io/akless-components/menu/versions/ccm.menu-2.4.4.js", {
+        "css": [ "ccm.load", "https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css",
+          "https://use.fontawesome.com/releases/v5.6.3/css/all.css",
+          "https://ccmjs.github.io/work-and-study/business-english/be1/resources/menu.css" ]
+      } ],
+      "data": [ "ccm.store", "https://ccmjs.github.io/work-and-study/business-english/be1/resources/datasets.js" ]
+
+    },
     "cloze": {
       "comp": [ "ccm.component", "https://ccmjs.github.io/akless-components/cloze/versions/ccm.cloze-6.0.0.js"],
       "ignore":{
@@ -150,6 +172,12 @@ ccm.files[ "configs.js" ] = {
         } ]
       }
     },
-    "admin": null
+    "content": {
+      "comp": [ "ccm.component", "https://ccmjs.github.io/akless-components/content/versions/ccm.content-5.2.0.js", {
+        "css": [ "ccm.load", "https://tkless.github.io/ccm-components/libs/bootstrap/css/bootstrap.css" ]
+      } ],
+      "ignore": [ "ccm.get", { "name": "ws_content", "url": "https://ccm2.inf.h-brs.de" }, "1536585034382X04756237908295757" ]
+    },
+    "mode": "guest"
   }
 };
