@@ -302,7 +302,7 @@
         "realm": "cloud",
         "store": "be1_WiSe19_user",
         "url": "https://ccm2.inf.h-brs.de",
-        "title": "Please enter your username and uassword you're given in class."
+        "title": "Please enter your username and uassword <br> you're given in class."
       } ],
       "pdf_viewer": {
         "comp": [ "ccm.component", "https://ccmjs.github.io/tkless-components/pdf_viewer/versions/ccm.pdf_viewer-4.0.0.js" ],
