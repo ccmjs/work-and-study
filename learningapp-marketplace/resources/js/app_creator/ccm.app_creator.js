@@ -490,7 +490,7 @@
       } ],
       "qr_code": [ "ccm.load", "https://ccmjs.github.io/akless-components/libs/qrcode-generator/qrcode.min.js" ],
       "helper": [ "ccm.load", { "url": "https://ccmjs.github.io/akless-components/modules/helper.mjs", "type": "module" } ],
-      "app_url": "https://ccmjs.github.io/work-and-study/learninapp-marketplace/app.html",
+      "app_url": "https://ccmjs.github.io/work-and-study/learningapp-marketplace/app.html",
       "css": [ "ccm.load", "https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css",
         "https://use.fontawesome.com/releases/v5.6.3/css/all.css",
         { "context": "head", "url": "https://use.fontawesome.com/releases/v5.6.3/css/all.css" },
