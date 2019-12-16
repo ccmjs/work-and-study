@@ -43,7 +43,7 @@ ccm.files[ "configs.js" ] = {
           "alert": "Saved for your student analytics!",
           "restart": true
         },
-        "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-9.2.0.js", {
+        "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-9.3.0.js", {
           "key": [ "ccm.get", "https://ccmjs.github.io/akless-components/user/resources/configs.js", "compact" ],
           "logged_in": true
         } ]
@@ -66,7 +66,7 @@ ccm.files[ "configs.js" ] = {
           "alert": "Saved for your student analytics!",
           "restart": true
         },
-        "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-9.2.0.js", {
+        "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-9.3.0.js", {
           "key": [ "ccm.get", "https://ccmjs.github.io/akless-components/user/resources/configs.js", "compact" ],
           "logged_in": true
         } ]
@@ -92,7 +92,7 @@ ccm.files[ "configs.js" ] = {
           "alert": "Saved for your student analytics!",
           "restart": true
         },
-        "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-9.2.0.js", {
+        "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-9.3.0.js", {
           "key": [ "ccm.get", "https://ccmjs.github.io/akless-components/user/resources/configs.js", "compact" ],
           "logged_in": true
         } ]
@@ -118,13 +118,13 @@ ccm.files[ "configs.js" ] = {
           "alert": "Saved for your student analytics!",
           "restart": true
         },
-        "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-9.2.0.js", {
+        "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-9.3.0.js", {
           "key": [ "ccm.get", "https://ccmjs.github.io/akless-components/user/resources/configs.js", "compact" ],
           "logged_in": true
         } ]
       }
     },
-    "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-9.2.0.js", {
+    "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-9.3.0.js", {
       "key": [ "ccm.get", "https://ccmjs.github.io/akless-components/user/resources/configs.js", "compact" ],
       "logged_in": true
     } ],
@@ -137,10 +137,10 @@ ccm.files[ "configs.js" ] = {
       "editable": true,
       "chat": true,
       "data": {
-        "store": [ "ccm.store", { "name": "b1_quest_chat_result", "url": "https://ccm2.inf.h-brs.de" } ],
+        "store": [ "ccm.store", { "name": "b1_guest_chat_result", "url": "https://ccm2.inf.h-brs.de" } ],
         "key": "be1_guest_chat"
       },
-      "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-9.2.0.js", {
+      "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-9.3.0.js", {
         "key": [ "ccm.get", "https://ccmjs.github.io/akless-components/user/resources/configs.js", "compact" ],
         "hash": [ "ccm.load", { "url": "https://ccmjs.github.io/akless-components/modules/md5.mjs", "type": "module" } ],
         "logged_in": true
@@ -152,7 +152,7 @@ ccm.files[ "configs.js" ] = {
       "data": { "store": [ "ccm.store", { "name": "be1_guest_feedbackk", "url": "https://ccm2.inf.h-brs.de" } ] }
     } ],
     "analytic": [ "ccm.component", "https://ccmjs.github.io/akless-components/result/versions/ccm.result-2.0.0.js", {
-      "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-9.2.0.js", {
+      "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-9.3.0.js", {
         "key": [ "ccm.get", "https://ccmjs.github.io/akless-components/user/resources/configs.js", "compact" ],
         "logged_in": true
       } ],
@@ -166,7 +166,7 @@ ccm.files[ "configs.js" ] = {
         "data": {
           "store": [ "ccm.store", { "name": "be1_guest_star_rating_results", "url": "https://ccm2.inf.h-brs.de" } ]
         },
-        "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-9.2.0.js", {
+        "user": [ "ccm.instance", "https://ccmjs.github.io/akless-components/user/versions/ccm.user-9.3.0.js", {
           "key": [ "ccm.get", "https://ccmjs.github.io/akless-components/user/resources/configs.js", "compact" ],
           "logged_in": true
         } ]
