@@ -400,12 +400,12 @@
         }
 
         async function renderChart() {
-          const store_names = [ 'ws_chat', 'ws_comment', 'ws_exercise', 'ws_cloze',
-                                'ws_live_poll', 'ws_mark_words', 'ws_pdf_viewer', 'ws_qiuck_decide',
-                                'ws_quiz', 'ws_star_rating', 'ws_teambuild', 'ws_thumb_rating'];
-          const app_title = [ 'Chat', 'Comment', 'Exercise', 'Fill in The Blanks',
-                              'Live Poll', 'Mark Words', 'PDF Viewer', 'Qiuck Decision',
-                              'Quiz', 'Star Rating', 'Team Building', 'Thumb Rating'];
+          const store_names = [ 'app_collection', 'ws_chat', 'ws_comment', 'ws_content', 'ws_exercise', 'ws_cloze',
+                                'ws_live_poll', 'ws_mark_words', 'ws_quick_decide',
+                                'ws_quiz', 'ws_star_rating', 'ws_teambuild', 'ws_thumb_rating' ];
+          const app_title = [ 'App Collection', 'Chat', 'Comment', 'Content', 'Exercise', 'Fill in The Blanks',
+                              'Live Poll', 'Mark Words', 'Quick Decision',
+                              'Quiz', 'Star Rating', 'Team Building', 'Thumb Rating' ];
           let chart_data = [];
           let max = 0;
           let max_name = '';
