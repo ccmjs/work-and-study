@@ -413,22 +413,21 @@
 
 
           for ( let i = 0; i < store_names.length; i++ ) {
-            let store = await $.solveDependency( [ "ccm.store", { name: store_names[ i ], url: my.source.url } ] );
-            let store_data = await store.get({});
+            const count = parseInt( await self.ccm.load( { url: my.source.url, type: 'data', params: { store: store_names[ i ] } } ) );
 
-            if( max < store_data.length ) {
-              max = store_data.length;
+            if( max < count ) {
+              max = count;
               max_name = app_title[ i ];
             }
 
             let entry = {
               name: app_title[ i ],
-              y: store_data.length
+              y: count
             };
 
-            store_data.length && chart_data.push( entry );
+            count && chart_data.push( entry );
 
-            apps_total = apps_total + store_data.length;
+            apps_total = apps_total + count;
 
           }
 
@@ -442,7 +441,7 @@
           await my.chart.start({
             root: main_elem.querySelector( '#chart' ),
             settings: {
-              colors: ["#90ed7d", "#7cb5ec", "#85a366", "#f7a35c", "#8085e9", "#f15c80", "#e4d354", "#2b908f", "#434348", "#f45b5b", "#ffcc66", "#91e8e1"],
+              //colors: ["#90ed7d", "#7cb5ec", "#85a366", "#f7a35c", "#8085e9", "#f15c80", "#e4d354", "#2b908f", "#434348", "#f45b5b", "#ffcc66", "#91e8e1"],
               chart: {
                 plotBackgroundColor: null,
                 plotBorderWidth: null,
