@@ -668,7 +668,7 @@
                * decomposed embed code
                * @type {Object}
                */
-              const result = self.helper.decomposeEmbedCode( content.querySelector( '#embed_code' ).value.trim() );
+              const result = self.helper.decomposeEmbedCode( content.querySelector( '#embed_code' ).value.trim(), self.ccm );
 
               // load app
               result && await load( result.key, result.store.name ? await ccm.store( result.store ) : undefined );
