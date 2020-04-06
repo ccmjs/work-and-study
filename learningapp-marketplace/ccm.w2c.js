@@ -155,9 +155,9 @@
         "key": { }
       },
       template: {
-        home: [ "ccm.load", { "url": "https://tkless.github.io/w2c/v2/resources/home.html", "type": "data", "method": "get" } ],
-        how_to: [ "ccm.load", { "url": "https://tkless.github.io/w2c/v2/resources/how_to.html", "type": "data", "method": "get" } ],
-        footer: [ "ccm.load", { "url": "https://tkless.github.io/w2c/v2/resources/footer.html", "type": "data", "method": "get" } ]
+        home: [ "ccm.load", { "url": "https://ccmjs.github.io/work-and-study/learningapp-marketplace/resources/html/home.html", "type": "data", "method": "get" } ],
+        how_to: [ "ccm.load", { "url": "https://ccmjs.github.io/work-and-study/learningapp-marketplace/resources/html/how_to.html", "type": "data", "method": "get" } ],
+        footer: [ "ccm.load", { "url": "https://ccmjs.github.io/work-and-study/learningapp-marketplace/resources/html/footer.html", "type": "data", "method": "get" } ]
       },
       menu:  [ "ccm.component", "https://ccmjs.github.io/akless-components/menu/versions/ccm.menu-2.4.4.js", {
         "html": {
