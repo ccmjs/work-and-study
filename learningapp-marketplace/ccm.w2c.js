@@ -348,7 +348,7 @@
 
               const menu = await my.menu.start( {
                   selected: 1,
-                  data: { entries: [ {"title": 'Overview'}, {"title": 'Create App'} ] },
+                  data: { entries: [ {"title": 'Overview'}, {"title": 'App Creation'} ] },
                   onclick: async ( event, menu ) => {
                     const tab = event.nr;
                     switch ( tab ) {
