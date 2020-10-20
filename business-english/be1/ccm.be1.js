@@ -509,6 +509,8 @@
 
         renderFeedback();
 
+        main.appendChild( $.html( my.html.logo ) );
+
         $.setContent( self.element, main );
 
         function setUpNavigation() {
