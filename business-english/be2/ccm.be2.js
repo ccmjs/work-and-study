@@ -2,7 +2,7 @@
  * @overview ccm component for business english app
  * @author Tea Kless <tea.kless@web.de> 2018
  * @author André Kless <andre.kless@web.de> 2018
- * @copyright © 2018 work&study - All Rights reserved.
+ * @copyright © 2020 work&study - All Rights reserved.
  */
 
 {
@@ -268,6 +268,32 @@
         renderContent();
 
         renderFeedback();
+
+        main.querySelector( '#footer' ).appendChild( $.html(
+          "<div>\n" +
+          "    <br>\n" +
+          "    <hr>\n" +
+          "    <div class=\"row\">\n" +
+          "      <div id=\"logo\">\n" +
+          "        <div style=\"display: flex;justify-content: space-around;align-items: center;\">\n" +
+          "          <img src=\"https://ccmjs.github.io/work-and-study/business-english/be1/img/w&amp;s.svg\" width=\"7%\">\n" +
+          "          <div style=\"width: 20%\">\n" +
+          "            <img src=\"https://ccmjs.github.io/work-and-study/resources/hbrs_logo.png\" alt=\"Logo HBRS\" width=\"100%\">\n" +
+          "          </div>\n" +
+          "          <img src=\"https://ccmjs.github.io/work-and-study/resources/bmbf_logo.jpeg\" width=\"20%\" alt=\"Logo BMBF\" class=\"img-fluid\">\n" +
+          "          <img src=\"https://ccmjs.github.io/work-and-study/resources/offene_hochschulen.svg\" width=\"12%\" alt=\"Logo offene Hochschulen\" class=\"img-fluid\">\n" +
+          "        </div>\n" +
+          "      </div>\n" +
+          "      <div id=\"footer\" class=\"container\" style=\"margin-top: 2%; display: flex;\">\n" +
+          "        <small class=\"text-muted text-center\">\n" +
+          "          The project \"Work &amp; Study - Open Universities Rhine-Saar\" was funded by the Federal Ministry of Education and Research\n" +
+          "          under the grant number 16OH22056 as part of the \"Ascent through Education\" program. The responsibility for the content of this\n" +
+          "          publication lies with the authors.\"\n" +
+          "        </small>\n" +
+          "      </div>\n" +
+          "    </div>\n" +
+          "  </div>"
+         ) );
 
         $.setContent( self.element, main );
 
