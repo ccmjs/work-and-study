@@ -409,10 +409,10 @@
         }
 
         function renderFeedback() {
-          self.ccm.load( "https://ccmjs.github.io/ccm/versions/ccm-18.0.0.js", () => {
-            window.ccm[ '18.0.0' ].start( "https://ccmjs.github.io/tkless-components/feedback/versions/ccm.feedback-4.0.0.js", {
+          self.ccm.load( "https://ccmjs.github.io/ccm/versions/ccm-20.0.0.js", () => {
+            window.ccm[ '20.0.0' ].start( "https://ccmjs.github.io/tkless-components/feedback/versions/ccm.feedback-4.0.0.js", {
               "root": main.querySelector( '#feedback' ),
-              "from_above": "20%",
+              "from_above": "40",
               "css": [ "ccm.load", "https://ccmjs.github.io/tkless-components/feedback/resources/right.css" ],
               "data": { "store": [ "ccm.store", { "name": "feedback", "url": "https://ccm2.inf.h-brs.de" } ], "key": "be2_ws1819_feedback" }
             } );
