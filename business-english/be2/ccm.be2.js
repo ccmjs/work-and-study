@@ -276,7 +276,7 @@
           "    <div class=\"row\">\n" +
           "      <div id=\"logo\">\n" +
           "        <div style=\"display: flex;justify-content: space-around;align-items: center;\">\n" +
-          "          <img src=\"https://ccmjs.github.io/work-and-study/business-english/be1/img/w&amp;s.svg\" width=\"7%\">\n" +
+          "          <img src=\"https://ccmjs.github.io/work-and-study/business-english/be1/img/w&amp;s.svg\" alt=\"Logo work&amp;study\" width=\"7%\">\n" +
           "          <div style=\"width: 20%\">\n" +
           "            <img src=\"https://ccmjs.github.io/work-and-study/resources/hbrs_logo.png\" alt=\"Logo HBRS\" width=\"100%\">\n" +
           "          </div>\n" +
@@ -285,7 +285,7 @@
           "        </div>\n" +
           "      </div>\n" +
           "      <div id=\"footer\" class=\"container\" style=\"margin-top: 2%; display: flex;\">\n" +
-          "        <small class=\"text-muted text-center\">\n" +
+          "        <small class=\"text-center\">\n" +
           "          The project \"Work &amp; Study - Open Universities Rhine-Saar\" was funded by the Federal Ministry of Education and Research\n" +
           "          under the grant number 16OH22056 as part of the \"Ascent through Education\" program. The responsibility for the content of this\n" +
           "          publication lies with the authors.\"\n" +
